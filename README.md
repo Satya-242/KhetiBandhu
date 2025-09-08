@@ -16,7 +16,6 @@ This platform empowers farmers with personalized eco-friendly tasks (‚Äúquests‚Ä
 
 **Actor:** Farmer + App
 
-* Farmer downloads app (PWA/Android/iOS).
 * Registration with multi-language support.
 * Farmer inputs details: name, location, village, farm size, main crop.
 * App fetches supporting data:
@@ -29,22 +28,11 @@ This platform empowers farmers with personalized eco-friendly tasks (‚Äúquests‚Ä
 
 ---
 
-### **2. AI/Rule Engine Quest Generation**
 
-**Actor:** AI Engine + Backend
-
-* Combines farmer profile + external datasets.
-* Rule-based & ML-driven quest generation:
-
-  * If rain forecast ‚Üí irrigation quest.
-  * If low nitrogen ‚Üí organic input quest.
-  * If pest outbreak nearby ‚Üí bio-pesticide quest.
-
-‚úÖ **Output:** Personalized sustainable quests
 
 ---
 
-### **3. Farmer Receives Gamified Quests**
+### **2. Farmer Receives Gamified Quests**
 
 **Actor:** Farmer + App Frontend
 
@@ -59,7 +47,7 @@ This platform empowers farmers with personalized eco-friendly tasks (‚Äúquests‚Ä
 
 ---
 
-### **4. Task Execution & Proof Submission**
+### **3. Task Execution & Proof Submission**
 
 **Actor:** Farmer
 
@@ -71,7 +59,7 @@ This platform empowers farmers with personalized eco-friendly tasks (‚Äúquests‚Ä
 
 ---
 
-### **5. Reward & Progress Tracking**
+### **4. Reward & Progress Tracking**
 
 **Actor:** Gamification System
 
@@ -86,7 +74,7 @@ This platform empowers farmers with personalized eco-friendly tasks (‚Äúquests‚Ä
 
 ---
 
-### **6. Community & Leaderboards**
+### **5. Community & Leaderboards**
 
 **Actor:** Farmer Community
 
@@ -98,7 +86,7 @@ This platform empowers farmers with personalized eco-friendly tasks (‚Äúquests‚Ä
 
 ---
 
-### **7. Real-World Incentives**
+### **6. Real-World Incentives**
 
 **Actor:** Govt. / Institutions
 
@@ -112,7 +100,7 @@ This platform empowers farmers with personalized eco-friendly tasks (‚Äúquests‚Ä
 
 ---
 
-### **8. Continuous Feedback & Learning**
+### **7. Continuous Feedback & Learning**
 
 **Actor:** Farmer + AI Engine
 
@@ -128,12 +116,12 @@ This platform empowers farmers with personalized eco-friendly tasks (‚Äúquests‚Ä
 
 ## üõ†Ô∏è Tech Stack (Proposed)
 
-* **Frontend:** PWA (React / Vue), multi-language support.
-* **Backend:** Node.js / Django + REST APIs.
+* **Frontend:**  multi-language support
+* **Backend:** Django
 * **AI Engine:** ML models for recommendations + image validation.
 * **Data Sources:** Weather APIs, Govt. agri datasets, farmer reports.
 * **Gamification:** Points, badges, leaderboards.
-* **Storage:** Cloud DB (PostgreSQL / Firebase).
+
 
 ---
 
