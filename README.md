@@ -1,4 +1,4 @@
-# Krishi-Mitra
+# KhetiBandhu
 Here’s a clean **README.md** draft for your *Gamified Sustainable Farming Platform* 👇
 
 ---
