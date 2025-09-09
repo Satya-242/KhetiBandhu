@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Crop Recommendation System - Smart Farming</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+  <style>
+    body {
+      background: linear-gradient(135deg, #74c69d, #f6f9fc, #3949ab);
+      background-attachment: fixed;
+      font-family: 'Roboto', sans-serif;
+    }
+    .fade-in {
+      animation: fadeIn 1s ease-in;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+    .card {
+      box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease;
+    }
+    .card:hover {
+      transform: translateY(-5px);
+    }
+    input:focus, select:focus, textarea:focus, button:focus {
+      outline: 2px solid #4CAF50;
+      outline-offset: 2px;
+    }
+  </style>
+</head>
+<body class="min-h-screen flex items-center justify-center p-6 fade-in">
+  <main class="bg-white max-w-md w-full p-8 rounded-xl card">
+    <h1 class="text-3xl font-bold text-center mb-6 text-gray-800">
+      <i class="fas fa-seedling text-green-500 mr-2"></i>Crop Recommendation System
+    </h1>
+    <form method="post" novalidate class="space-y-6" id="recommendationForm">
+      {% csrf_token %}
+      <!-- Django form rendered as paragraphs -->
+      {{ form.as_p|safe }}
+
+      <button type="submit" aria-label="Get crop recommendation" class="w-full bg-gradient-to-r from-green-500 to-blue-500 hover:from-green-600 hover:to-blue-600 text-white py-3 px-4 rounded-lg font-semibold transition duration-200 shadow-md flex items-center justify-center gap-2">
+        <i class="fas fa-brain"></i> Get Recommendation
+      </button>
+    </form>
+
+    {% if crop %}
+      <div class="mt-8 p-5 bg-green-100 border border-green-300 rounded-lg text-green-800 font-semibold text-center text-xl" role="region" aria-live="polite" aria-atomic="true">
+        <i class="fas fa-check-circle mr-2"></i>Recommended Crop: {{ crop }}
+      </div>
+    {% endif %}
+  </main>
+
+  <script>
+    // Enhance Django form fields styling dynamically
+    document.addEventListener('DOMContentLoaded', () => {
+      // Select all paragraphs inside the form (Django renders fields as <p>)
+      const formParagraphs = document.querySelectorAll('#recommendationForm p');
+      formParagraphs.forEach(p => {
+        p.classList.add('flex', 'flex-col', 'gap-1', 'mb-0');
+        // Style label
+        const label = p.querySelector('label');
+        if(label) {
+          label.classList.add('font-semibold', 'text-gray-700');
+        }
+        // Style inputs/select/textarea
+        const input = p.querySelector('input, select, textarea');
+        if(input) {
+          input.classList.add('px-4', 'py-2', 'border', 'border-gray-300', 'rounded-lg', 'text-gray-800', 'focus:ring-2', 'focus:ring-green-500', 'transition', 'duration-200');
+        }
+      });
+    });
+  </script>
+</body>
+</html>
