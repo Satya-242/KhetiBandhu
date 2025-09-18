@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Navigate, useNavigate } from 'react-router-dom';
 import { useAuth } from '@/context/AuthContext';
+import { useTranslation } from '@/hooks/useTranslation';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
@@ -30,6 +31,7 @@ interface Quest {
 
 const Quests: React.FC = () => {
   const { isAuthenticated, user, isLoading: authLoading } = useAuth();
+  const { t } = useTranslation();
   const [quests, setQuests] = useState<Quest[]>([]);
   const [isLoading, setIsLoading] = useState(true);
   const [filter, setFilter] = useState('all');
@@ -50,11 +52,11 @@ const Quests: React.FC = () => {
           {
             id: 1,
             quest: {
-              title: "Water Usage Optimization",
-              description: "Implement smart irrigation techniques to reduce water consumption by 20%",
+              title: t('quests.items.water_usage_optimization.title'),
+              description: t('quests.items.water_usage_optimization.description'),
               reward_points: 150,
               difficulty_level: 2,
-              target_crop: "Rice",
+              target_crop: t('crops.rice'),
               duration_days: 14
             },
             status: 'available'
@@ -62,11 +64,11 @@ const Quests: React.FC = () => {
           {
             id: 2,
             quest: {
-              title: "Organic Fertilizer Adoption",
-              description: "Switch to organic fertilizers and document the impact on soil health",
+              title: t('quests.items.organic_fertilizer_adoption.title'),
+              description: t('quests.items.organic_fertilizer_adoption.description'),
               reward_points: 200,
               difficulty_level: 3,
-              target_crop: "Wheat",
+              target_crop: t('crops.wheat'),
               duration_days: 21
             },
             status: 'in_progress',
@@ -76,11 +78,11 @@ const Quests: React.FC = () => {
           {
             id: 3,
             quest: {
-              title: "Crop Rotation Planning",
-              description: "Design and implement a 4-season crop rotation plan",
+              title: t('quests.items.crop_rotation_planning.title'),
+              description: t('quests.items.crop_rotation_planning.description'),
               reward_points: 300,
               difficulty_level: 4,
-              target_crop: "Mixed",
+              target_crop: t('crops.mixed'),
               duration_days: 30
             },
             status: 'available'
@@ -88,11 +90,11 @@ const Quests: React.FC = () => {
           {
             id: 4,
             quest: {
-              title: "Pest Management Survey",
-              description: "Complete detailed pest monitoring and submit weekly reports",
+              title: t('quests.items.pest_management_survey.title'),
+              description: t('quests.items.pest_management_survey.description'),
               reward_points: 100,
               difficulty_level: 1,
-              target_crop: "Cotton",
+              target_crop: t('crops.cotton'),
               duration_days: 7
             },
             status: 'completed'
@@ -100,11 +102,11 @@ const Quests: React.FC = () => {
           {
             id: 5,
             quest: {
-              title: "Sustainable Harvesting",
-              description: "Implement eco-friendly harvesting methods and measure efficiency",
+              title: t('quests.items.sustainable_harvesting.title'),
+              description: t('quests.items.sustainable_harvesting.description'),
               reward_points: 250,
               difficulty_level: 3,
-              target_crop: "Sugarcane",
+              target_crop: t('crops.sugarcane'),
               duration_days: 10
             },
             status: 'available'
@@ -122,12 +124,12 @@ const Quests: React.FC = () => {
     };
 
     fetchQuests();
-  }, [user]);
+  }, [user, t]);
 
   const filteredQuests = quests.filter(quest => {
     const matchesFilter = filter === 'all' || quest.status === filter;
-    const matchesSearch = quest.quest.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                         quest.quest.target_crop.toLowerCase().includes(searchTerm.toLowerCase());
+    const hay = `${quest.quest.title} ${quest.quest.target_crop}`.toLowerCase();
+    const matchesSearch = hay.includes(searchTerm.toLowerCase());
     return matchesFilter && matchesSearch;
   });
 
@@ -151,9 +153,9 @@ const Quests: React.FC = () => {
 
   const getStatusBadge = (status: Quest['status']) => {
     const variants = {
-      available: { variant: 'secondary' as const, text: 'Available', icon: Target },
-      in_progress: { variant: 'default' as const, text: 'In Progress', icon: Clock },
-      completed: { variant: 'outline' as const, text: 'Completed', icon: CheckCircle }
+      available: { variant: 'secondary' as const, text: t('quests.status.available'), icon: Target },
+      in_progress: { variant: 'default' as const, text: t('quests.status.in_progress'), icon: Clock },
+      completed: { variant: 'outline' as const, text: t('quests.status.completed'), icon: CheckCircle }
     };
     
     const { variant, text, icon: Icon } = variants[status];
@@ -169,7 +171,7 @@ const Quests: React.FC = () => {
   if (authLoading || isLoading) {
     return (
       <div className="min-h-screen flex items-center justify-center">
-        <LoadingSpinner size="lg" text="Loading quests..." />
+        <LoadingSpinner size="lg" text={t('quests.loading')} />
       </div>
     );
   }
@@ -188,17 +190,19 @@ const Quests: React.FC = () => {
                 className="gap-2"
               >
                 <ArrowLeft className="h-4 w-4" />
-                Dashboard
+                {t('quests.header.back_to_dashboard')}
               </Button>
               <div className="h-6 w-px bg-border" />
               <div>
-                <h1 className="text-2xl font-bold font-heading">Farming Quests</h1>
-                <p className="text-sm text-muted-foreground">Complete challenges and earn rewards</p>
+                <h1 className="text-2xl font-bold font-heading">{t('quests.header.title')}</h1>
+                <p className="text-sm text-muted-foreground">{t('quests.header.subtitle')}</p>
               </div>
             </div>
             <div className="flex items-center gap-2 bg-primary/10 px-3 py-2 rounded-lg">
               <Trophy className="h-4 w-4 text-primary" />
-              <span className="font-semibold text-primary">{user?.total_points || 0} Points</span>
+              <span className="font-semibold text-primary">
+                {t('quests.header.points', { points: user?.total_points || 0 })}
+              </span>
             </div>
           </div>
         </div>
@@ -211,7 +215,7 @@ const Quests: React.FC = () => {
             <div className="relative">
               <Search className="h-4 w-4 absolute left-3 top-1/2 transform -translate-y-1/2 text-muted-foreground" />
               <Input
-                placeholder="Search quests by title or crop..."
+                placeholder={t('quests.filters.search_placeholder')}
                 value={searchTerm}
                 onChange={(e) => setSearchTerm(e.target.value)}
                 className="pl-10"
@@ -221,13 +225,13 @@ const Quests: React.FC = () => {
           <Select value={filter} onValueChange={setFilter}>
             <SelectTrigger className="w-full sm:w-48">
               <Filter className="h-4 w-4 mr-2" />
-              <SelectValue placeholder="Filter by status" />
+              <SelectValue placeholder={t('quests.filters.filter_by_status')} />
             </SelectTrigger>
             <SelectContent>
-              <SelectItem value="all">All Quests</SelectItem>
-              <SelectItem value="available">Available</SelectItem>
-              <SelectItem value="in_progress">In Progress</SelectItem>
-              <SelectItem value="completed">Completed</SelectItem>
+              <SelectItem value="all">{t('quests.filters.all_quests')}</SelectItem>
+              <SelectItem value="available">{t('quests.status.available')}</SelectItem>
+              <SelectItem value="in_progress">{t('quests.status.in_progress')}</SelectItem>
+              <SelectItem value="completed">{t('quests.status.completed')}</SelectItem>
             </SelectContent>
           </Select>
         </div>
@@ -245,7 +249,7 @@ const Quests: React.FC = () => {
                     <div className="flex items-center gap-2 mt-2">
                       <div className="flex">{getDifficultyStars(quest.quest.difficulty_level)}</div>
                       <span className="text-xs text-muted-foreground">
-                        Level {quest.quest.difficulty_level}
+                        {t('quests.card.level', { level: quest.quest.difficulty_level })}
                       </span>
                     </div>
                   </div>
@@ -266,21 +270,21 @@ const Quests: React.FC = () => {
                     </div>
                     <div className="flex items-center gap-1">
                       <Calendar className="h-4 w-4 text-muted-foreground" />
-                      <span>{quest.quest.duration_days} days</span>
+                      <span>{t('quests.card.duration_days', { days: quest.quest.duration_days })}</span>
                     </div>
                   </div>
 
                   <div className="flex items-center justify-between">
                     <div className="flex items-center gap-1 text-primary font-semibold">
                       <Award className="h-4 w-4" />
-                      <span>{quest.quest.reward_points} points</span>
+                      <span>{t('quests.card.reward_points', { points: quest.quest.reward_points })}</span>
                     </div>
                   </div>
 
                   {quest.status === 'in_progress' && quest.progress !== undefined && (
                     <div className="space-y-1">
                       <div className="flex justify-between text-sm">
-                        <span>Progress</span>
+                        <span>{t('quests.card.progress')}</span>
                         <span>{quest.progress}%</span>
                       </div>
                       <div className="w-full bg-muted rounded-full h-2">
@@ -291,7 +295,7 @@ const Quests: React.FC = () => {
                       </div>
                       {quest.deadline && (
                         <p className="text-xs text-muted-foreground">
-                          Deadline: {new Date(quest.deadline).toLocaleDateString()}
+                          {t('quests.card.deadline', { date: new Date(quest.deadline).toLocaleDateString() })}
                         </p>
                       )}
                     </div>
@@ -305,21 +309,21 @@ const Quests: React.FC = () => {
                       onClick={() => startQuest(quest.id)}
                     >
                       <Play className="h-4 w-4" />
-                      Start Quest
+                      {t('quests.actions.start_quest')}
                     </Button>
                   )}
 
                   {quest.status === 'in_progress' && (
                     <Button variant="outline" size="sm" className="w-full gap-2">
                       <TrendingUp className="h-4 w-4" />
-                      View Progress
+                      {t('quests.actions.view_progress')}
                     </Button>
                   )}
 
                   {quest.status === 'completed' && (
                     <Button variant="secondary" size="sm" className="w-full gap-2" disabled>
                       <CheckCircle className="h-4 w-4" />
-                      Completed
+                      {t('quests.status.completed')}
                     </Button>
                   )}
                 </div>
@@ -331,11 +335,11 @@ const Quests: React.FC = () => {
         {filteredQuests.length === 0 && (
           <div className="text-center py-12">
             <Target className="h-12 w-12 text-muted-foreground mx-auto mb-4" />
-            <h3 className="text-lg font-semibold mb-2">No quests found</h3>
+            <h3 className="text-lg font-semibold mb-2">{t('quests.empty.title')}</h3>
             <p className="text-muted-foreground mb-4">
               {searchTerm || filter !== 'all' 
-                ? 'Try adjusting your search or filter criteria'
-                : 'Check back soon for new farming challenges!'}
+                ? t('quests.empty.adjust_filters')
+                : t('quests.empty.check_back')}
             </p>
             {(searchTerm || filter !== 'all') && (
               <Button 
@@ -345,7 +349,7 @@ const Quests: React.FC = () => {
                   setFilter('all');
                 }}
               >
-                Clear Filters
+                {t('quests.empty.clear_filters')}
               </Button>
             )}
           </div>

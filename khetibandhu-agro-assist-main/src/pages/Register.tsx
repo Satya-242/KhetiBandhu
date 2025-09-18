@@ -9,8 +9,10 @@ import LoadingSpinner from '@/components/LoadingSpinner';
 import ToastNotification from '@/components/ui/toast-notification';
 import { UserPlus, Mail, Phone, MapPin, Wheat, IdCard, User, Lock } from 'lucide-react';
 import heroFarm from '@/assets/hero-farm.jpg';
+import { useTranslation } from '@/hooks/useTranslation';
 
 const Register: React.FC = () => {
+  const { t } = useTranslation();
   const [formData, setFormData] = useState({
     name: '',
     username: '',
@@ -27,7 +29,6 @@ const Register: React.FC = () => {
   const { register, isAuthenticated } = useAuth();
   const navigate = useNavigate();
 
-  // Redirect if already authenticated
   if (isAuthenticated) {
     return <Navigate to="/dashboard" replace />;
   }
@@ -41,12 +42,12 @@ const Register: React.FC = () => {
     const result = await register(formData);
     
     if (result.success) {
-      setSuccess('Account created successfully! Welcome to KhetiBandhu!');
+      setSuccess(t('register.toast.success_message'));
       setTimeout(() => {
         navigate('/dashboard');
       }, 1500);
     } else {
-      setError(result.message || 'Registration failed');
+      setError(result.message || t('register.toast.error_fallback'));
     }
     
     setIsLoading(false);
@@ -57,7 +58,7 @@ const Register: React.FC = () => {
       ...prev,
       [e.target.name]: e.target.value
     }));
-    setError(''); // Clear error when user starts typing
+    setError('');
   };
 
   return (
@@ -66,7 +67,7 @@ const Register: React.FC = () => {
       <div className="hidden lg:flex lg:w-1/2 relative">
         <img 
           src={heroFarm} 
-          alt="Beautiful Indian farm landscape"
+          alt={t('register.hero.alt')}
           className="w-full h-full object-cover"
         />
         <div className="absolute inset-0 bg-gradient-to-r from-accent/20 to-primary/30" />
@@ -74,10 +75,10 @@ const Register: React.FC = () => {
           <div className="text-center text-white p-8">
             <div className="flex items-center justify-center gap-3 mb-6">
               <Wheat className="w-12 h-12" />
-              <h1 className="text-4xl font-bold font-heading">Join KhetiBandhu</h1>
+              <h1 className="text-4xl font-bold font-heading">{t('register.hero.title')}</h1>
             </div>
-            <p className="text-xl mb-4">Start Your Digital Farming Journey</p>
-            <p className="text-lg opacity-90">Get predictions, complete quests, and grow with the community</p>
+            <p className="text-xl mb-4">{t('register.hero.subtitle')}</p>
+            <p className="text-lg opacity-90">{t('register.hero.tagline')}</p>
           </div>
         </div>
       </div>
@@ -89,10 +90,10 @@ const Register: React.FC = () => {
             <CardHeader className="text-center">
               <CardTitle className="text-2xl font-heading flex items-center justify-center gap-2">
                 <UserPlus className="w-6 h-6 text-primary" />
-                Farmer Registration
+                {t('register.form.title')}
               </CardTitle>
               <CardDescription>
-                Create your account to access farming assistance
+                {t('register.form.description')}
               </CardDescription>
             </CardHeader>
             <CardContent>
@@ -100,7 +101,7 @@ const Register: React.FC = () => {
                 {error && (
                   <ToastNotification
                     type="error"
-                    title="Registration Failed"
+                    title={t('register.toast.error_title')}
                     message={error}
                   />
                 )}
@@ -108,7 +109,7 @@ const Register: React.FC = () => {
                 {success && (
                   <ToastNotification
                     type="success"
-                    title="Success!"
+                    title={t('register.toast.success_title')}
                     message={success}
                   />
                 )}
@@ -117,7 +118,7 @@ const Register: React.FC = () => {
                   <div className="space-y-2">
                     <Label htmlFor="name" className="flex items-center gap-2">
                       <User className="w-4 h-4" />
-                      Full Name
+                      {t('register.fields.name.label')}
                     </Label>
                     <Input
                       id="name"
@@ -126,7 +127,7 @@ const Register: React.FC = () => {
                       value={formData.name}
                       onChange={handleInputChange}
                       className="input-agricultural"
-                      placeholder="Your full name"
+                      placeholder={t('register.fields.name.placeholder')}
                       required
                       disabled={isLoading}
                     />
@@ -135,7 +136,7 @@ const Register: React.FC = () => {
                   <div className="space-y-2">
                     <Label htmlFor="username" className="flex items-center gap-2">
                       <User className="w-4 h-4" />
-                      Username
+                      {t('register.fields.username.label')}
                     </Label>
                     <Input
                       id="username"
@@ -144,7 +145,7 @@ const Register: React.FC = () => {
                       value={formData.username}
                       onChange={handleInputChange}
                       className="input-agricultural"
-                      placeholder="Choose username"
+                      placeholder={t('register.fields.username.placeholder')}
                       required
                       disabled={isLoading}
                     />
@@ -154,7 +155,7 @@ const Register: React.FC = () => {
                 <div className="space-y-2">
                   <Label htmlFor="email" className="flex items-center gap-2">
                     <Mail className="w-4 h-4" />
-                    Email Address
+                    {t('register.fields.email.label')}
                   </Label>
                   <Input
                     id="email"
@@ -163,7 +164,7 @@ const Register: React.FC = () => {
                     value={formData.email}
                     onChange={handleInputChange}
                     className="input-agricultural"
-                    placeholder="your.email@example.com"
+                    placeholder={t('register.fields.email.placeholder')}
                     required
                     disabled={isLoading}
                   />
@@ -172,7 +173,7 @@ const Register: React.FC = () => {
                 <div className="space-y-2">
                   <Label htmlFor="password" className="flex items-center gap-2">
                     <Lock className="w-4 h-4" />
-                    Password
+                    {t('register.fields.password.label')}
                   </Label>
                   <Input
                     id="password"
@@ -181,7 +182,7 @@ const Register: React.FC = () => {
                     value={formData.password}
                     onChange={handleInputChange}
                     className="input-agricultural"
-                    placeholder="Create strong password"
+                    placeholder={t('register.fields.password.placeholder')}
                     required
                     disabled={isLoading}
                   />
@@ -191,7 +192,7 @@ const Register: React.FC = () => {
                   <div className="space-y-2">
                     <Label htmlFor="pm_kisan_id" className="flex items-center gap-2">
                       <IdCard className="w-4 h-4" />
-                      PM-Kisan ID
+                      {t('register.fields.pm_kisan_id.label')}
                     </Label>
                     <Input
                       id="pm_kisan_id"
@@ -200,17 +201,19 @@ const Register: React.FC = () => {
                       value={formData.pm_kisan_id}
                       onChange={handleInputChange}
                       className="input-agricultural"
-                      placeholder="PMK1234567890"
+                      placeholder={t('register.fields.pm_kisan_id.placeholder')}
                       required
                       disabled={isLoading}
                     />
-                    <p className="text-xs text-muted-foreground">Must start with 'PMK' and be 10+ characters</p>
+                    <p className="text-xs text-muted-foreground">
+                      {t('register.fields.pm_kisan_id.helper')}
+                    </p>
                   </div>
 
                   <div className="space-y-2">
                     <Label htmlFor="village" className="flex items-center gap-2">
                       <MapPin className="w-4 h-4" />
-                      Village
+                      {t('register.fields.village.label')}
                     </Label>
                     <Input
                       id="village"
@@ -219,7 +222,7 @@ const Register: React.FC = () => {
                       value={formData.village}
                       onChange={handleInputChange}
                       className="input-agricultural"
-                      placeholder="Your village name"
+                      placeholder={t('register.fields.village.placeholder')}
                       required
                       disabled={isLoading}
                     />
@@ -230,7 +233,7 @@ const Register: React.FC = () => {
                   <div className="space-y-2">
                     <Label htmlFor="crops" className="flex items-center gap-2">
                       <Wheat className="w-4 h-4" />
-                      Crops Grown
+                      {t('register.fields.crops.label')}
                     </Label>
                     <Input
                       id="crops"
@@ -239,17 +242,19 @@ const Register: React.FC = () => {
                       value={formData.crops}
                       onChange={handleInputChange}
                       className="input-agricultural"
-                      placeholder="Rice, Wheat, Corn"
+                      placeholder={t('register.fields.crops.placeholder')}
                       required
                       disabled={isLoading}
                     />
-                    <p className="text-xs text-muted-foreground">Separate with commas</p>
+                    <p className="text-xs text-muted-foreground">
+                      {t('register.fields.crops.helper')}
+                    </p>
                   </div>
 
                   <div className="space-y-2">
                     <Label htmlFor="phone" className="flex items-center gap-2">
                       <Phone className="w-4 h-4" />
-                      Phone Number
+                      {t('register.fields.phone.label')}
                     </Label>
                     <Input
                       id="phone"
@@ -258,7 +263,7 @@ const Register: React.FC = () => {
                       value={formData.phone}
                       onChange={handleInputChange}
                       className="input-agricultural"
-                      placeholder="+91 9876543210"
+                      placeholder={t('register.fields.phone.placeholder')}
                       required
                       disabled={isLoading}
                     />
@@ -273,20 +278,20 @@ const Register: React.FC = () => {
                   disabled={isLoading}
                 >
                   {isLoading ? (
-                    <LoadingSpinner size="sm" text="Creating account..." />
+                    <LoadingSpinner size="sm" text={t('register.cta.creating_account')} />
                   ) : (
-                    'Create Account'
+                    t('register.cta.create_account')
                   )}
                 </Button>
 
                 <div className="text-center">
                   <p className="text-sm text-muted-foreground">
-                    Already have an account?{' '}
+                    {t('register.have_account')}{' '}
                     <Link 
                       to="/login" 
                       className="text-primary hover:text-primary-hover font-medium underline-offset-4 hover:underline"
                     >
-                      Sign in here
+                      {t('register.sign_in_here')}
                     </Link>
                   </p>
                 </div>

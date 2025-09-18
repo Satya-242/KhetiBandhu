@@ -1,0 +1,534 @@
+{
+  "common": {
+    "loading": "લોડ થઈ રહ્યું છે...",
+    "error": "ભૂલ",
+    "success": "સફળતા",
+    "cancel": "રદ કરો",
+    "save": "સેવ કરો",
+    "edit": "સંપાદન કરો",
+    "delete": "ડિલીટ કરો",
+    "view": "જુઓ",
+    "back": "પાછળ",
+    "next": "આગળ",
+    "previous": "પહેલાનું",
+    "submit": "સબમિટ કરો",
+    "close": "બંધ કરો",
+    "yes": "હા",
+    "no": "ના",
+    "ok": "બરાબર"
+  },
+  "navigation": {
+    "dashboard": "ડેશબોર્ડ",
+    "quests": "ક્વેસ્ટ",
+    "predictions": "અનુમાન",
+    "leaderboard": "લીડરબોર્ડ",
+    "rewards": "ઇનામ",
+    "badges": "બેજ",
+    "profile": "પ્રોફાઇલ",
+    "login": "લોગિન",
+    "register": "રજિસ્ટર",
+    "logout": "લોગઆઉટ"
+  },
+    "dashboard": {
+      "loading_dashboard": "ડેશબોર્ડ લોડ થઈ રહ્યું છે...",
+      "stats": {
+        "total_points": "કુલ પોઈન્ટ્સ",
+        "keep_growing": "વૃદ્ધિ કરતા રહો!",
+        "active_quests": "સક્રિય પડકારો",
+        "available": "ઉપલબ્ધ",
+        "leaderboard_rank": "લીડરબોર્ડ રેંક",
+        "farmers_count": "{{count}} ખેડૂતોમાં",
+        "prediction_confidence": "પૂર્વાનુમાન વિશ્વાસ",
+        "latest_crop_prediction": "નવીનતમ પાક પૂર્વાનુમાન"
+      },
+      "cards": {
+        "my_quests": "મારા પડકારો",
+        "quests_description": "તમારા ખેતી પડકારો અને સિદ્ધિઓને ટ્રેક કરો",
+        "active_quests": "સક્રિય પડકારો",
+        "completed": "પૂર્ણ",
+        "available": "ઉપલબ્ધ",
+        "view_all": "બધા જુઓ",
+        "crop_predictions": "પાક પૂર્વાનુમાન",
+        "predictions_description": "AI-સંચાલિત ઉત્પાદન અને સ્થિરતા અંતર્દૃષ્ટિ"
+      },
+      "predictions": {
+        "latest_prediction": "નવીનતમ પૂર્વાનુમાન",
+        "latest_prediction_text": "+15% ઉત્પાદન વધારાની અપેક્ષા",
+        "confidence": "વિશ્વાસ",
+        "view_detailed": "વિસ્તૃત પૂર્વાનુમાન જુઓ"
+      },
+      "weather": {
+        "todays_weather": "આજનું હવામાન",
+        "location_conditions": "{{location}} હવામાન પરિસ્થિતિઓ",
+        "your_location": "તમારું સ્થાન",
+        "humidity": "ભેજ",
+        "wind": "હવા",
+        "wind_light": "હળવી",
+        "forecast_7_day": "7-દિવસનો પૂર્વાનુમાન"
+      },
+      "quick_actions": {
+        "title": "ઝડપી કાર્યો",
+        "start_new_quest": "નવો પડકાર શરૂ કરો",
+        "view_predictions": "પૂર્વાનુમાન જુઓ",
+        "check_rewards": "ઇનામો તપાસો",
+        "view_leaderboard": "લીડરબોર્ડ જુઓ"
+      },
+      "activity": {
+        "recent_activity": "તાજેતરની પ્રવૃત્તિ",
+        "description": "તમારી નવીનતમ ખેતી સિદ્ધિઓ",
+        "quest_completed_water_management": "\"પાણી વ્યવસ્થાપન ઑપ્ટિમાઇઝેશન\" પૂર્ણ કર્યું",
+        "prediction_received_rice": "નવું ચોખાનું ઉત્પાદન પૂર્વાનુમાન ઉપલબ્ધ",
+        "badge_earned_efficiency": "\"કાર્યક્ષમતા નિષ્ણાત\" બેજ મેળવ્યો",
+        "time_hours_ago": "{{count}} કલાક પહેલા",
+        "time_days_ago": "{{count}} દિવસ પહેલા"
+      }
+    },
+  "auth": {
+    "login": {
+      "title": "ફરી સ્વાગત",
+      "subtitle": "તમારા KhetiBandhu એકાઉન્ટમાં સાઇન ઇન કરો",
+      "email": "ઇમેઇલ",
+      "password": "પાસવર્ડ",
+      "remember_me": "મને યાદ રાખો",
+      "forgot_password": "પાસવર્ડ ભૂલી ગયા?",
+      "sign_in": "સાઇન ઇન",
+      "no_account": "એકાઉન્ટ નથી?",
+      "sign_up": "સાઇન અપ કરો"
+    },
+    "register": {
+      "title": "એકાઉન્ટ બનાવો",
+      "subtitle": "KhetiBandhuમાં જોડાઓ અને તમારી ખેતીની યાત્રા શરૂ કરો",
+      "full_name": "પૂર્ણ નામ",
+      "email": "ઇમેઇલ",
+      "password": "પાસવર્ડ",
+      "confirm_password": "પાસવર્ડ કન્ફર્મ કરો",
+      "village": "ગામ",
+      "state": "રાજ્ય",
+      "crop_type": "પાકનો પ્રકાર",
+      "create_account": "એકાઉન્ટ બનાવો",
+      "have_account": "પહેલાથી એકાઉન્ટ છે?",
+      "sign_in": "સાઇન ઇન કરો"
+    }
+  },
+  "quests": {
+    "title": "ક્વેસ્ટ",
+    "description": "પોઇન્ટ અને ઇનામ મેળવવા માટે ખેતી મિશન પૂર્ણ કરો",
+    "active": "સક્રિય ક્વેસ્ટ",
+    "completed": "પૂર્ણ ક્વેસ્ટ",
+    "available": "ઉપલબ્ધ ક્વેસ્ટ",
+    "start_quest": "ક્વેસ્ટ શરૂ કરો",
+    "complete_quest": "ક્વેસ્ટ પૂર્ણ કરો",
+    "view_details": "વિગતો જુઓ",
+    "points": "પોઇન્ટ",
+    "difficulty": "મુશ્કેલી",
+    "easy": "સરળ",
+    "medium": "મધ્યમ",
+    "hard": "મુશ્કેલ",
+    "duration": "અવધિ",
+    "days": "દિવસ",
+        "loading": "ક્વેસ્ટ લોડ થઈ રહ્યા છે...",
+        "header": {
+          "back_to_dashboard": "ડેશબોર્ડ",
+          "title": "ખેતી પડકારો",
+          "subtitle": "પડકારો પૂર્ણ કરો અને ઇનામ મેળવો",
+          "points": "{{points}} પોઈન્ટ્સ"
+        },
+        "filters": {
+          "search_placeholder": "શીર્ષક અથવા પાક પ્રમાણે ક્વેસ્ટ શોધો...",
+          "filter_by_status": "સ્થિતિ પ્રમાણે ફિલ્ટર કરો",
+          "all_quests": "બધા ક્વેસ્ટ"
+        },
+        "status": {
+          "available": "ઉપલબ્ધ",
+          "in_progress": "પ્રગતિમાં",
+          "completed": "પૂર્ણ"
+        },
+        "card": {
+          "level": "સ્તર {{level}}",
+          "duration_days": "{{days}} દિવસ",
+          "reward_points": "{{points}} પોઈન્ટ્સ",
+          "progress": "પ્રગતિ",
+          "deadline": "અંતિમ તારીખ: {{date}}"
+        },
+        "actions": {
+          "start_quest": "ક્વેસ્ટ શરૂ કરો",
+          "view_progress": "પ્રગતિ જુઓ"
+        },
+        "empty": {
+          "title": "કોઈ ક્વેસ્ટ મળી નથી",
+          "adjust_filters": "શોધ અથવા ફિલ્ટર બદલીને અજમાવો",
+          "check_back": "નવી ખેતી પડકારો માટે ટૂંક સમયમાં ફરી તપાસો!",
+          "clear_filters": "ફિલ્ટર સાફ કરો"
+        },
+        "items": {
+          "water_usage_optimization": {
+            "title": "પાણીના ઉપયોગનું ઑપ્ટિમાઇઝેશન",
+            "description": "સ્માર્ટ સિંચાઈ તકનીકો અપનાવીને પાણીનો ઉપયોગ 20% સુધી ઘટાડો"
+          },
+          "organic_fertilizer_adoption": {
+            "title": "સેંકડિય ખાતર અપનાવો",
+            "description": "સેંકડિય ખાતર તરફ સ્વિચ કરો અને જમીનની તંદુરસ્તી પર અસર નોંધો"
+          },
+          "crop_rotation_planning": {
+            "title": "પાક ફેરફાર યોજના",
+            "description": "4-મોસમની પાક ફેરફાર યોજના બનાવો અને અમલ કરો"
+          },
+          "pest_management_survey": {
+            "title": "કીટક વ્યવસ્થાપન સર્વે",
+            "description": "વિસ્તૃત કીટક મોનીટરીંગ કરો અને સાપ્તાહિક અહેવાલો સબમિટ કરો"
+          },
+          "sustainable_harvesting": {
+            "title": "સ્થાયી કાપણી",
+            "description": "પર્યાવરણ-મૈત્રીપૂર્ણ કાપણી પદ્ધતિઓ અમલમાં લાવો અને કાર્યક્ષમતાનું માપન કરો"
+          }
+        }
+      },
+  "predictions": {
+    "title": "પાકની આગાહી",
+    "description": "તમારા ખેતી નિર્ણયો માટે AI-ચાલિત અંતર્દ્રષ્ટિ",
+    "yield_prediction": "ઉપજની આગાહી",
+    "weather_forecast": "હવામાનની આગાહી",
+    "disease_risk": "રોગનું જોખમ",
+    "pest_alert": "કીટક ચેતવણી",
+    "soil_analysis": "માટીનું વિશ્લેષણ",
+    "irrigation_advice": "સિંચાઈ સલાહ",
+    "fertilizer_recommendation": "ખાતરની ભલામણ",
+    "planting_time": "વાવણીનો સમય",
+    "harvest_time": "કાપણીનો સમય",
+    "confidence": "વિશ્વાસ",
+    "high": "ઉચ્ચ",
+    "medium": "મધ્યમ",
+    "low": "નીચું"
+  },
+  "leaderboard": {
+    "title": "લીડરબોર્ડ",
+    "description": "જુઓ કે તમે અન્ય કૃષકોમાં ક્યાં રેન્ક કરો છો",
+    "rank": "રેન્ક",
+    "farmer": "કૃષક",
+    "points": "પોઇન્ટ",
+    "village": "ગામ",
+    "state": "રાજ્ય",
+    "your_rank": "તમારી રેન્ક",
+    "total_farmers": "કુલ કૃષકો"
+  },
+  "rewards": {
+    "title": "ઇનામ",
+    "description": "રોમાંચક ઇનામ માટે તમારા પોઇન્ટ રિડીમ કરો",
+    "available_rewards": "ઉપલબ્ધ ઇનામ",
+    "my_rewards": "મારા ઇનામ",
+    "points_required": "જરૂરી પોઇન્ટ",
+    "redeem": "રિડીમ કરો",
+    "redeemed": "રિડીમ કર્યું",
+    "expires": "સમાપ્તિ",
+    "loading": "ઈનામો લોડ થઈ રહ્યા છે...",
+"header": {
+"back_to_dashboard": "ડેશબોર્ડ",
+"title": "ઇનામ સ્ટોર",
+"subtitle": "તમારા પોઈન્ટ્સના બદલામાં કિંમતી કૃષિ સંસાધનો મેળવો",
+"points": "{{points}} પોઈન્ટ્સ"
+},
+"stats": {
+"total_points": "કુલ પોઈન્ટ્સ",
+"available": "ઉપલબ્ધ",
+"points_spent": "ખર્ચાયેલા પોઈન્ટ્સ",
+"items_redeemed": "રિડીમ કરેલી વસ્તુઓ"
+},
+"tabs": {
+"available": "ઉપલબ્ધ ઇનામો",
+"history": "રિડેમ્પશન ઇતિહાસ"
+},
+"availability": {
+"available": "ઉપલબ્ધ",
+"limited": "મર્યાદિત સ્ટોક",
+"out_of_stock": "સ્ટોક સમાપ્ત"
+},
+"status": {
+"processing": "પ્રોસેસિંગ",
+"shipped": "મોકલી દેવામાં આવ્યું",
+"delivered": "વિતરણ થયું"
+},
+"card": {
+"delivery": "ડિલિવરી:",
+"stock": "સ્ટોક:",
+"stock_left": "{{count}} બાકી",
+"limit": "મર્યાદા:",
+"limit_per_farmer": "દર ખેડૂત દીઠ {{count}}",
+"points_label": "પોઈન્ટ્સ"
+},
+"actions": {
+"redeem_now": "હમણાં રિડીમ કરો",
+"insufficient_points": "પોઈન્ટ્સ પૂરતા નથી"
+},
+"history": {
+"redeemed": "રિડીમ તારીખ:",
+"points_used": "વપરાયેલા પોઈન્ટ્સ:",
+"tracking": "ટ્રેકિંગ:"
+},
+"empty": {
+"title": "હજુ સુધી કોઈ રિડેમ્પશન નથી",
+"subtitle": "તમારું ખેતી ટૂલકિટ બનાવવા ઇનામો રિડીમ કરવાનું શરૂ કરો!",
+"browse": "ઉપલબ્ધ ઇનામો જુઓ"
+},
+"items": {
+"premium_seeds": {
+"name": "પ્રિમિયમ બીજ વેરાયટી પેક",
+"description": "ઘઉં, ચોખા અને મકાઈ માટે ઉચ્ચ ઉપજ, દુષ્કાળ પ્રતિરોધક બીજ"
+},
+"smart_irrigation": {
+"name": "સ્માર્ટ સિંચાઈ કિટ",
+"description": "કાર્યક્ષમ પાણી વ્યવસ્થાપન માટે IoT સક્ષમ ડ્રિપ સિસ્ટમ"
+},
+"organic_fertilizer": {
+"name": "સેંકડિય ખાતર બંડલ",
+"description": "50 કિ.ગ્રા. પ્રિમિયમ ઓર્ગેનિક કોમ્પોસ્ટ અને બાયો-ફર્ટિલાઈઝર મિશ્રણ"
+},
+"farming_course": {
+"name": "એડવાન્સ્ડ ખેતી કોર્સ",
+"description": "સ્થાયી ખેતી પ્રથાઓ પર ઓનલાઇન પ્રમાણપત્ર કોર્સ"
+},
+"soil_kit": {
+"name": "માટી પરીક્ષણ કિટ",
+"description": "pH અને પોષક પરીક્ષણ સાથે પ્રોફેશનલ સોઇલ એનાલિસિસ કિટ"
+},
+"equipment_voucher": {
+"name": "કૃષિ સાધન વાઉચર",
+"description": "ટ્રેક્ટર, હાર્વેસ્ટર અને સાધનો માટે ₹2000 વાઉચર"
+},
+"weather_station": {
+"name": "હવામાન સ્ટેશન",
+"description": "એપ કનેક્ટિવિટી સાથે પોર્ટેબલ હવામાન મોનીટરિંગ સ્ટેશન"
+},
+"pest_handbook": {
+"name": "કીટ નિયંત્રણ હેન્ડબુક",
+"description": "સેંકડિય કીટ નિયંત્રણ તકનીકો પર વ્યાપક માર્ગદર્શિકા"
+}
+},
+"common": {
+"delivery_3_5": "3-5 દિવસ",
+"delivery_5_7": "5-7 દિવસ",
+"delivery_10_14": "10-14 દિવસ",
+"delivery_14_21": "14-21 દિવસ",
+"instant_access": "તાત્કાલિક પ્રવેશ",
+"instant": "તાત્કાલિક",
+"digital_download": "ડિજિટલ ડાઉનલોડ"
+}
+  },
+  "badges": {
+    "title": "બેજ",
+    "description": "તમારી ખેતીની સિદ્ધિઓ માટે બેજ મેળવો",
+    "earned": "મેળવેલ બેજ",
+    "available": "ઉપલબ્ધ બેજ",
+    "earn_badge": "બેજ મેળવો",
+    "loading": "બેજ લોડ થઈ રહ્યા છે...",
+"header": {
+"back_to_dashboard": "ડેશબોર્ડ",
+"title": "સિદ્ધિ બેજ",
+"subtitle": "પડકારો પૂર્ણ કરીને બેજ મેળવો",
+"earned_count": "{{earned}}/{{total}} મળ્યાં"
+},
+"stats": {
+"total_badges": "કુલ બેજ",
+"earned": "મળેલા",
+"points": "બેજ પોઈન્ટ્સ",
+"completion": "પૂર્ણતા"
+},
+"categories": {
+"all": "બધું",
+"achiever": "સિદ્ધિકાર",
+"expert": "નિષ્ણાત",
+"pioneer": "અગ્રણી",
+"helper": "સહાયક",
+"learner": "શીખનાર"
+},
+"sections": {
+"earned": "મળેલા બેજ",
+"in_progress": "પ્રગતિમાં"
+},
+"rarity": {
+"common": "સામાન્ય",
+"rare": "દુર્લભ",
+"epic": "એપિક",
+"legendary": "લેજેન્ડરી"
+},
+"points_short": "+{{points}} પોઈન્ટ્સ",
+"earned_on": "{{date}} એ મેળવ્યું",
+"progress": "પ્રગતિ",
+"empty": {
+"title": "આ શ્રેણીમાં બેજ નથી",
+"subtitle": "અન્ય શ્રેણીઓ તપાસો!"
+},
+"items": {
+"first_quest": { "name": "પ્રથમ ક્વેસ્ટ", "description": "તમારી પ્રથમ ખેતી ક્વેસ્ટ પૂર્ણ કરો", "req": "1 ક્વેસ્ટ પૂર્ણ કરો" },
+"quest_master": { "name": "ક્વેસ્ટ માસ્ટર", "description": "10 ખેતી ક્વેસ્ટ પૂર્ણ કરો", "req": "10 ક્વેસ્ટ પૂર્ણ કરો" },
+"water_wizard": { "name": "વોટર વિઝાર્ડ", "description": "પાણી વ્યવસ્થાપન તકનિકીઓમાં પ્રાવીણ્ય મેળવો", "req": "પાણી સંબંધિત 5 ક્વેસ્ટ પૂર્ણ કરો" },
+"sustainability_champion": { "name": "સસ્ટેનેબિલિટી ચેમ્પિયન", "description": "ઉચ્ચ સ્થિરતા સ્કોર મેળવો", "req": "30 દિવસ સુધી 80%+ સ્થિરતા જાળવો" },
+"innovation_pioneer": { "name": "ઇનોવેશન પાયોનિયર", "description": "નવા ફીચર્સ સૌથી પહેલા અજમાવો", "req": "લૉન્ચ અઠવાડિયામાં 3 નવા ફીચર્સ અજમાવો" },
+"community_helper": { "name": "સમુદાય સહાયક", "description": "અન્ય ખેડૂતોને મદદ કરો", "req": "10 વાર જ્ઞાન શેર કરો" },
+"knowledge_seeker": { "name": "નોલેજ સીકર", "description": "બધા લર્નિંગ મોડ્યુલ પૂર્ણ કરો", "req": "8 લર્નિંગ મોડ્યુલ પૂર્ણ કરો" },
+"streak_warrior": { "name": "સ્ટ્રીક વોરિયર", "description": "30-દિવસની સક્રિયતા સ્ટ્રીક જાળવો", "req": "સતત 30 દિવસ લૉગિન કરો" },
+"legendary_farmer": { "name": "લેજેન્ડરી ફાર્મર", "description": "કૃષિ શ્રેષ્ઠતાના શિખરે પહોંચો", "req": "લેવલ 10 મેળવી 5000 પોઈન્ટ્સ મેળવો" }
+}
+  },
+  "profile": {
+    "title": "પ્રોફાઇલ",
+    "personal_info": "વ્યક્તિગત માહિતી",
+    "farming_info": "ખેતીની માહિતી",
+    "statistics": "આંકડા",
+    "edit_profile": "પ્રોફાઇલ એડિટ કરો",
+    "change_password": "પાસવર્ડ બદલો",
+    "account_settings": "એકાઉન્ટ સેટિંગ્સ",
+    "joined_date": "જોડાયા",
+    "total_points": "કુલ પોઇન્ટ",
+    "quests_completed": "પૂર્ણ ક્વેસ્ટ",
+    "badges_earned": "મેળવેલ બેજ",
+    "predictions_used": "વપરાયેલ આગાહી"
+  },
+  "weather": {
+    "temperature": "તાપમાન",
+    "humidity": "આર્દ્રતા",
+    "wind_speed": "પવનની ઝડપ",
+    "pressure": "દબાણ",
+    "uv_index": "UV ઇન્ડેક્સ",
+    "visibility": "દૃશ્યતા",
+    "sunrise": "સૂર્યોદય",
+    "sunset": "સૂર્યાસ્ત",
+    "conditions": {
+      "sunny": "સૂર્યપ્રકાશ",
+      "partly_cloudy": "આંશિક વાદળી",
+      "cloudy": "વાદળી",
+      "rainy": "વરસાદ",
+      "stormy": "તોફાની",
+      "foggy": "ધુમ્મસ"
+    }
+  },
+  "crops": {
+    "rice": "ચોખા",
+    "wheat": "ઘઉં",
+    "maize": "મકાઈ",
+    "sugarcane": "ખાંડ",
+    "cotton": "કપાસ",
+    "potato": "બટાટ",
+    "tomato": "ટમેટા",
+    "onion": "ડુંગળી",
+    "chili": "મરચાં",
+    "brinjal": "રીંગણ",
+    "okra": "ભીંડા",
+    "cabbage": "કોબી",
+    "cauliflower": "ફૂલકોબી",
+    "spinach": "પાલક",
+    "coriander": "ધાણા",
+    "mint": "પુદીના",
+    "basil": "તુલસી",
+    "other": "અન્ય"
+  },
+  "states": {
+    "andhra_pradesh": "આંધ્રપ્રદેશ",
+    "arunachal_pradesh": "અરુણાચલ પ્રદેશ",
+    "assam": "આસામ",
+    "bihar": "બિહાર",
+    "chhattisgarh": "છત્તીસગઢ",
+    "goa": "ગોવા",
+    "gujarat": "ગુજરાત",
+    "haryana": "હરિયાણા",
+    "himachal_pradesh": "હિમાચલ પ્રદેશ",
+    "jharkhand": "ઝારખંડ",
+    "karnataka": "કર્ણાટક",
+    "kerala": "કેરળ",
+    "madhya_pradesh": "મધ્યપ્રદેશ",
+    "maharashtra": "મહારાષ્ટ્ર",
+    "manipur": "મણિપુર",
+    "meghalaya": "મેઘાલય",
+    "mizoram": "મિઝોરમ",
+    "nagaland": "નાગાલેન્ડ",
+    "odisha": "ઓડિશા",
+    "punjab": "પંજાબ",
+    "rajasthan": "રાજસ્થાન",
+    "sikkim": "સિક્કિમ",
+    "tamil_nadu": "તમિલનાડુ",
+    "telangana": "તેલંગાણા",
+    "tripura": "ત્રિપુરા",
+    "uttar_pradesh": "ઉત્તરપ્રદેશ",
+    "uttarakhand": "ઉત્તરાખંડ",
+    "west_bengal": "પશ્ચિમ બંગાળ"
+  },
+  "languages": {
+    "english": "English",
+    "hindi": "हिन्दी",
+    "telugu": "తెలుగు",
+    "tamil": "தமிழ்",
+    "bengali": "বাংলা",
+    "gujarati": "ગુજરાતી",
+    "marathi": "मराठी",
+    "kannada": "ಕನ್ನಡ",
+    "malayalam": "മലയാളം",
+    "punjabi": "ਪੰਜਾਬੀ",
+    "odia": "ଓଡ଼ିଆ",
+    "assamese": "অসমীয়া"
+  },
+  "register": {
+      "hero": {
+        "alt": "સુંદર ભારતીય ખેતર દૃશ્ય",
+        "title": "ખેતિબંધુમાં જોડાઓ",
+        "subtitle": "તમારી ડિજિટલ ખેતી યાત્રા શરૂ કરો",
+        "tagline": "અનુમાન મેળવો, પડકારો પૂર્ણ કરો અને સમુદાય સાથે વધો"
+      },
+      "form": {
+        "title": "ખેડૂત નોંધણી",
+        "description": "કૃષિ સહાય માટે તમારું એકાઉન્ટ બનાવો"
+      },
+      "toast": {
+        "error_title": "નોંધણી નિષ્ફળ",
+        "success_title": "સફળતા!",
+        "success_message": "એકાઉન્ટ સફળતાપૂર્વક બનાવાયું! ખેતિબંધુમાં સ્વાગત છે!",
+        "error_fallback": "નોંધણી નિષ્ફળ ગઈ"
+      },
+      "fields": {
+        "name": { "label": "પૂરું નામ", "placeholder": "તમારું પૂરું નામ" },
+        "username": { "label": "વપરાશકર્તા નામ", "placeholder": "વપરાશકર્તા નામ પસંદ કરો" },
+        "email": { "label": "ઇમેઇલ સરનામું", "placeholder": "your.email@example.com" },
+        "password": { "label": "પાસવર્ડ", "placeholder": "મજબૂત પાસવર્ડ બનાવો" },
+        "pm_kisan_id": { 
+          "label": "PM-કિસાન આઈડી", 
+          "placeholder": "PMK1234567890",
+          "helper": "'PMK' થી શરૂ થવું જોઈએ અને 10+ અક્ષરો હોવા જોઈએ"
+        },
+        "village": { "label": "ગામ", "placeholder": "તમારા ગામનું નામ" },
+        "crops": { 
+          "label": "ઉગાડેલ પાક", 
+          "placeholder": "ચોખા, ઘઉં, મકાઈ",
+          "helper": "અલ્પવિરામથી અલગ કરો"
+        },
+        "phone": { "label": "ફોન નંબર", "placeholder": "+91 9876543210" }
+      },
+      "cta": {
+        "create_account": "એકાઉન્ટ બનાવો",
+        "creating_account": "એકાઉન્ટ બનાવાઈ રહ્યું છે..."
+      },
+      "have_account": "પહેલેથી એકાઉન્ટ છે?",
+      "sign_in_here": "અહીં સાઇન ઇન કરો"
+    },
+    "login": {
+        "brand": "ખેતિબંધુ",
+        "hero": {
+          "alt": "સુંદર ભારતીય ખેતર દૃશ્ય",
+          "subtitle": "તમારો ડિજિટલ ખેતી સહાયક",
+          "tagline": "સ્માર્ટ કૃષિ સોલ્યુશન્સથી ખેડૂતોને સશક્ત બનાવવું"
+        },
+        "form": {
+          "title": "ખેડૂત લોગિન",
+          "description": "તમારા ખેતી ડેશબોર્ડમાં પ્રવેશ કરવા સાઇન ઇન કરો"
+        },
+        "fields": {
+          "username": { "label": "વપરાશકર્તા નામ", "placeholder": "તમારું વપરાશકર્તા નામ દાખલ કરો" },
+          "password": { "label": "પાસવર્ડ", "placeholder": "તમારો પાસવર્ડ દાખલ કરો" }
+        },
+        "cta": { "sign_in": "સાઇન ઇન", "signing_in": "સાઇન ઇન થઈ રહ્યું છે..." },
+        "new_farmer": "નવા ખેડૂત?",
+        "create_account": "એકાઉન્ટ બનાવો",
+        "toast": {
+          "error_title": "લોગિન નિષ્ફળ",
+          "error_fallback": "લોગિન નિષ્ફળ ગયું"
+        }
+      }
+    }
+

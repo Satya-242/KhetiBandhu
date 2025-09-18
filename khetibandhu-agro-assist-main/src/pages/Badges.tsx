@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Navigate, useNavigate } from 'react-router-dom';
 import { useAuth } from '@/context/AuthContext';
+import { useTranslation } from '@/hooks/useTranslation';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
@@ -43,6 +44,7 @@ interface BadgeStats {
 
 const Badges: React.FC = () => {
   const { isAuthenticated, user, isLoading: authLoading } = useAuth();
+  const { t } = useTranslation();
   const [badges, setBadges] = useState<BadgeData[]>([]);
   const [stats, setStats] = useState<BadgeStats | null>(null);
   const [isLoading, setIsLoading] = useState(true);
@@ -58,18 +60,17 @@ const Badges: React.FC = () => {
       if (!user?.id) return;
 
       try {
-        // Mock data - replace with actual API call
         const mockBadges: BadgeData[] = [
           {
             id: '1',
-            name: 'First Quest',
-            description: 'Complete your first farming quest',
+            name: t('badges.items.first_quest.name'),
+            description: t('badges.items.first_quest.description'),
             category: 'achiever',
             icon: 'target',
             earned: true,
             earned_date: '2024-09-10T10:30:00Z',
             requirements: {
-              description: 'Complete 1 quest',
+              description: t('badges.items.first_quest.req'),
               progress: 1,
               target: 1
             },
@@ -78,14 +79,14 @@ const Badges: React.FC = () => {
           },
           {
             id: '2',
-            name: 'Quest Master',
-            description: 'Complete 10 farming quests',
+            name: t('badges.items.quest_master.name'),
+            description: t('badges.items.quest_master.description'),
             category: 'achiever',
             icon: 'trophy',
             earned: true,
             earned_date: '2024-09-12T14:20:00Z',
             requirements: {
-              description: 'Complete 10 quests',
+              description: t('badges.items.quest_master.req'),
               progress: 10,
               target: 10
             },
@@ -94,13 +95,13 @@ const Badges: React.FC = () => {
           },
           {
             id: '3',
-            name: 'Water Wizard',
-            description: 'Master water management techniques',
+            name: t('badges.items.water_wizard.name'),
+            description: t('badges.items.water_wizard.description'),
             category: 'expert',
             icon: 'droplets',
             earned: false,
             requirements: {
-              description: 'Complete 5 water-related quests',
+              description: t('badges.items.water_wizard.req'),
               progress: 3,
               target: 5
             },
@@ -109,14 +110,14 @@ const Badges: React.FC = () => {
           },
           {
             id: '4',
-            name: 'Sustainability Champion',
-            description: 'Achieve high sustainability scores',
+            name: t('badges.items.sustainability_champion.name'),
+            description: t('badges.items.sustainability_champion.description'),
             category: 'expert',
             icon: 'leaf',
             earned: true,
             earned_date: '2024-09-14T09:15:00Z',
             requirements: {
-              description: 'Maintain 80%+ sustainability for 30 days',
+              description: t('badges.items.sustainability_champion.req'),
               progress: 30,
               target: 30
             },
@@ -125,13 +126,13 @@ const Badges: React.FC = () => {
           },
           {
             id: '5',
-            name: 'Innovation Pioneer',
-            description: 'Be among the first to try new features',
+            name: t('badges.items.innovation_pioneer.name'),
+            description: t('badges.items.innovation_pioneer.description'),
             category: 'pioneer',
             icon: 'zap',
             earned: false,
             requirements: {
-              description: 'Try 3 new features within launch week',
+              description: t('badges.items.innovation_pioneer.req'),
               progress: 1,
               target: 3
             },
@@ -140,13 +141,13 @@ const Badges: React.FC = () => {
           },
           {
             id: '6',
-            name: 'Community Helper',
-            description: 'Help fellow farmers succeed',
+            name: t('badges.items.community_helper.name'),
+            description: t('badges.items.community_helper.description'),
             category: 'helper',
             icon: 'users',
             earned: false,
             requirements: {
-              description: 'Share knowledge 10 times',
+              description: t('badges.items.community_helper.req'),
               progress: 4,
               target: 10
             },
@@ -155,13 +156,13 @@ const Badges: React.FC = () => {
           },
           {
             id: '7',
-            name: 'Knowledge Seeker',
-            description: 'Complete all learning modules',
+            name: t('badges.items.knowledge_seeker.name'),
+            description: t('badges.items.knowledge_seeker.description'),
             category: 'learner',
             icon: 'star',
             earned: false,
             requirements: {
-              description: 'Complete 8 learning modules',
+              description: t('badges.items.knowledge_seeker.req'),
               progress: 5,
               target: 8
             },
@@ -170,13 +171,13 @@ const Badges: React.FC = () => {
           },
           {
             id: '8',
-            name: 'Streak Warrior',
-            description: 'Maintain a 30-day activity streak',
+            name: t('badges.items.streak_warrior.name'),
+            description: t('badges.items.streak_warrior.description'),
             category: 'achiever',
             icon: 'clock',
             earned: false,
             requirements: {
-              description: 'Login for 30 consecutive days',
+              description: t('badges.items.streak_warrior.req'),
               progress: 18,
               target: 30
             },
@@ -185,13 +186,13 @@ const Badges: React.FC = () => {
           },
           {
             id: '9',
-            name: 'Legendary Farmer',
-            description: 'Reach the pinnacle of farming excellence',
+            name: t('badges.items.legendary_farmer.name'),
+            description: t('badges.items.legendary_farmer.description'),
             category: 'expert',
             icon: 'crown',
             earned: false,
             requirements: {
-              description: 'Reach level 10 and earn 5000 points',
+              description: t('badges.items.legendary_farmer.req'),
               progress: 2850,
               target: 5000
             },
@@ -206,7 +207,7 @@ const Badges: React.FC = () => {
           points_from_badges: 650,
           completion_rate: 33.3,
           latest_badge: {
-            name: 'Sustainability Champion',
+            name: t('badges.items.sustainability_champion.name'),
             earned_date: '2024-09-14T09:15:00Z'
           }
         };
@@ -223,7 +224,7 @@ const Badges: React.FC = () => {
     };
 
     fetchBadges();
-  }, [user]);
+  }, [user, t]);
 
   const getIconComponent = (iconName: string) => {
     const icons: { [key: string]: React.ComponentType<{ className?: string }> } = {
@@ -252,10 +253,10 @@ const Badges: React.FC = () => {
 
   const getRarityBadge = (rarity: BadgeData['rarity']) => {
     const variants = {
-      common: { variant: 'secondary' as const, text: 'Common' },
-      rare: { variant: 'default' as const, text: 'Rare' },
-      epic: { variant: 'outline' as const, text: 'Epic' },
-      legendary: { variant: 'destructive' as const, text: 'Legendary' }
+      common: { variant: 'secondary' as const, text: t('badges.rarity.common') },
+      rare: { variant: 'default' as const, text: t('badges.rarity.rare') },
+      epic: { variant: 'outline' as const, text: t('badges.rarity.epic') },
+      legendary: { variant: 'destructive' as const, text: t('badges.rarity.legendary') }
     };
     return variants[rarity];
   };
@@ -270,7 +271,7 @@ const Badges: React.FC = () => {
   if (authLoading || isLoading) {
     return (
       <div className="min-h-screen flex items-center justify-center">
-        <LoadingSpinner size="lg" text="Loading badges..." />
+        <LoadingSpinner size="lg" text={t('badges.loading')} />
       </div>
     );
   }
@@ -289,17 +290,19 @@ const Badges: React.FC = () => {
                 className="gap-2"
               >
                 <ArrowLeft className="h-4 w-4" />
-                Dashboard
+                {t('badges.header.back_to_dashboard')}
               </Button>
               <div className="h-6 w-px bg-border" />
               <div>
-                <h1 className="text-2xl font-bold font-heading">Achievement Badges</h1>
-                <p className="text-sm text-muted-foreground">Earn badges by completing challenges</p>
+                <h1 className="text-2xl font-bold font-heading">{t('badges.header.title')}</h1>
+                <p className="text-sm text-muted-foreground">{t('badges.header.subtitle')}</p>
               </div>
             </div>
             <div className="flex items-center gap-2 bg-primary/10 px-3 py-2 rounded-lg">
               <Award className="h-4 w-4 text-primary" />
-              <span className="font-semibold text-primary">{stats?.earned_badges}/{stats?.total_badges} Earned</span>
+              <span className="font-semibold text-primary">
+                {t('badges.header.earned_count', { earned: stats?.earned_badges || 0, total: stats?.total_badges || 0 })}
+              </span>
             </div>
           </div>
         </div>
@@ -312,7 +315,7 @@ const Badges: React.FC = () => {
             <CardContent className="p-6">
               <div className="flex items-center gap-2 mb-2">
                 <Trophy className="h-5 w-5 text-primary" />
-                <span className="text-sm font-medium text-muted-foreground">Total Badges</span>
+                <span className="text-sm font-medium text-muted-foreground">{t('badges.stats.total_badges')}</span>
               </div>
               <p className="text-3xl font-bold">{stats?.total_badges}</p>
             </CardContent>
@@ -322,7 +325,7 @@ const Badges: React.FC = () => {
             <CardContent className="p-6">
               <div className="flex items-center gap-2 mb-2">
                 <CheckCircle className="h-5 w-5 text-emerald-600" />
-                <span className="text-sm font-medium text-muted-foreground">Earned</span>
+                <span className="text-sm font-medium text-muted-foreground">{t('badges.stats.earned')}</span>
               </div>
               <p className="text-3xl font-bold text-emerald-600">{stats?.earned_badges}</p>
             </CardContent>
@@ -332,7 +335,7 @@ const Badges: React.FC = () => {
             <CardContent className="p-6">
               <div className="flex items-center gap-2 mb-2">
                 <Star className="h-5 w-5 text-primary" />
-                <span className="text-sm font-medium text-muted-foreground">Badge Points</span>
+                <span className="text-sm font-medium text-muted-foreground">{t('badges.stats.points')}</span>
               </div>
               <p className="text-3xl font-bold text-primary">{stats?.points_from_badges}</p>
             </CardContent>
@@ -342,7 +345,7 @@ const Badges: React.FC = () => {
             <CardContent className="p-6">
               <div className="flex items-center gap-2 mb-2">
                 <TrendingUp className="h-5 w-5 text-primary" />
-                <span className="text-sm font-medium text-muted-foreground">Completion</span>
+                <span className="text-sm font-medium text-muted-foreground">{t('badges.stats.completion')}</span>
               </div>
               <p className="text-3xl font-bold">{stats?.completion_rate.toFixed(1)}%</p>
             </CardContent>
@@ -358,8 +361,10 @@ const Badges: React.FC = () => {
                   <Award className="h-8 w-8 text-primary" />
                 </div>
                 <div className="flex-1">
-                  <h3 className="font-bold text-lg">Latest Achievement</h3>
-                  <p className="text-muted-foreground">You earned "{stats.latest_badge.name}"</p>
+                  <h3 className="font-bold text-lg">{t('badges.latest.title')}</h3>
+                  <p className="text-muted-foreground">
+                    {t('badges.latest.subtitle', { name: stats.latest_badge.name })}
+                  </p>
                   <p className="text-sm text-muted-foreground flex items-center gap-1 mt-1">
                     <Calendar className="h-3 w-3" />
                     {new Date(stats.latest_badge.earned_date).toLocaleDateString()}
@@ -373,19 +378,19 @@ const Badges: React.FC = () => {
         {/* Badge Categories */}
         <Tabs value={activeCategory} onValueChange={setActiveCategory}>
           <TabsList className="grid w-full grid-cols-6">
-            <TabsTrigger value="all">All</TabsTrigger>
-            <TabsTrigger value="achiever">Achiever</TabsTrigger>
-            <TabsTrigger value="expert">Expert</TabsTrigger>
-            <TabsTrigger value="pioneer">Pioneer</TabsTrigger>
-            <TabsTrigger value="helper">Helper</TabsTrigger>
-            <TabsTrigger value="learner">Learner</TabsTrigger>
+            <TabsTrigger value="all">{t('badges.categories.all')}</TabsTrigger>
+            <TabsTrigger value="achiever">{t('badges.categories.achiever')}</TabsTrigger>
+            <TabsTrigger value="expert">{t('badges.categories.expert')}</TabsTrigger>
+            <TabsTrigger value="pioneer">{t('badges.categories.pioneer')}</TabsTrigger>
+            <TabsTrigger value="helper">{t('badges.categories.helper')}</TabsTrigger>
+            <TabsTrigger value="learner">{t('badges.categories.learner')}</TabsTrigger>
           </TabsList>
 
           <TabsContent value={activeCategory} className="space-y-6">
             {/* Earned Badges */}
             {earnedBadges.length > 0 && (
               <div className="space-y-4">
-                <h2 className="text-xl font-bold font-heading text-emerald-600">🏆 Earned Badges</h2>
+                <h2 className="text-xl font-bold font-heading text-emerald-600">🏆 {t('badges.sections.earned')}</h2>
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                   {earnedBadges.map((badge) => {
                     const IconComponent = getIconComponent(badge.icon);
@@ -409,7 +414,7 @@ const Badges: React.FC = () => {
                                   {rarityBadge.text}
                                 </Badge>
                                 <span className="text-xs text-primary font-semibold">
-                                  +{badge.points_reward} pts
+                                  {t('badges.points_short', { points: badge.points_reward })}
                                 </span>
                               </div>
                             </div>
@@ -422,7 +427,7 @@ const Badges: React.FC = () => {
                           {badge.earned_date && (
                             <div className="text-xs text-emerald-600 font-medium flex items-center gap-1">
                               <Calendar className="h-3 w-3" />
-                              Earned {new Date(badge.earned_date).toLocaleDateString()}
+                              {t('badges.earned_on', { date: new Date(badge.earned_date).toLocaleDateString() })}
                             </div>
                           )}
                         </CardContent>
@@ -436,7 +441,7 @@ const Badges: React.FC = () => {
             {/* Progress Badges */}
             {unearnedBadges.length > 0 && (
               <div className="space-y-4">
-                <h2 className="text-xl font-bold font-heading text-muted-foreground">🎯 In Progress</h2>
+                <h2 className="text-xl font-bold font-heading text-muted-foreground">🎯 {t('badges.sections.in_progress')}</h2>
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                   {unearnedBadges.map((badge) => {
                     const IconComponent = getIconComponent(badge.icon);
@@ -461,7 +466,7 @@ const Badges: React.FC = () => {
                                   {rarityBadge.text}
                                 </Badge>
                                 <span className="text-xs text-muted-foreground">
-                                  +{badge.points_reward} pts
+                                  {t('badges.points_short', { points: badge.points_reward })}
                                 </span>
                               </div>
                             </div>
@@ -473,7 +478,7 @@ const Badges: React.FC = () => {
                           
                           <div className="space-y-2">
                             <div className="flex justify-between text-sm">
-                              <span className="text-muted-foreground">Progress</span>
+                              <span className="text-muted-foreground">{t('badges.progress')}</span>
                               <span className="font-semibold">
                                 {badge.requirements.progress}/{badge.requirements.target}
                               </span>
@@ -494,8 +499,8 @@ const Badges: React.FC = () => {
             {filteredBadges.length === 0 && (
               <div className="text-center py-12">
                 <Award className="h-12 w-12 text-muted-foreground mx-auto mb-4" />
-                <h3 className="text-lg font-semibold mb-2">No badges in this category</h3>
-                <p className="text-muted-foreground">Try exploring other categories!</p>
+                <h3 className="text-lg font-semibold mb-2">{t('badges.empty.title')}</h3>
+                <p className="text-muted-foreground">{t('badges.empty.subtitle')}</p>
               </div>
             )}
           </TabsContent>

@@ -1,0 +1,636 @@
+{
+  "common": {
+    "loading": "Loading...",
+    "error": "Error",
+    "success": "Success",
+    "cancel": "Cancel",
+    "save": "Save",
+    "edit": "Edit",
+    "delete": "Delete",
+    "view": "View",
+    "back": "Back",
+    "next": "Next",
+    "previous": "Previous",
+    "submit": "Submit",
+    "close": "Close",
+    "yes": "Yes",
+    "no": "No",
+    "ok": "OK",
+    "farmers": "farmers",
+    "language_switcher": "Language Switcher",
+    "select_language": "Select Language"
+  },
+  "navigation": {
+    "dashboard": "Dashboard",
+    "quests": "Quests",
+    "predictions": "Predictions",
+    "leaderboard": "Leaderboard",
+    "rewards": "Rewards",
+    "badges": "Badges",
+    "profile": "Profile",
+    "login": "Login",
+    "register": "Register",
+    "logout": "Logout"
+  },
+    "dashboard": {
+      "loading_dashboard": "Loading dashboard...",
+      "stats": {
+        "total_points": "Total Points",
+        "keep_growing": "Keep growing!",
+        "active_quests": "Active Quests",
+        "available": "available",
+        "leaderboard_rank": "Leaderboard Rank",
+        "farmers_count": "of {{count}} farmers",
+        "prediction_confidence": "Prediction Confidence",
+        "latest_crop_prediction": "Latest crop prediction"
+      },
+      "cards": {
+        "my_quests": "My Quests",
+        "quests_description": "Track your farming challenges and achievements",
+        "active_quests": "Active quests",
+        "completed": "Completed",
+        "available": "Available",
+        "view_all": "View All",
+        "crop_predictions": "Crop Predictions",
+        "predictions_description": "AI-powered yield and sustainability insights"
+      },
+      "predictions": {
+        "latest_prediction": "Latest Prediction",
+        "latest_prediction_text": "+15% yield increase expected",
+        "confidence": "Confidence",
+        "view_detailed": "View Detailed Predictions"
+      },
+      "weather": {
+        "todays_weather": "Today's Weather",
+        "location_conditions": "{{location}} weather conditions",
+        "your_location": "Your location",
+        "humidity": "Humidity",
+        "wind": "Wind",
+        "wind_light": "Light",
+        "forecast_7_day": "7-Day Forecast"
+      },
+      "quick_actions": {
+        "title": "Quick Actions",
+        "start_new_quest": "Start New Quest",
+        "view_predictions": "View Predictions",
+        "check_rewards": "Check Rewards",
+        "view_leaderboard": "View Leaderboard"
+      },
+      "activity": {
+        "recent_activity": "Recent Activity",
+        "description": "Your latest farming achievements",
+        "quest_completed_water_management": "Completed \"Water Management Optimization\"",
+        "prediction_received_rice": "New Rice yield prediction available",
+        "badge_earned_efficiency": "Earned \"Efficiency Expert\" badge",
+        "time_hours_ago": "{{count}} hours ago",
+        "time_days_ago": "{{count}} day ago"
+      }
+    },
+  "auth": {
+    "login": {
+      "title": "Welcome Back",
+      "subtitle": "Sign in to your KhetiBandhu account",
+      "email": "Email",
+      "password": "Password",
+      "remember_me": "Remember me",
+      "forgot_password": "Forgot password?",
+      "sign_in": "Sign In",
+      "no_account": "Don't have an account?",
+      "sign_up": "Sign up"
+    },
+    "register": {
+      "title": "Create Account",
+      "subtitle": "Join KhetiBandhu and start your farming journey",
+      "full_name": "Full Name",
+      "email": "Email",
+      "password": "Password",
+      "confirm_password": "Confirm Password",
+      "village": "Village",
+      "state": "State",
+      "crop_type": "Crop Type",
+      "create_account": "Create Account",
+      "have_account": "Already have an account?",
+      "sign_in": "Sign in"
+    }
+  },
+  "quests": {
+    "title": "Quests",
+    "description": "Complete farming missions to earn points and rewards",
+    "active": "Active Quests",
+    "completed": "Completed Quests",
+    "available": "Available Quests",
+    "start_quest": "Start Quest",
+    "complete_quest": "Complete Quest",
+    "view_details": "View Details",
+    "points": "points",
+    "difficulty": "Difficulty",
+    "easy": "Easy",
+    "medium": "Medium",
+    "hard": "Hard",
+    "duration": "Duration",
+    "days": "days",
+        "loading": "Loading quests...",
+        "header": {
+          "back_to_dashboard": "Dashboard",
+          "title": "Farming Quests",
+          "subtitle": "Complete challenges and earn rewards",
+          "points": "{{points}} Points"
+        },
+        "filters": {
+          "search_placeholder": "Search quests by title or crop...",
+          "filter_by_status": "Filter by status",
+          "all_quests": "All Quests"
+        },
+        "status": {
+          "available": "Available",
+          "in_progress": "In Progress",
+          "completed": "Completed"
+        },
+        "card": {
+          "level": "Level {{level}}",
+          "duration_days": "{{days}} days",
+          "reward_points": "{{points}} points",
+          "progress": "Progress",
+          "deadline": "Deadline: {{date}}"
+        },
+        "actions": {
+          "start_quest": "Start Quest",
+          "view_progress": "View Progress"
+        },
+        "empty": {
+          "title": "No quests found",
+          "adjust_filters": "Try adjusting your search or filter criteria",
+          "check_back": "Check back soon for new farming challenges!",
+          "clear_filters": "Clear Filters"
+        },
+        "items": {
+          "water_usage_optimization": {
+            "title": "Water Usage Optimization",
+            "description": "Implement smart irrigation techniques to reduce water consumption by 20%"
+          },
+          "organic_fertilizer_adoption": {
+            "title": "Organic Fertilizer Adoption",
+            "description": "Switch to organic fertilizers and document the impact on soil health"
+          },
+          "crop_rotation_planning": {
+            "title": "Crop Rotation Planning",
+            "description": "Design and implement a 4-season crop rotation plan"
+          },
+          "pest_management_survey": {
+            "title": "Pest Management Survey",
+            "description": "Complete detailed pest monitoring and submit weekly reports"
+          },
+          "sustainable_harvesting": {
+            "title": "Sustainable Harvesting",
+            "description": "Implement eco-friendly harvesting methods and measure efficiency"
+          }
+        }
+      },
+  "predictions": {
+    "title": "Crop Predictions",
+    "description": "AI-powered insights for your farming decisions",
+    "yield_prediction": "Yield Prediction",
+    "weather_forecast": "Weather Forecast",
+    "disease_risk": "Disease Risk",
+    "pest_alert": "Pest Alert",
+    "soil_analysis": "Soil Analysis",
+    "irrigation_advice": "Irrigation Advice",
+    "fertilizer_recommendation": "Fertilizer Recommendation",
+    "planting_time": "Planting Time",
+    "harvest_time": "Harvest Time",
+    "confidence": "Confidence",
+    "high": "High",
+    "medium": "Medium",
+    "low": "Low"
+  },
+  "leaderboard": {
+    "title": "Leaderboard",
+    "description": "See how you rank among other farmers",
+    "rank": "Rank",
+    "farmer": "Farmer",
+    "points": "Points",
+    "village": "Village",
+    "state": "State",
+    "your_rank": "Your Rank",
+    "total_farmers": "Total Farmers"
+  },
+  "badges": {
+    "title": "Badges",
+    "description": "Earn badges for your farming achievements",
+    "earned": "Earned Badges",
+    "available": "Available Badges",
+    "earn_badge": "Earn Badge",
+    "loading": "Loading badges...",
+"header": {
+"back_to_dashboard": "Dashboard",
+"title": "Achievement Badges",
+"subtitle": "Earn badges by completing challenges",
+"earned_count": "{{earned}}/{{total}} Earned"
+},
+"stats": {
+"total_badges": "Total Badges",
+"earned": "Earned",
+"points": "Badge Points",
+"completion": "Completion"
+},
+
+"categories": {
+"all": "All",
+"achiever": "Achiever",
+"expert": "Expert",
+"pioneer": "Pioneer",
+"helper": "Helper",
+"learner": "Learner"
+},
+"sections": {
+"earned": "Earned Badges",
+"in_progress": "In Progress"
+},
+"rarity": {
+"common": "Common",
+"rare": "Rare",
+"epic": "Epic",
+"legendary": "Legendary"
+},
+"points_short": "+{{points}} pts",
+"earned_on": "Earned {{date}}",
+"progress": "Progress",
+"empty": {
+"title": "No badges in this category",
+"subtitle": "Try exploring other categories!"
+},
+"items": {
+"first_quest": {
+"name": "First Quest",
+"description": "Complete your first farming quest",
+"req": "Complete 1 quest"
+},
+"quest_master": {
+"name": "Quest Master",
+"description": "Complete 10 farming quests",
+"req": "Complete 10 quests"
+},
+"water_wizard": {
+"name": "Water Wizard",
+"description": "Master water management techniques",
+"req": "Complete 5 water-related quests"
+},
+"sustainability_champion": {
+"name": "Sustainability Champion",
+"description": "Achieve high sustainability scores",
+"req": "Maintain 80%+ sustainability for 30 days"
+},
+"innovation_pioneer": {
+"name": "Innovation Pioneer",
+"description": "Be among the first to try new features",
+"req": "Try 3 new features within launch week"
+},
+"community_helper": {
+"name": "Community Helper",
+"description": "Help fellow farmers succeed",
+"req": "Share knowledge 10 times"
+},
+"knowledge_seeker": {
+"name": "Knowledge Seeker",
+"description": "Complete all learning modules",
+"req": "Complete 8 learning modules"
+},
+"streak_warrior": {
+"name": "Streak Warrior",
+"description": "Maintain a 30-day activity streak",
+"req": "Login for 30 consecutive days"
+},
+"legendary_farmer": {
+"name": "Legendary Farmer",
+"description": "Reach the pinnacle of farming excellence",
+"req": "Reach level 10 and earn 5000 points"
+}
+}
+  },
+  "profile": {
+    "title": "Profile",
+    "personal_info": "Personal Information",
+    "farming_info": "Farming Information",
+    "statistics": "Statistics",
+    "edit_profile": "Edit Profile",
+    "change_password": "Change Password",
+    "account_settings": "Account Settings",
+    "joined_date": "Joined",
+    "total_points": "Total Points",
+    "quests_completed": "Quests Completed",
+    "badges_earned": "Badges Earned",
+    "predictions_used": "Predictions Used"
+  },
+  "weather": {
+    "temperature": "Temperature",
+    "humidity": "Humidity",
+    "wind_speed": "Wind Speed",
+    "pressure": "Pressure",
+    "uv_index": "UV Index",
+    "visibility": "Visibility",
+    "sunrise": "Sunrise",
+    "sunset": "Sunset",
+    "conditions": {
+      "sunny": "Sunny",
+      "partly_cloudy": "Partly Cloudy",
+      "cloudy": "Cloudy",
+      "rainy": "Rainy",
+      "stormy": "Stormy",
+      "foggy": "Foggy"
+    }
+  },
+  "crops": {
+    "rice": "Rice",
+    "wheat": "Wheat",
+    "maize": "Maize",
+    "sugarcane": "Sugarcane",
+    "cotton": "Cotton",
+    "potato": "Potato",
+    "tomato": "Tomato",
+    "onion": "Onion",
+    "chili": "Chili",
+    "brinjal": "Brinjal",
+    "okra": "Okra",
+    "cabbage": "Cabbage",
+    "cauliflower": "Cauliflower",
+    "spinach": "Spinach",
+    "coriander": "Coriander",
+    "mint": "Mint",
+    "basil": "Basil",
+    "other": "Other"
+  },
+  "states": {
+    "andhra_pradesh": "Andhra Pradesh",
+    "arunachal_pradesh": "Arunachal Pradesh",
+    "assam": "Assam",
+    "bihar": "Bihar",
+    "chhattisgarh": "Chhattisgarh",
+    "goa": "Goa",
+    "gujarat": "Gujarat",
+    "haryana": "Haryana",
+    "himachal_pradesh": "Himachal Pradesh",
+    "jharkhand": "Jharkhand",
+    "karnataka": "Karnataka",
+    "kerala": "Kerala",
+    "madhya_pradesh": "Madhya Pradesh",
+    "maharashtra": "Maharashtra",
+    "manipur": "Manipur",
+    "meghalaya": "Meghalaya",
+    "mizoram": "Mizoram",
+    "nagaland": "Nagaland",
+    "odisha": "Odisha",
+    "punjab": "Punjab",
+    "rajasthan": "Rajasthan",
+    "sikkim": "Sikkim",
+    "tamil_nadu": "Tamil Nadu",
+    "telangana": "Telangana",
+    "tripura": "Tripura",
+    "uttar_pradesh": "Uttar Pradesh",
+    "uttarakhand": "Uttarakhand",
+    "west_bengal": "West Bengal"
+  },
+  "languages": {
+    "english": "English",
+    "hindi": "हिन्दी",
+    "telugu": "తెలుగు",
+    "tamil": "தமிழ்",
+    "bengali": "বাংলা",
+    "gujarati": "ગુજરાતી",
+    "marathi": "मराठी",
+    "kannada": "ಕನ್ನಡ",
+    "malayalam": "മലയാളം",
+    "punjabi": "ਪੰਜਾਬੀ",
+    "odia": "ଓଡ଼ିଆ",
+    "assamese": "অসমীয়া"
+  },
+  "register": {
+      "hero": {
+        "alt": "Beautiful Indian farm landscape",
+        "title": "Join KhetiBandhu",
+        "subtitle": "Start Your Digital Farming Journey",
+        "tagline": "Get predictions, complete quests, and grow with the community"
+      },
+      "form": {
+        "title": "Farmer Registration",
+        "description": "Create your account to access farming assistance"
+      },
+      "toast": {
+        "error_title": "Registration Failed",
+        "success_title": "Success!",
+        "success_message": "Account created successfully! Welcome to KhetiBandhu!",
+        "error_fallback": "Registration failed"
+      },
+      "fields": {
+        "name": { "label": "Full Name", "placeholder": "Your full name" },
+        "username": { "label": "Username", "placeholder": "Choose username" },
+        "email": { "label": "Email Address", "placeholder": "your.email@example.com" },
+        "password": { "label": "Password", "placeholder": "Create strong password" },
+        "pm_kisan_id": { 
+          "label": "PM-Kisan ID", 
+          "placeholder": "PMK1234567890",
+          "helper": "Must start with 'PMK' and be 10+ characters"
+        },
+        "village": { "label": "Village", "placeholder": "Your village name" },
+        "crops": { 
+          "label": "Crops Grown", 
+          "placeholder": "Rice, Wheat, Corn",
+          "helper": "Separate with commas"
+        },
+        "phone": { "label": "Phone Number", "placeholder": "+91 9876543210" }
+      },
+      "cta": {
+        "create_account": "Create Account",
+        "creating_account": "Creating account..."
+      },
+      "have_account": "Already have an account?",
+      "sign_in_here": "Sign in here"
+    },
+    "login": {
+        "brand": "KhetiBandhu",
+        "hero": {
+          "alt": "Beautiful Indian farm landscape",
+          "subtitle": "Your Digital Farming Assistant",
+          "tagline": "Empowering farmers with smart agriculture solutions"
+        },
+        "form": {
+          "title": "Farmer Login",
+          "description": "Sign in to access your farming dashboard"
+        },
+        "fields": {
+          "username": { "label": "Username", "placeholder": "Enter your username" },
+          "password": { "label": "Password", "placeholder": "Enter your password" }
+        },
+        "cta": { "sign_in": "Sign In", "signing_in": "Signing in..." },
+        "new_farmer": "New farmer?",
+        "create_account": "Create an account",
+        "toast": {
+          "error_title": "Login Failed",
+          "error_fallback": "Login failed"
+        }
+      },
+        "landing": {
+          "brand": "KhetiBandhu",
+          "nav": { "sign_in": "Sign In", "get_started": "Get Started" },
+          "hero": {
+            "alt": "Modern farming landscape",
+            "tagline": "Your Digital Farming Assistant — empowering Indian farmers with AI-powered insights, gamified learning, and community support.",
+            "cta_start": "Start Your Journey"
+          },
+          "features": {
+            "title": "Revolutionizing Indian Agriculture",
+            "subtitle": "Discover how KhetiBandhu blends traditional wisdom with modern tech to grow better crops and build a sustainable future.",
+            "smart_quests": {
+              "title": "Smart Quests",
+              "description": "Complete farming missions and earn points while improving your agricultural practices."
+            },
+            "ai_predictions": {
+              "title": "AI Predictions",
+              "description": "Get accurate crop yield predictions powered by machine learning and weather data."
+            },
+            "gamification": {
+              "title": "Gamification",
+              "description": "Earn badges, climb leaderboards, and unlock rewards for your farming achievements."
+            },
+            "community": {
+              "title": "Community",
+              "description": "Connect with fellow farmers and learn from the agricultural community."
+            }
+          },
+          "benefits": {
+            "title": "Why Choose KhetiBandhu?",
+            "subtitle": "Join thousands of Indian farmers already transforming their practices with our innovative platform.",
+            "ai_yield": "Increase crop yields with AI-powered insights",
+            "sustainable_practices": "Learn sustainable farming practices",
+            "community_connect": "Connect with farming community",
+            "earn_rewards": "Earn rewards for good practices",
+            "weather_access": "Access weather forecasts and alerts",
+            "track_progress": "Track your farming progress"
+          },
+          "stats": {
+            "active_farmers": "10,000+",
+            "active_farmers_label": "Active Farmers",
+            "yield_improvement": { "value": "85%", "label": "Yield Improvement" },
+            "user_satisfaction": { "value": "92%", "label": "User Satisfaction" }
+          },
+          "cta": {
+            "title": "Ready to Transform Your Farming?",
+            "subtitle": "Join KhetiBandhu today and start your journey towards smarter, more sustainable agriculture.",
+            "create_free_account": "Create Free Account"
+          },
+          "footer": {
+            "tagline": "Empowering Indian Agriculture",
+            "copyright": "© {{year}} KhetiBandhu. Built for farmers, by farmers."
+          }
+        },
+        "rewards": {
+          "title": "Rewards",
+          "description": "Redeem your points for exciting rewards",
+          "available_rewards": "Available Rewards",
+          "my_rewards": "My Rewards",
+          "points_required": "Points Required",
+          "redeem": "Redeem",
+          "redeemed": "Redeemed",
+          "expires": "Expires",
+"loading": "Loading rewards...",
+"header": {
+"back_to_dashboard": "Dashboard",
+"title": "Reward Store",
+"subtitle": "Redeem your points for valuable farming resources",
+"points": "{{points}} Points"
+},
+"stats": {
+"total_points": "Total Points",
+"available": "Available",
+"points_spent": "Points Spent",
+"items_redeemed": "Items Redeemed"
+},
+"tabs": {
+"available": "Available Rewards",
+"history": "Redemption History"
+},
+"availability": {
+"available": "Available",
+"limited": "Limited Stock",
+"out_of_stock": "Out of Stock"
+},
+"status": {
+"processing": "Processing",
+"shipped": "Shipped",
+"delivered": "Delivered"
+},
+"card": {
+"delivery": "Delivery:",
+"stock": "Stock:",
+"stock_left": "{{count}} left",
+"limit": "Limit:",
+"limit_per_farmer": "{{count}} per farmer",
+"points_label": "points"
+},
+"actions": {
+"redeem_now": "Redeem Now",
+"insufficient_points": "Insufficient Points"
+},
+"history": {
+"redeemed": "Redeemed:",
+"points_used": "Points Used:",
+"tracking": "Tracking:"
+},
+"empty": {
+"title": "No redemptions yet",
+"subtitle": "Start redeeming rewards to build your farming toolkit!",
+"browse": "Browse Available Rewards"
+},
+"common": {
+"tools": "Tools",
+"seeds": "Seeds",
+"education": "Education",
+"technology": "Technology",
+"vouchers": "Vouchers"
+},
+"items": {
+"premium_seeds": {
+"name": "Premium Seed Varieties Pack",
+"description": "High-yield drought-resistant seeds for wheat, rice, and maize"
+},
+"smart_irrigation": {
+"name": "Smart Irrigation Kit",
+"description": "IoT-enabled drip irrigation system for efficient water management"
+},
+"organic_fertilizer": {
+"name": "Organic Fertilizer Bundle",
+"description": "50kg premium organic compost and bio-fertilizer mix"
+},
+"farming_course": {
+"name": "Advanced Farming Course",
+"description": "Online certification course on sustainable farming practices"
+},
+"soil_kit": {
+"name": "Soil Testing Kit",
+"description": "Professional soil analysis kit with pH and nutrient testing"
+},
+"equipment_voucher": {
+"name": "Agricultural Equipment Voucher",
+"description": "₹2000 voucher for tractors, harvesters, and farming equipment"
+},
+"weather_station": {
+"name": "Weather Station",
+"description": "Portable weather monitoring station with app connectivity"
+},
+"pest_handbook": {
+"name": "Pest Control Handbook",
+"description": "Comprehensive guide on organic pest management techniques"
+}
+},
+"common_delivery": {
+"days": "{{min}}-{{max}} days"
+},
+"common_alt": {
+"instant": "Instant",
+"digital_download": "Digital download"
+},
+"common_merge_note": "Keep only one 'common' object; above keys are grouped for readability."
+}     
+    }
+
+
+

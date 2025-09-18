@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Navigate, useNavigate } from 'react-router-dom';
 import { useAuth } from '@/context/AuthContext';
+import { useTranslation } from '@/hooks/useTranslation';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
@@ -42,6 +43,7 @@ interface RewardStats {
 
 const Rewards: React.FC = () => {
   const { isAuthenticated, user, isLoading: authLoading } = useAuth();
+  const { t } = useTranslation();
   const [rewards, setRewards] = useState<Reward[]>([]);
   const [redeemedRewards, setRedeemedRewards] = useState<RedeemedReward[]>([]);
   const [stats, setStats] = useState<RewardStats | null>(null);
@@ -58,92 +60,91 @@ const Rewards: React.FC = () => {
       if (!user?.id) return;
 
       try {
-        // Mock data - replace with actual API calls
         const mockRewards: Reward[] = [
           {
             id: '1',
-            name: 'Premium Seed Varieties Pack',
-            description: 'High-yield drought-resistant seeds for wheat, rice, and maize',
+            name: t('rewards.items.premium_seeds.name'),
+            description: t('rewards.items.premium_seeds.description'),
             category: 'seeds',
             points_cost: 500,
             availability: 'available',
             stock_remaining: 25,
-            estimated_delivery: '5-7 days',
+            estimated_delivery: t('rewards.common.delivery_5_7'),
             redemption_limit: 2
           },
           {
             id: '2',
-            name: 'Smart Irrigation Kit',
-            description: 'IoT-enabled drip irrigation system for efficient water management',
+            name: t('rewards.items.smart_irrigation.name'),
+            description: t('rewards.items.smart_irrigation.description'),
             category: 'technology',
             points_cost: 1200,
             availability: 'limited',
             stock_remaining: 5,
-            estimated_delivery: '10-14 days',
+            estimated_delivery: t('rewards.common.delivery_10_14'),
             redemption_limit: 1
           },
           {
             id: '3',
-            name: 'Organic Fertilizer Bundle',
-            description: '50kg premium organic compost and bio-fertilizer mix',
+            name: t('rewards.items.organic_fertilizer.name'),
+            description: t('rewards.items.organic_fertilizer.description'),
             category: 'tools',
             points_cost: 300,
             availability: 'available',
             stock_remaining: 50,
-            estimated_delivery: '3-5 days',
+            estimated_delivery: t('rewards.common.delivery_3_5'),
             redemption_limit: 3
           },
           {
             id: '4',
-            name: 'Advanced Farming Course',
-            description: 'Online certification course on sustainable farming practices',
+            name: t('rewards.items.farming_course.name'),
+            description: t('rewards.items.farming_course.description'),
             category: 'education',
             points_cost: 800,
             availability: 'available',
-            estimated_delivery: 'Instant access',
+            estimated_delivery: t('rewards.common.instant_access'),
             redemption_limit: 1
           },
           {
             id: '5',
-            name: 'Soil Testing Kit',
-            description: 'Professional soil analysis kit with pH and nutrient testing',
+            name: t('rewards.items.soil_kit.name'),
+            description: t('rewards.items.soil_kit.description'),
             category: 'tools',
             points_cost: 400,
             availability: 'available',
             stock_remaining: 30,
-            estimated_delivery: '5-7 days',
+            estimated_delivery: t('rewards.common.delivery_5_7'),
             redemption_limit: 2
           },
           {
             id: '6',
-            name: 'Agricultural Equipment Voucher',
-            description: '₹2000 voucher for tractors, harvesters, and farming equipment',
+            name: t('rewards.items.equipment_voucher.name'),
+            description: t('rewards.items.equipment_voucher.description'),
             category: 'vouchers',
             points_cost: 1000,
             availability: 'limited',
             stock_remaining: 10,
-            estimated_delivery: 'Instant',
+            estimated_delivery: t('rewards.common.instant'),
             redemption_limit: 1
           },
           {
             id: '7',
-            name: 'Weather Station',
-            description: 'Portable weather monitoring station with app connectivity',
+            name: t('rewards.items.weather_station.name'),
+            description: t('rewards.items.weather_station.description'),
             category: 'technology',
             points_cost: 2000,
             availability: 'limited',
             stock_remaining: 3,
-            estimated_delivery: '14-21 days',
+            estimated_delivery: t('rewards.common.delivery_14_21'),
             redemption_limit: 1
           },
           {
             id: '8',
-            name: 'Pest Control Handbook',
-            description: 'Comprehensive guide on organic pest management techniques',
+            name: t('rewards.items.pest_handbook.name'),
+            description: t('rewards.items.pest_handbook.description'),
             category: 'education',
             points_cost: 200,
             availability: 'available',
-            estimated_delivery: 'Digital download',
+            estimated_delivery: t('rewards.common.digital_download'),
             redemption_limit: 1
           }
         ];
@@ -151,14 +152,14 @@ const Rewards: React.FC = () => {
         const mockRedeemedRewards: RedeemedReward[] = [
           {
             id: '1',
-            reward: mockRewards[2], // Organic Fertilizer Bundle
+            reward: mockRewards[2],
             redeemed_date: '2024-09-10T10:30:00Z',
             status: 'delivered',
             tracking_code: 'KB123456789'
           },
           {
             id: '2',
-            reward: mockRewards[7], // Pest Control Handbook
+            reward: mockRewards[7],
             redeemed_date: '2024-09-12T14:20:00Z',
             status: 'delivered'
           }
@@ -184,7 +185,7 @@ const Rewards: React.FC = () => {
     };
 
     fetchRewards();
-  }, [user]);
+  }, [user, t]);
 
   const getCategoryIcon = (category: Reward['category']) => {
     const icons = {
@@ -210,18 +211,18 @@ const Rewards: React.FC = () => {
 
   const getAvailabilityBadge = (availability: Reward['availability']) => {
     const variants = {
-      available: { variant: 'default' as const, text: 'Available' },
-      limited: { variant: 'secondary' as const, text: 'Limited Stock' },
-      out_of_stock: { variant: 'destructive' as const, text: 'Out of Stock' }
+      available: { variant: 'default' as const, text: t('rewards.availability.available') },
+      limited: { variant: 'secondary' as const, text: t('rewards.availability.limited') },
+      out_of_stock: { variant: 'destructive' as const, text: t('rewards.availability.out_of_stock') }
     };
     return variants[availability];
   };
 
   const getStatusBadge = (status: RedeemedReward['status']) => {
     const variants = {
-      pending: { variant: 'secondary' as const, text: 'Processing', icon: Clock },
-      shipped: { variant: 'default' as const, text: 'Shipped', icon: ShoppingCart },
-      delivered: { variant: 'outline' as const, text: 'Delivered', icon: Check }
+      pending: { variant: 'secondary' as const, text: t('rewards.status.processing'), icon: Clock },
+      shipped: { variant: 'default' as const, text: t('rewards.status.shipped'), icon: ShoppingCart },
+      delivered: { variant: 'outline' as const, text: t('rewards.status.delivered'), icon: Check }
     };
     return variants[status];
   };
@@ -234,7 +235,6 @@ const Rewards: React.FC = () => {
     const reward = rewards.find(r => r.id === rewardId);
     if (!reward || !canAfford(reward.points_cost)) return;
 
-    // Mock redemption - replace with actual API call
     const newRedemption: RedeemedReward = {
       id: Date.now().toString(),
       reward,
@@ -254,7 +254,7 @@ const Rewards: React.FC = () => {
   if (authLoading || isLoading) {
     return (
       <div className="min-h-screen flex items-center justify-center">
-        <LoadingSpinner size="lg" text="Loading rewards..." />
+        <LoadingSpinner size="lg" text={t('rewards.loading')} />
       </div>
     );
   }
@@ -273,17 +273,19 @@ const Rewards: React.FC = () => {
                 className="gap-2"
               >
                 <ArrowLeft className="h-4 w-4" />
-                Dashboard
+                {t('rewards.header.back_to_dashboard')}
               </Button>
               <div className="h-6 w-px bg-border" />
               <div>
-                <h1 className="text-2xl font-bold font-heading">Reward Store</h1>
-                <p className="text-sm text-muted-foreground">Redeem your points for valuable farming resources</p>
+                <h1 className="text-2xl font-bold font-heading">{t('rewards.header.title')}</h1>
+                <p className="text-sm text-muted-foreground">{t('rewards.header.subtitle')}</p>
               </div>
             </div>
             <div className="flex items-center gap-2 bg-primary/10 px-3 py-2 rounded-lg">
               <Coins className="h-4 w-4 text-primary" />
-              <span className="font-semibold text-primary">{stats?.points_available} Points</span>
+              <span className="font-semibold text-primary">
+                {t('rewards.header.points', { points: stats?.points_available || 0 })}
+              </span>
             </div>
           </div>
         </div>
@@ -296,7 +298,7 @@ const Rewards: React.FC = () => {
             <CardContent className="p-6">
               <div className="flex items-center gap-2 mb-2">
                 <Trophy className="h-5 w-5 text-primary" />
-                <span className="text-sm font-medium text-muted-foreground">Total Points</span>
+                <span className="text-sm font-medium text-muted-foreground">{t('rewards.stats.total_points')}</span>
               </div>
               <p className="text-3xl font-bold">{stats?.total_points}</p>
             </CardContent>
@@ -306,7 +308,7 @@ const Rewards: React.FC = () => {
             <CardContent className="p-6">
               <div className="flex items-center gap-2 mb-2">
                 <Coins className="h-5 w-5 text-emerald-600" />
-                <span className="text-sm font-medium text-muted-foreground">Available</span>
+                <span className="text-sm font-medium text-muted-foreground">{t('rewards.stats.available')}</span>
               </div>
               <p className="text-3xl font-bold text-emerald-600">{stats?.points_available}</p>
             </CardContent>
@@ -316,7 +318,7 @@ const Rewards: React.FC = () => {
             <CardContent className="p-6">
               <div className="flex items-center gap-2 mb-2">
                 <ShoppingCart className="h-5 w-5 text-primary" />
-                <span className="text-sm font-medium text-muted-foreground">Points Spent</span>
+                <span className="text-sm font-medium text-muted-foreground">{t('rewards.stats.points_spent')}</span>
               </div>
               <p className="text-3xl font-bold">{stats?.points_spent}</p>
             </CardContent>
@@ -326,7 +328,7 @@ const Rewards: React.FC = () => {
             <CardContent className="p-6">
               <div className="flex items-center gap-2 mb-2">
                 <Gift className="h-5 w-5 text-primary" />
-                <span className="text-sm font-medium text-muted-foreground">Items Redeemed</span>
+                <span className="text-sm font-medium text-muted-foreground">{t('rewards.stats.items_redeemed')}</span>
               </div>
               <p className="text-3xl font-bold">{stats?.total_redeemed}</p>
             </CardContent>
@@ -336,8 +338,8 @@ const Rewards: React.FC = () => {
         {/* Rewards Tabs */}
         <Tabs value={activeTab} onValueChange={setActiveTab}>
           <TabsList className="grid w-full grid-cols-2">
-            <TabsTrigger value="available">Available Rewards</TabsTrigger>
-            <TabsTrigger value="history">Redemption History</TabsTrigger>
+            <TabsTrigger value="available">{t('rewards.tabs.available')}</TabsTrigger>
+            <TabsTrigger value="history">{t('rewards.tabs.history')}</TabsTrigger>
           </TabsList>
 
           <TabsContent value="available" className="space-y-6">
@@ -372,18 +374,22 @@ const Rewards: React.FC = () => {
 
                       <div className="space-y-2 text-sm">
                         <div className="flex justify-between">
-                          <span>Delivery:</span>
+                          <span>{t('rewards.card.delivery')}</span>
                           <span className="font-medium">{reward.estimated_delivery}</span>
                         </div>
-                        {reward.stock_remaining && (
+                        {typeof reward.stock_remaining === 'number' && (
                           <div className="flex justify-between">
-                            <span>Stock:</span>
-                            <span className="font-medium">{reward.stock_remaining} left</span>
+                            <span>{t('rewards.card.stock')}</span>
+                            <span className="font-medium">
+                              {t('rewards.card.stock_left', { count: reward.stock_remaining })}
+                            </span>
                           </div>
                         )}
                         <div className="flex justify-between">
-                          <span>Limit:</span>
-                          <span className="font-medium">{reward.redemption_limit} per farmer</span>
+                          <span>{t('rewards.card.limit')}</span>
+                          <span className="font-medium">
+                            {t('rewards.card.limit_per_farmer', { count: reward.redemption_limit })}
+                          </span>
                         </div>
                       </div>
 
@@ -393,7 +399,7 @@ const Rewards: React.FC = () => {
                             <Coins className="h-4 w-4 text-primary" />
                             <span className="text-2xl font-bold text-primary">{reward.points_cost}</span>
                           </div>
-                          <span className="text-sm text-muted-foreground">points</span>
+                          <span className="text-sm text-muted-foreground">{t('rewards.card.points_label')}</span>
                         </div>
 
                         <Button
@@ -404,9 +410,9 @@ const Rewards: React.FC = () => {
                           onClick={() => redeemReward(reward.id)}
                         >
                           <Gift className="h-4 w-4" />
-                          {!affordable ? 'Insufficient Points' : 
-                           reward.availability === 'out_of_stock' ? 'Out of Stock' : 
-                           'Redeem Now'}
+                          {!affordable ? t('rewards.actions.insufficient_points') : 
+                           reward.availability === 'out_of_stock' ? t('rewards.availability.out_of_stock') : 
+                           t('rewards.actions.redeem_now')}
                         </Button>
                       </div>
                     </CardContent>
@@ -448,18 +454,18 @@ const Rewards: React.FC = () => {
                             
                             <div className="mt-4 grid grid-cols-1 md:grid-cols-3 gap-4 text-sm">
                               <div>
-                                <span className="text-muted-foreground">Redeemed:</span>
+                                <span className="text-muted-foreground">{t('rewards.history.redeemed')}</span>
                                 <p className="font-medium">
                                   {new Date(redemption.redeemed_date).toLocaleDateString()}
                                 </p>
                               </div>
                               <div>
-                                <span className="text-muted-foreground">Points Used:</span>
+                                <span className="text-muted-foreground">{t('rewards.history.points_used')}</span>
                                 <p className="font-medium text-primary">{redemption.reward.points_cost}</p>
                               </div>
                               {redemption.tracking_code && (
                                 <div>
-                                  <span className="text-muted-foreground">Tracking:</span>
+                                  <span className="text-muted-foreground">{t('rewards.history.tracking')}</span>
                                   <p className="font-medium">{redemption.tracking_code}</p>
                                 </div>
                               )}
@@ -474,12 +480,12 @@ const Rewards: React.FC = () => {
             ) : (
               <div className="text-center py-12">
                 <History className="h-12 w-12 text-muted-foreground mx-auto mb-4" />
-                <h3 className="text-lg font-semibold mb-2">No redemptions yet</h3>
+                <h3 className="text-lg font-semibold mb-2">{t('rewards.empty.title')}</h3>
                 <p className="text-muted-foreground mb-4">
-                  Start redeeming rewards to build your farming toolkit!
+                  {t('rewards.empty.subtitle')}
                 </p>
                 <Button onClick={() => setActiveTab('available')}>
-                  Browse Available Rewards
+                  {t('rewards.empty.browse')}
                 </Button>
               </div>
             )}

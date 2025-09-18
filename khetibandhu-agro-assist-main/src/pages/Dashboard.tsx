@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Navigate, useNavigate } from 'react-router-dom';
 import { useAuth } from '@/context/AuthContext';
+import { useTranslation } from '@/hooks/useTranslation';
 import DashboardHeader from '@/components/Dashboard/DashboardHeader';
 import StatCard from '@/components/Dashboard/StatCard';
 import { Button } from '@/components/ui/button';
@@ -41,10 +42,10 @@ interface DashboardData {
 
 const Dashboard: React.FC = () => {
   const { isAuthenticated, user, isLoading: authLoading } = useAuth();
+  const { t } = useTranslation();
   const [dashboardData, setDashboardData] = useState<DashboardData | null>(null);
   const [isLoading, setIsLoading] = useState(true);
   const navigate = useNavigate();
-
 
   useEffect(() => {
     const fetchDashboardData = async () => {
@@ -59,7 +60,7 @@ const Dashboard: React.FC = () => {
             available: 5,
           },
           predictions: {
-            latest: '+15% yield increase expected',
+            latest: t('dashboard.predictions.latest_prediction_text'),
             confidence: 85,
           },
           leaderboard: {
@@ -69,26 +70,26 @@ const Dashboard: React.FC = () => {
           weather: {
             temperature: 28,
             humidity: 65,
-            condition: 'Partly Cloudy',
+            condition: t('weather.conditions.partly_cloudy'),
           },
           recentActivity: [
             {
               id: '1',
               type: 'quest_completed',
-              description: 'Completed "Water Management Optimization"',
-              timestamp: '2 hours ago',
+              description: t('dashboard.activity.quest_completed_water_management'),
+              timestamp: t('dashboard.activity.time_hours_ago', { count: 2 }),
             },
             {
               id: '2',
               type: 'prediction_received',
-              description: 'New Rice yield prediction available',
-              timestamp: '5 hours ago',
+              description: t('dashboard.activity.prediction_received_rice'),
+              timestamp: t('dashboard.activity.time_hours_ago', { count: 5 }),
             },
             {
               id: '3',
               type: 'badge_earned',
-              description: 'Earned "Efficiency Expert" badge',
-              timestamp: '1 day ago',
+              description: t('dashboard.activity.badge_earned_efficiency'),
+              timestamp: t('dashboard.activity.time_days_ago', { count: 1 }),
             },
           ],
         };
@@ -105,7 +106,7 @@ const Dashboard: React.FC = () => {
     };
 
     fetchDashboardData();
-  }, [user]);
+  }, [user, t]);
 
   // Redirect if not authenticated (after all hooks are called)
   if (!authLoading && !isAuthenticated) {
@@ -116,7 +117,7 @@ const Dashboard: React.FC = () => {
   if (authLoading || isLoading) {
     return (
       <div className="min-h-screen flex items-center justify-center">
-        <LoadingSpinner size="lg" text="Loading your dashboard..." />
+        <LoadingSpinner size="lg" text={t('dashboard.loading_dashboard')} />
       </div>
     );
   }
@@ -129,28 +130,30 @@ const Dashboard: React.FC = () => {
         {/* Stats Overview */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
           <StatCard
-            title="Total Points"
+            title={t('dashboard.stats.total_points')}
             value={user?.total_points || 0}
-            subtitle="Keep growing!"
+            subtitle={t('dashboard.stats.keep_growing')}
             icon={Trophy}
             variant="primary"
           />
           <StatCard
-            title="Active Quests"
+            title={t('dashboard.stats.active_quests')}
             value={dashboardData?.quests.active || 0}
-            subtitle={`${dashboardData?.quests.available || 0} available`}
+            subtitle={`${dashboardData?.quests.available || 0} ${t('dashboard.stats.available')}`}
             icon={Target}
           />
           <StatCard
-            title="Leaderboard Rank"
+            title={t('dashboard.stats.leaderboard_rank')}
             value={`#${dashboardData?.leaderboard.rank || 0}`}
-            subtitle={`of ${dashboardData?.leaderboard.total_farmers || 0} farmers`}
+            subtitle={t('dashboard.stats.farmers_count', { 
+              count: dashboardData?.leaderboard.total_farmers || 0 
+            })}
             icon={Users}
           />
           <StatCard
-            title="Prediction Confidence"
+            title={t('dashboard.stats.prediction_confidence')}
             value={`${dashboardData?.predictions.confidence || 0}%`}
-            subtitle="Latest crop prediction"
+            subtitle={t('dashboard.stats.latest_crop_prediction')}
             icon={BarChart3}
             variant="accent"
           />
@@ -163,24 +166,24 @@ const Dashboard: React.FC = () => {
             <CardHeader className="pb-3">
               <CardTitle className="flex items-center gap-2">
                 <Target className="h-5 w-5 text-primary" />
-                My Quests
+                {t('dashboard.cards.my_quests')}
               </CardTitle>
               <CardDescription>
-                Track your farming missions and earn rewards
+                {t('dashboard.cards.quests_description')}
               </CardDescription>
             </CardHeader>
             <CardContent className="space-y-4">
               <div className="space-y-2">
                 <div className="flex justify-between text-sm">
-                  <span>Active Quests</span>
+                  <span>{t('dashboard.cards.active_quests')}</span>
                   <span className="font-semibold text-primary">{dashboardData?.quests.active}</span>
                 </div>
                 <div className="flex justify-between text-sm">
-                  <span>Completed</span>
+                  <span>{t('dashboard.cards.completed')}</span>
                   <span className="font-semibold text-emerald-600">{dashboardData?.quests.completed}</span>
                 </div>
                 <div className="flex justify-between text-sm">
-                  <span>Available</span>
+                  <span>{t('dashboard.cards.available')}</span>
                   <span className="font-semibold text-accent">{dashboardData?.quests.available}</span>
                 </div>
               </div>
@@ -192,7 +195,7 @@ const Dashboard: React.FC = () => {
                   onClick={() => navigate('/quests')}
                 >
                   <Eye className="h-4 w-4 mr-2" />
-                  View All
+                  {t('dashboard.cards.view_all')}
                 </Button>
                 <Button variant="secondary" size="sm">
                   <Plus className="h-4 w-4" />
@@ -206,22 +209,22 @@ const Dashboard: React.FC = () => {
             <CardHeader className="pb-3">
               <CardTitle className="flex items-center gap-2">
                 <TrendingUp className="h-5 w-5 text-primary" />
-                Crop Predictions
+                {t('dashboard.cards.crop_predictions')}
               </CardTitle>
               <CardDescription>
-                AI-powered yield and sustainability insights
+                {t('dashboard.cards.predictions_description')}
               </CardDescription>
             </CardHeader>
             <CardContent className="space-y-4">
               <div className="space-y-3">
                 <div className="bg-primary/10 p-3 rounded-lg">
-                  <p className="text-sm font-medium text-primary">Latest Prediction</p>
+                  <p className="text-sm font-medium text-primary">{t('dashboard.predictions.latest_prediction')}</p>
                   <p className="font-semibold">{dashboardData?.predictions.latest}</p>
                 </div>
                 <div className="flex items-center gap-2">
                   <div className="flex-1">
                     <div className="flex justify-between text-sm mb-1">
-                      <span>Confidence</span>
+                      <span>{t('dashboard.predictions.confidence')}</span>
                       <span>{dashboardData?.predictions.confidence}%</span>
                     </div>
                     <div className="w-full bg-muted rounded-full h-2">
@@ -239,7 +242,7 @@ const Dashboard: React.FC = () => {
                 className="w-full"
                 onClick={() => navigate('/predictions')}
               >
-                View Detailed Predictions
+                {t('dashboard.predictions.view_detailed')}
                 <ArrowRight className="h-4 w-4 ml-2" />
               </Button>
             </CardContent>
@@ -250,10 +253,12 @@ const Dashboard: React.FC = () => {
             <CardHeader className="pb-3">
               <CardTitle className="flex items-center gap-2">
                 <Cloud className="h-5 w-5 text-primary" />
-                Today's Weather
+                {t('dashboard.weather.todays_weather')}
               </CardTitle>
               <CardDescription>
-                {user?.village || 'Your location'} weather conditions
+                {t('dashboard.weather.location_conditions', { 
+                  location: user?.village || t('dashboard.weather.your_location') 
+                })}
               </CardDescription>
             </CardHeader>
             <CardContent className="space-y-4">
@@ -267,15 +272,15 @@ const Dashboard: React.FC = () => {
               <div className="grid grid-cols-2 gap-4 text-sm">
                 <div className="flex items-center gap-2">
                   <Droplets className="h-4 w-4 text-sky-500" />
-                  <span>Humidity: {dashboardData?.weather.humidity}%</span>
+                  <span>{t('dashboard.weather.humidity')}: {dashboardData?.weather.humidity}%</span>
                 </div>
                 <div className="flex items-center gap-2">
                   <Wind className="h-4 w-4 text-gray-500" />
-                  <span>Wind: Light</span>
+                  <span>{t('dashboard.weather.wind')}: {t('dashboard.weather.wind_light')}</span>
                 </div>
               </div>
               <Button variant="outline" size="sm" className="w-full">
-                7-Day Forecast
+                {t('dashboard.weather.forecast_7_day')}
                 <ArrowRight className="h-4 w-4 ml-2" />
               </Button>
             </CardContent>
@@ -289,7 +294,7 @@ const Dashboard: React.FC = () => {
             <CardHeader>
               <CardTitle className="flex items-center gap-2">
                 <Sprout className="h-5 w-5 text-primary" />
-                Quick Actions
+                {t('dashboard.quick_actions.title')}
               </CardTitle>
             </CardHeader>
             <CardContent className="space-y-3">
@@ -300,7 +305,7 @@ const Dashboard: React.FC = () => {
                 onClick={() => navigate('/quests')}
               >
                 <Plus className="h-4 w-4 mr-2" />
-                Start New Quest
+                {t('dashboard.quick_actions.start_new_quest')}
               </Button>
               <Button 
                 variant="secondary" 
@@ -309,7 +314,7 @@ const Dashboard: React.FC = () => {
                 onClick={() => navigate('/predictions')}
               >
                 <TrendingUp className="h-4 w-4 mr-2" />
-                View Predictions
+                {t('dashboard.quick_actions.view_predictions')}
               </Button>
               <Button 
                 variant="secondary" 
@@ -318,7 +323,7 @@ const Dashboard: React.FC = () => {
                 onClick={() => navigate('/rewards')}
               >
                 <Gift className="h-4 w-4 mr-2" />
-                Check Rewards
+                {t('dashboard.quick_actions.check_rewards')}
               </Button>
               <Button 
                 variant="outline" 
@@ -327,7 +332,7 @@ const Dashboard: React.FC = () => {
                 onClick={() => navigate('/leaderboard')}
               >
                 <Trophy className="h-4 w-4 mr-2" />
-                View Leaderboard
+                {t('dashboard.quick_actions.view_leaderboard')}
               </Button>
             </CardContent>
           </Card>
@@ -337,9 +342,9 @@ const Dashboard: React.FC = () => {
             <CardHeader>
               <CardTitle className="flex items-center gap-2">
                 <Activity className="h-5 w-5 text-primary" />
-                Recent Activity
+                {t('dashboard.activity.recent_activity')}
               </CardTitle>
-              <CardDescription>Your latest farming achievements</CardDescription>
+              <CardDescription>{t('dashboard.activity.description')}</CardDescription>
             </CardHeader>
             <CardContent>
               <div className="space-y-4">

@@ -1,0 +1,588 @@
+{
+  "common": {
+    "loading": "लोड हो रहा है...",
+    "error": "त्रुटि",
+    "success": "सफलता",
+    "cancel": "रद्द करें",
+    "save": "सहेजें",
+    "edit": "संपादित करें",
+    "delete": "हटाएं",
+    "view": "देखें",
+    "back": "वापस",
+    "next": "अगला",
+    "previous": "पिछला",
+    "submit": "जमा करें",
+    "close": "बंद करें",
+    "yes": "हाँ",
+    "no": "नहीं",
+    "ok": "ठीक है"
+  },
+  "navigation": {
+    "dashboard": "डैशबोर्ड",
+    "quests": "क्वेस्ट",
+    "predictions": "भविष्यवाणी",
+    "leaderboard": "लीडरबोर्ड",
+    "rewards": "पुरस्कार",
+    "badges": "बैज",
+    "profile": "प्रोफाइल",
+    "login": "लॉगिन",
+    "register": "रजिस्टर",
+    "logout": "लॉगआउट"
+  },
+    "dashboard": {
+      "loading_dashboard": "डैशबोर्ड लोड हो रहा है...",
+      "stats": {
+        "total_points": "कुल अंक",
+        "keep_growing": "बढ़ते रहिए!",
+        "active_quests": "सक्रिय चुनौतियां",
+        "available": "उपलब्ध",
+        "leaderboard_rank": "लीडरबोर्ड रैंक",
+        "farmers_count": "{{count}} किसानों में से",
+        "prediction_confidence": "भविष्यवाणी विश्वास",
+        "latest_crop_prediction": "नवीनतम फसल भविष्यवाणी"
+      },
+      "cards": {
+        "my_quests": "मेरी चुनौतियां",
+        "quests_description": "अपनी कृषि चुनौतियों और उपलब्धियों को ट्रैक करें",
+        "active_quests": "सक्रिय चुनौतियां",
+        "completed": "पूर्ण",
+        "available": "उपलब्ध",
+        "view_all": "सभी देखें",
+        "crop_predictions": "फसल भविष्यवाणियां",
+        "predictions_description": "AI-संचालित उत्पादन और स्थिरता अंतर्दृष्टि"
+      },
+      "predictions": {
+        "latest_prediction": "नवीनतम भविष्यवाणी",
+        "latest_prediction_text": "+15% उत्पादन वृद्धि की अपेक्षा",
+        "confidence": "विश्वास",
+        "view_detailed": "विस्तृत भविष्यवाणियां देखें"
+      },
+      "weather": {
+        "todays_weather": "आज का मौसम",
+        "location_conditions": "{{location}} मौसम की स्थिति",
+        "your_location": "आपका स्थान",
+        "humidity": "नमी",
+        "wind": "हवा",
+        "wind_light": "हल्की",
+        "forecast_7_day": "7-दिन का पूर्वानुमान"
+      },
+      "quick_actions": {
+        "title": "त्वरित कार्य",
+        "start_new_quest": "नई चुनौती शुरू करें",
+        "view_predictions": "भविष्यवाणियां देखें",
+        "check_rewards": "पुरस्कार जांचें",
+        "view_leaderboard": "लीडरबोर्ड देखें"
+      },
+      "activity": {
+        "recent_activity": "हाल की गतिविधि",
+        "description": "आपकी नवीनतम कृषि उपलब्धियां",
+        "quest_completed_water_management": "\"जल प्रबंधन अनुकूलन\" पूरा किया",
+        "prediction_received_rice": "नई चावल उत्पादन भविष्यवाणी उपलब्ध",
+        "badge_earned_efficiency": "\"दक्षता विशेषज्ञ\" बैज अर्जित किया",
+        "time_hours_ago": "{{count}} घंटे पहले",
+        "time_days_ago": "{{count}} दिन पहले"
+      }
+    },
+  "auth": {
+    "login": {
+      "title": "वापस स्वागत है",
+      "subtitle": "अपने KhetiBandhu खाते में साइन इन करें",
+      "email": "ईमेल",
+      "password": "पासवर्ड",
+      "remember_me": "मुझे याद रखें",
+      "forgot_password": "पासवर्ड भूल गए?",
+      "sign_in": "साइन इन",
+      "no_account": "खाता नहीं है?",
+      "sign_up": "साइन अप करें"
+    },
+    "register": {
+      "title": "खाता बनाएं",
+      "subtitle": "KhetiBandhu में शामिल हों और अपनी कृषि यात्रा शुरू करें",
+      "full_name": "पूरा नाम",
+      "email": "ईमेल",
+      "password": "पासवर्ड",
+      "confirm_password": "पासवर्ड की पुष्टि करें",
+      "village": "गाँव",
+      "state": "राज्य",
+      "crop_type": "फसल प्रकार",
+      "create_account": "खाता बनाएं",
+      "have_account": "पहले से खाता है?",
+      "sign_in": "साइन इन करें"
+    }
+  },
+  "quests": {
+    "title": "क्वेस्ट",
+    "description": "अंक और पुरस्कार कमाने के लिए कृषि मिशन पूरे करें",
+    "active": "सक्रिय क्वेस्ट",
+    "completed": "पूर्ण क्वेस्ट",
+    "available": "उपलब्ध क्वेस्ट",
+    "start_quest": "क्वेस्ट शुरू करें",
+    "complete_quest": "क्वेस्ट पूर्ण करें",
+    "view_details": "विवरण देखें",
+    "points": "अंक",
+    "difficulty": "कठिनाई",
+    "easy": "आसान",
+    "medium": "मध्यम",
+    "hard": "कठिन",
+    "duration": "अवधि",
+    "days": "दिन",
+        "loading": "क्वेस्ट लोड हो रहे हैं...",
+        "header": {
+          "back_to_dashboard": "डैशबोर्ड",
+          "title": "कृषि चुनौतियां",
+          "subtitle": "चुनौतियां पूरी करें और पुरस्कार अर्जित करें",
+          "points": "{{points}} अंक"
+        },
+        "filters": {
+          "search_placeholder": "शीर्षक या फसल से क्वेस्ट खोजें...",
+          "filter_by_status": "स्थिति के अनुसार फ़िल्टर करें",
+          "all_quests": "सभी क्वेस्ट"
+        },
+        "status": {
+          "available": "उपलब्ध",
+          "in_progress": "प्रगति पर",
+          "completed": "पूर्ण"
+        },
+        "card": {
+          "level": "स्तर {{level}}",
+          "duration_days": "{{days}} दिन",
+          "reward_points": "{{points}} अंक",
+          "progress": "प्रगति",
+          "deadline": "अंतिम तिथि: {{date}}"
+        },
+        "actions": {
+          "start_quest": "क्वेस्ट शुरू करें",
+          "view_progress": "प्रगति देखें"
+        },
+        "empty": {
+          "title": "कोई क्वेस्ट नहीं मिला",
+          "adjust_filters": "अपना खोज या फ़िल्टर बदलकर देखें",
+          "check_back": "नई कृषि चुनौतियों के लिए जल्दी ही दोबारा देखें!",
+          "clear_filters": "फ़िल्टर साफ़ करें"
+        },
+        "items": {
+          "water_usage_optimization": {
+            "title": "जल उपयोग अनुकूलन",
+            "description": "स्मार्ट सिंचाई तकनीक लागू करें और पानी की खपत 20% कम करें"
+          },
+          "organic_fertilizer_adoption": {
+            "title": "जैविक उर्वरक अपनाना",
+            "description": "जैविक उर्वरकों पर स्विच करें और मिट्टी के स्वास्थ्य पर प्रभाव दर्ज करें"
+          },
+          "crop_rotation_planning": {
+            "title": "फसल चक्र योजना",
+            "description": "चार मौसमों की फसल चक्र योजना बनाएं और लागू करें"
+          },
+          "pest_management_survey": {
+            "title": "कीट प्रबंधन सर्वेक्षण",
+            "description": "विस्तृत कीट निगरानी करें और साप्ताहिक रिपोर्ट जमा करें"
+          },
+          "sustainable_harvesting": {
+            "title": "टिकाऊ कटाई",
+            "description": "पर्यावरण-अनुकूल कटाई तरीकों को लागू करें और दक्षता मापें"
+          }
+        }
+      },
+  "predictions": {
+    "title": "फसल भविष्यवाणी",
+    "description": "आपके कृषि निर्णयों के लिए AI-संचालित अंतर्दृष्टि",
+    "yield_prediction": "उपज भविष्यवाणी",
+    "weather_forecast": "मौसम पूर्वानुमान",
+    "disease_risk": "रोग जोखिम",
+    "pest_alert": "कीट अलर्ट",
+    "soil_analysis": "मिट्टी विश्लेषण",
+    "irrigation_advice": "सिंचाई सलाह",
+    "fertilizer_recommendation": "उर्वरक सिफारिश",
+    "planting_time": "बुवाई का समय",
+    "harvest_time": "कटाई का समय",
+    "confidence": "आत्मविश्वास",
+    "high": "उच्च",
+    "medium": "मध्यम",
+    "low": "कम"
+  },
+  "leaderboard": {
+    "title": "लीडरबोर्ड",
+    "description": "देखें कि आप अन्य किसानों में कहाँ रैंक करते हैं",
+    "rank": "रैंक",
+    "farmer": "किसान",
+    "points": "अंक",
+    "village": "गाँव",
+    "state": "राज्य",
+    "your_rank": "आपकी रैंक",
+    "total_farmers": "कुल किसान"
+  },
+  "rewards": {
+    "title": "पुरस्कार",
+    "description": "रोमांचक पुरस्कारों के लिए अपने अंक रिडीम करें",
+    "available_rewards": "उपलब्ध पुरस्कार",
+    "my_rewards": "मेरे पुरस्कार",
+    "points_required": "आवश्यक अंक",
+    "redeem": "रिडीम करें",
+    "redeemed": "रिडीम किया गया",
+    "expires": "समाप्त होता है",
+    "loading": "रिवॉर्ड लोड हो रहे हैं...",
+"header": {
+"back_to_dashboard": "डैशबोर्ड",
+"title": "रिवॉर्ड स्टोर",
+"subtitle": "अपने अंकों के बदले मूल्यवान कृषि संसाधन लें",
+"points": "{{points}} अंक"
+},
+"stats": {
+"total_points": "कुल अंक",
+"available": "उपलब्ध",
+"points_spent": "खर्च किए अंक",
+"items_redeemed": "रिडीम की गई वस्तुएं"
+},
+"tabs": {
+"available": "उपलब्ध रिवॉर्ड",
+"history": "रिडेम्पशन इतिहास"
+},
+"availability": {
+"available": "उपलब्ध",
+"limited": "सीमित स्टॉक",
+"out_of_stock": "स्टॉक समाप्त"
+},
+"status": {
+"processing": "प्रोसेसिंग",
+"shipped": "भेज दिया गया",
+"delivered": "डिलीवर हो गया"
+},
+"card": {
+"delivery": "डिलीवरी:",
+"stock": "स्टॉक:",
+"stock_left": "{{count}} शेष",
+"limit": "सीमा:",
+"limit_per_farmer": "प्रति किसान {{count}}",
+"points_label": "अंक"
+},
+"actions": {
+"redeem_now": "अभी रिडीम करें",
+"insufficient_points": "अंक पर्याप्त नहीं"
+},
+"history": {
+"redeemed": "रिडीम तिथि:",
+"points_used": "खर्च अंक:",
+"tracking": "ट्रैकिंग:"
+},
+"empty": {
+"title": "अभी तक कोई रिडेम्पशन नहीं",
+"subtitle": "अपना खेती टूलकिट बनाने के लिए रिवॉर्ड रिडीम करना शुरू करें!",
+"browse": "उपलब्ध रिवॉर्ड देखें"
+},
+"items": {
+"premium_seeds": {
+"name": "प्रीमियम बीज वैरायटी पैक",
+"description": "गेहूँ, धान और मक्का के लिए उच्च उत्पादक, सूखा-रोधी बीज"
+},
+"smart_irrigation": {
+"name": "स्मार्ट सिंचाई किट",
+"description": "कुशल जल प्रबंधन के लिए IoT-सक्षम ड्रिप सिंचाई प्रणाली"
+},
+"organic_fertilizer": {
+"name": "ऑर्गेनिक उर्वरक बंडल",
+"description": "50 किग्रा प्रीमियम जैविक कम्पोस्ट और बायो-फर्टिलाइज़र मिक्स"
+},
+"farming_course": {
+"name": "उन्नत खेती पाठ्यक्रम",
+"description": "सतत खेती प्रथाओं पर ऑनलाइन सर्टिफिकेशन कोर्स"
+},
+"soil_kit": {
+"name": "मिट्टी परीक्षण किट",
+"description": "pH और पोषक परीक्षण सहित प्रोफेशनल सॉइल एनालिसिस किट"
+},
+"equipment_voucher": {
+"name": "कृषि उपकरण वाउचर",
+"description": "ट्रैक्टर, हार्वेस्टर और उपकरणों के लिए ₹2000 वाउचर"
+},
+"weather_station": {
+"name": "मौसम स्टेशन",
+"description": "ऐप कनेक्टिविटी के साथ पोर्टेबल मौसम मॉनिटरिंग स्टेशन"
+},
+"pest_handbook": {
+"name": "कीट नियंत्रण हैंडबुक",
+"description": "जैविक कीट प्रबंधन तकनीकों पर व्यापक मार्गदर्शिका"
+}
+},
+"common": {
+"delivery_3_5": "3-5 दिन",
+"delivery_5_7": "5-7 दिन",
+"delivery_10_14": "10-14 दिन",
+"delivery_14_21": "14-21 दिन",
+"instant_access": "तुरंत एक्सेस",
+"instant": "तुरंत",
+"digital_download": "डिजिटल डाउनलोड"
+}
+  },
+  "badges": {
+    "title": "बैज",
+    "description": "अपनी कृषि उपलब्धियों के लिए बैज अर्जित करें",
+    "earned": "अर्जित बैज",
+    "available": "उपलब्ध बैज",
+    "earn_badge": "बैज अर्जित करें",
+    "loading": "बैज लोड हो रहे हैं...",
+"header": {
+"back_to_dashboard": "डैशबोर्ड",
+"title": "उपलब्धि बैज",
+"subtitle": "चुनौतियाँ पूरी करके बैज अर्जित करें",
+"earned_count": "{{earned}}/{{total}} अर्जित"
+},
+"stats": {
+"total_badges": "कुल बैज",
+"earned": "अर्जित",
+"points": "बैज अंक",
+"completion": "पूर्णता"
+},
+"categories": {
+"all": "सभी",
+"achiever": "उपलब्धिकर्ता",
+"expert": "विशेषज्ञ",
+"pioneer": "अग्रणी",
+"helper": "सहायक",
+"learner": "सीखने वाला"
+},
+"sections": {
+"earned": "अर्जित बैज",
+"in_progress": "प्रगति पर"
+},
+"rarity": {
+"common": "सामान्य",
+"rare": "दुर्लभ",
+"epic": "विशिष्ट",
+"legendary": "दुर्लभतम"
+},
+"points_short": "+{{points}} अंक",
+"earned_on": "अर्जित {{date}}",
+"progress": "प्रगति",
+"empty": {
+"title": "इस श्रेणी में कोई बैज नहीं",
+"subtitle": "अन्य श्रेणियाँ देखें!"
+},
+"items": {
+"first_quest": { "name": "पहला क्वेस्ट", "description": "अपना पहला खेती क्वेस्ट पूरा करें", "req": "1 क्वेस्ट पूरा करें" },
+"quest_master": { "name": "क्वेस्ट मास्टर", "description": "10 खेती क्वेस्ट पूरे करें", "req": "10 क्वेस्ट पूरे करें" },
+"water_wizard": { "name": "वाटर विज़ार्ड", "description": "जल प्रबंधन तकनीकों में महारत हासिल करें", "req": "पानी से जुड़े 5 क्वेस्ट पूरे करें" },
+"sustainability_champion": { "name": "सस्टेनेबिलिटी चैंपियन", "description": "उच्च स्थिरता स्कोर प्राप्त करें", "req": "30 दिनों तक 80%+ स्थिरता बनाए रखें" },
+"innovation_pioneer": { "name": "इनोवेशन पायनियर", "description": "नई सुविधाएँ सबसे पहले आज़माएँ", "req": "लॉन्च सप्ताह में 3 नई सुविधाएँ आज़माएँ" },
+"community_helper": { "name": "कम्युनिटी हेल्पर", "description": "साथी किसानों की मदद करें", "req": "10 बार ज्ञान साझा करें" },
+"knowledge_seeker": { "name": "नॉलेज सीकर", "description": "सभी लर्निंग मॉड्यूल पूरे करें", "req": "8 लर्निंग मॉड्यूल पूरे करें" },
+"streak_warrior": { "name": "स्ट्रिक वारियर", "description": "30 दिनों की सक्रियता स्ट्रिक बनाए रखें", "req": "लगातार 30 दिन लॉगिन करें" },
+"legendary_farmer": { "name": "लेजेंडरी फार्मर", "description": "खेती उत्कृष्टता के शिखर पर पहुँचें", "req": "लेवल 10 पाएं और 5000 अंक अर्जित करें" }
+}
+  },
+  "profile": {
+    "title": "प्रोफाइल",
+    "personal_info": "व्यक्तिगत जानकारी",
+    "farming_info": "कृषि जानकारी",
+    "statistics": "आंकड़े",
+    "edit_profile": "प्रोफाइल संपादित करें",
+    "change_password": "पासवर्ड बदलें",
+    "account_settings": "खाता सेटिंग्स",
+    "joined_date": "शामिल हुए",
+    "total_points": "कुल अंक",
+    "quests_completed": "पूर्ण क्वेस्ट",
+    "badges_earned": "अर्जित बैज",
+    "predictions_used": "उपयोग की गई भविष्यवाणी"
+  },
+  "weather": {
+    "temperature": "तापमान",
+    "humidity": "आर्द्रता",
+    "wind_speed": "हवा की गति",
+    "pressure": "दबाव",
+    "uv_index": "यूवी इंडेक्स",
+    "visibility": "दृश्यता",
+    "sunrise": "सूर्योदय",
+    "sunset": "सूर्यास्त",
+    "conditions": {
+      "sunny": "धूप",
+      "partly_cloudy": "आंशिक रूप से बादल",
+      "cloudy": "बादल",
+      "rainy": "बारिश",
+      "stormy": "तूफानी",
+      "foggy": "कोहरा"
+    }
+  },
+  "crops": {
+    "rice": "चावल",
+    "wheat": "गेहूं",
+    "maize": "मक्का",
+    "sugarcane": "गन्ना",
+    "cotton": "कपास",
+    "potato": "आलू",
+    "tomato": "टमाटर",
+    "onion": "प्याज",
+    "chili": "मिर्च",
+    "brinjal": "बैंगन",
+    "okra": "भिंडी",
+    "cabbage": "पत्ता गोभी",
+    "cauliflower": "फूल गोभी",
+    "spinach": "पालक",
+    "coriander": "धनिया",
+    "mint": "पुदीना",
+    "basil": "तुलसी",
+    "other": "अन्य"
+  },
+  "states": {
+    "andhra_pradesh": "आंध्र प्रदेश",
+    "arunachal_pradesh": "अरुणाचल प्रदेश",
+    "assam": "असम",
+    "bihar": "बिहार",
+    "chhattisgarh": "छत्तीसगढ़",
+    "goa": "गोवा",
+    "gujarat": "गुजरात",
+    "haryana": "हरियाणा",
+    "himachal_pradesh": "हिमाचल प्रदेश",
+    "jharkhand": "झारखंड",
+    "karnataka": "कर्नाटक",
+    "kerala": "केरल",
+    "madhya_pradesh": "मध्य प्रदेश",
+    "maharashtra": "महाराष्ट्र",
+    "manipur": "मणिपुर",
+    "meghalaya": "मेघालय",
+    "mizoram": "मिजोरम",
+    "nagaland": "नागालैंड",
+    "odisha": "ओडिशा",
+    "punjab": "पंजाब",
+    "rajasthan": "राजस्थान",
+    "sikkim": "सिक्किम",
+    "tamil_nadu": "तमिलनाडु",
+    "telangana": "तेलंगाना",
+    "tripura": "त्रिपुरा",
+    "uttar_pradesh": "उत्तर प्रदेश",
+    "uttarakhand": "उत्तराखंड",
+    "west_bengal": "पश्चिम बंगाल"
+  },
+  "languages": {
+    "english": "English",
+    "hindi": "हिन्दी",
+    "telugu": "తెలుగు",
+    "tamil": "தமிழ்",
+    "bengali": "বাংলা",
+    "gujarati": "ગુજરાતી",
+    "marathi": "मराठी",
+    "kannada": "ಕನ್ನಡ",
+    "malayalam": "മലയാളം",
+    "punjabi": "ਪੰਜਾਬੀ",
+    "odia": "ଓଡ଼ିଆ",
+    "assamese": "অসমীয়া"
+  },
+  "register": {
+      "hero": {
+        "alt": "सुंदर भारतीय खेत का दृश्य",
+        "title": "खेतीबंधु से जुड़ें",
+        "subtitle": "अपनी डिजिटल खेती यात्रा शुरू करें",
+        "tagline": "भविष्यवाणियां पाएं, चुनौतियां पूरी करें और समुदाय के साथ आगे बढ़ें"
+      },
+      "form": {
+        "title": "किसान पंजीकरण",
+        "description": "कृषि सहायता पाने के लिए अपना खाता बनाएं"
+      },
+      "toast": {
+        "error_title": "पंजीकरण विफल",
+        "success_title": "सफलता!",
+        "success_message": "खाता सफलतापूर्वक बनाया गया! खेतीबंधु में स्वागत है!",
+        "error_fallback": "पंजीकरण विफल रहा"
+      },
+      "fields": {
+        "name": { "label": "पूरा नाम", "placeholder": "अपना पूरा नाम" },
+        "username": { "label": "उपयोगकर्ता नाम", "placeholder": "उपयोगकर्ता नाम चुनें" },
+        "email": { "label": "ईमेल पता", "placeholder": "your.email@example.com" },
+        "password": { "label": "पासवर्ड", "placeholder": "मजबूत पासवर्ड बनाएँ" },
+        "pm_kisan_id": { 
+          "label": "पीएम-किसान आईडी", 
+          "placeholder": "PMK1234567890",
+          "helper": "'PMK' से शुरू होना चाहिए और 10+ अक्षर होने चाहिए"
+        },
+        "village": { "label": "गाँव", "placeholder": "आपके गाँव का नाम" },
+        "crops": { 
+          "label": "उगाई गई फसलें", 
+          "placeholder": "धान, गेहूँ, मक्का",
+          "helper": "अल्पविराम से अलग करें"
+        },
+        "phone": { "label": "फोन नंबर", "placeholder": "+91 9876543210" }
+      },
+      "cta": {
+        "create_account": "खाता बनाएं",
+        "creating_account": "खाता बनाया जा रहा है..."
+      },
+      "have_account": "क्या पहले से खाता है?",
+      "sign_in_here": "यहाँ साइन इन करें"
+    },
+    "login": {
+        "brand": "खेतीबंधु",
+        "hero": {
+          "alt": "सुंदर भारतीय खेत का दृश्य",
+          "subtitle": "आपका डिजिटल खेती सहायक",
+          "tagline": "स्मार्ट कृषि समाधानों से किसानों को सशक्त बनाना"
+        },
+        "form": {
+          "title": "किसान लॉगिन",
+          "description": "अपना खेती डैशबोर्ड एक्सेस करने के लिए साइन इन करें"
+        },
+        "fields": {
+          "username": { "label": "उपयोगकर्ता नाम", "placeholder": "अपना उपयोगकर्ता नाम दर्ज करें" },
+          "password": { "label": "पासवर्ड", "placeholder": "अपना पासवर्ड दर्ज करें" }
+        },
+        "cta": { "sign_in": "साइन इन", "signing_in": "साइन इन किया जा रहा है..." },
+        "new_farmer": "नए किसान?",
+        "create_account": "खाता बनाएं",
+        "toast": {
+          "error_title": "लॉगिन विफल",
+          "error_fallback": "लॉगिन असफल रहा"
+        }
+      },
+      "landing": {
+"brand": "खेतीबंधु",
+"nav": { "sign_in": "साइन इन", "get_started": "शुरू करें" },
+"hero": {
+"alt": "आधुनिक खेती का दृश्य",
+"tagline": "आपका डिजिटल खेती सहायक — AI-संचालित जानकारियाँ, गेमिफाइड लर्निंग और समुदाय का सहयोग।",
+"cta_start": "अपनी यात्रा शुरू करें"
+},
+"features": {
+"title": "भारतीय कृषि में बदलाव",
+"subtitle": "जानें कैसे खेतीबंधु पारंपरिक ज्ञान को आधुनिक तकनीक से जोड़कर बेहतर फसल और टिकाऊ भविष्य बनाता है।",
+"smart_quests": {
+"title": "स्मार्ट क्वेस्ट",
+"description": "खेती मिशन पूरे करें, अंक अर्जित करें और अपनी कृषि पद्धतियाँ सुधारें।"
+},
+"ai_predictions": {
+"title": "AI भविष्यवाणियाँ",
+"description": "मशीन लर्निंग और मौसम डेटा से सटीक फसल उत्पादन अनुमान प्राप्त करें।"
+},
+"gamification": {
+"title": "गेमिफिकेशन",
+"description": "बैज पाएं, लीडरबोर्ड पर ऊपर जाएं, और अपनी उपलब्धियों के लिए इनाम अनलॉक करें।"
+},
+"community": {
+"title": "समुदाय",
+"description": "किसानों से जुड़ें और कृषि समुदाय से सीखें।"
+}
+},
+"benefits": {
+"title": "क्यों चुनें खेतीबंधु?",
+"subtitle": "हजारों भारतीय किसान हमारी नवोन्मेषी प्लेटफ़ॉर्म से अपनी खेती बदल रहे हैं।",
+"ai_yield": "AI-संचालित अंतर्दृष्टियों से उत्पादन बढ़ाएं",
+"sustainable_practices": "सतत खेती के तरीके सीखें",
+"community_connect": "खेती समुदाय से जुड़ें",
+"earn_rewards": "अच्छी प्रथाओं के लिए इनाम पाएं",
+"weather_access": "मौसम पूर्वानुमान और अलर्ट पाएं",
+"track_progress": "अपनी खेती प्रगति ट्रैक करें"
+},
+"stats": {
+"active_farmers": "10,000+",
+"active_farmers_label": "सक्रिय किसान",
+"yield_improvement": { "value": "85%", "label": "उत्पादन सुधार" },
+"user_satisfaction": { "value": "92%", "label": "उपयोगकर्ता संतुष्टि" }
+},
+"cta": {
+"title": "खेती बदलने के लिए तैयार?",
+"subtitle": "आज ही खेतीबंधु से जुड़ें और स्मार्ट, टिकाऊ खेती की ओर कदम बढ़ाएँ।",
+"create_free_account": "मुफ़्त खाता बनाएँ"
+},
+"footer": {
+"tagline": "भारतीय कृषि को सशक्त बनाना",
+"copyright": "© {{year}} खेतीबंधु। किसानों के लिए, किसानों द्वारा।"
+}
+}
+    }
+
