@@ -1,0 +1,589 @@
+{
+  "common": {
+    "loading": "लोड होत आहे...",
+    "error": "त्रुटी",
+    "success": "यश",
+    "cancel": "रद्द करा",
+    "save": "जतन करा",
+    "edit": "संपादित करा",
+    "delete": "हटवा",
+    "view": "पहा",
+    "back": "मागे",
+    "next": "पुढे",
+    "previous": "मागील",
+    "submit": "सबमिट करा",
+    "close": "बंद करा",
+    "yes": "होय",
+    "no": "नाही",
+    "ok": "ठीक आहे"
+  },
+  "navigation": {
+    "dashboard": "डॅशबोर्ड",
+    "quests": "क्वेस्ट",
+    "predictions": "अंदाज",
+    "leaderboard": "लीडरबोर्ड",
+    "rewards": "बक्षीस",
+    "badges": "बॅज",
+    "profile": "प्रोफाइल",
+    "login": "लॉगिन",
+    "register": "नोंदणी",
+    "logout": "लॉगआउट"
+  },
+    "dashboard": {
+      "loading_dashboard": "डॅशबोर्ड लोड होत आहे...",
+      "stats": {
+        "total_points": "एकूण गुण",
+        "keep_growing": "वाढत राहा!",
+        "active_quests": "सक्रिय आव्हाने",
+        "available": "उपलब्ध",
+        "leaderboard_rank": "लीडरबोर्ड श्रेणी",
+        "farmers_count": "{{count}} शेतकऱ्यांमध्ये",
+        "prediction_confidence": "अंदाज विश्वास",
+        "latest_crop_prediction": "नवीनतम पीक अंदाज"
+      },
+      "cards": {
+        "my_quests": "माझी आव्हाने",
+        "quests_description": "तुमच्या शेतकरी आव्हाने आणि यशांचा मागोवा घ्या",
+        "active_quests": "सक्रिय आव्हाने",
+        "completed": "पूर्ण",
+        "available": "उपलब्ध",
+        "view_all": "सर्व पहा",
+        "crop_predictions": "पीक अंदाज",
+        "predictions_description": "AI-चालित उत्पादन आणि टिकाऊपणा अंतर्दृष्टी"
+      },
+      "predictions": {
+        "latest_prediction": "नवीनतम अंदाज",
+        "latest_prediction_text": "+15% उत्पादन वाढीची अपेक्षा",
+        "confidence": "विश्वास",
+        "view_detailed": "तपशीलवार अंदाज पहा"
+      },
+      "weather": {
+        "todays_weather": "आजचे हवामान",
+        "location_conditions": "{{location}} हवामान परिस्थिती",
+        "your_location": "तुमचे स्थान",
+        "humidity": "आर्द्रता",
+        "wind": "वारा",
+        "wind_light": "हलका",
+        "forecast_7_day": "7-दिवसांचा अंदाज"
+      },
+      "quick_actions": {
+        "title": "जलद कृती",
+        "start_new_quest": "नवीन आव्हान सुरू करा",
+        "view_predictions": "अंदाज पहा",
+        "check_rewards": "बक्षिसे तपासा",
+        "view_leaderboard": "लीडरबोर्ड पहा"
+      },
+      "activity": {
+        "recent_activity": "अलीकडील क्रियाकलाप",
+        "description": "तुमच्या नवीनतम शेतकरी यशा",
+        "quest_completed_water_management": "\"पाणी व्यवस्थापन अनुकूलन\" पूर्ण केले",
+        "prediction_received_rice": "नवीन तांदूळ उत्पादन अंदाज उपलब्ध",
+        "badge_earned_efficiency": "\"कार्यक्षमता तज्ज्ञ\" बॅज मिळविला",
+        "time_hours_ago": "{{count}} तासांपूर्वी",
+        "time_days_ago": "{{count}} दिवसापूर्वी"
+      }
+    },
+  "auth": {
+    "login": {
+      "title": "पुन्हा स्वागत",
+      "subtitle": "तुमच्या KhetiBandhu खात्यात साइन इन करा",
+      "email": "ईमेल",
+      "password": "पासवर्ड",
+      "remember_me": "मला आठवा",
+      "forgot_password": "पासवर्ड विसरलात?",
+      "sign_in": "साइन इन",
+      "no_account": "खाते नाही?",
+      "sign_up": "साइन अप करा"
+    },
+    "register": {
+      "title": "खाते तयार करा",
+      "subtitle": "KhetiBandhu मध्ये सामील व्हा आणि तुमची शेतीची प्रवास सुरू करा",
+      "full_name": "पूर्ण नाव",
+      "email": "ईमेल",
+      "password": "पासवर्ड",
+      "confirm_password": "पासवर्ड निश्चित करा",
+      "village": "गाव",
+      "state": "राज्य",
+      "crop_type": "पिकाचा प्रकार",
+      "create_account": "खाते तयार करा",
+      "have_account": "आधीच खाते आहे?",
+      "sign_in": "साइन इन करा"
+    }
+  },
+  "quests": {
+    "title": "क्वेस्ट",
+    "description": "गुण आणि बक्षीस मिळवण्यासाठी शेती मिशन पूर्ण करा",
+    "active": "सक्रिय क्वेस्ट",
+    "completed": "पूर्ण क्वेस्ट",
+    "available": "उपलब्ध क्वेस्ट",
+    "start_quest": "क्वेस्ट सुरू करा",
+    "complete_quest": "क्वेस्ट पूर्ण करा",
+    "view_details": "तपशील पहा",
+    "points": "गुण",
+    "difficulty": "अडचण",
+    "easy": "सोपे",
+    "medium": "मध्यम",
+    "hard": "कठीण",
+    "duration": "कालावधी",
+    "days": "दिवस",
+        "loading": "क्वेस्ट लोड होत आहेत...",
+        "header": {
+          "back_to_dashboard": "डॅशबोर्ड",
+          "title": "शेती आव्हाने",
+          "subtitle": "आव्हाने पूर्ण करा आणि बक्षिसे मिळवा",
+          "points": "{{points}} गुण"
+        },
+        "filters": {
+          "search_placeholder": "शीर्षक किंवा पिकानुसार क्वेस्ट शोधा...",
+          "filter_by_status": "स्थितीनुसार फिल्टर करा",
+          "all_quests": "सर्व क्वेस्ट"
+        },
+        "status": {
+          "available": "उपलब्ध",
+          "in_progress": "चालू आहे",
+          "completed": "पूर्ण"
+        },
+        "card": {
+          "level": "स्तर {{level}}",
+          "duration_days": "{{days}} दिवस",
+          "reward_points": "{{points}} गुण",
+          "progress": "प्रगती",
+          "deadline": "अंतिम दिनांक: {{date}}"
+        },
+        "actions": {
+          "start_quest": "क्वेस्ट सुरू करा",
+          "view_progress": "प्रगती पहा"
+        },
+        "empty": {
+          "title": "क्वेस्ट आढळल्या नाहीत",
+          "adjust_filters": "शोध किंवा फिल्टर बदला आणि पहा",
+          "check_back": "नवीन शेती आव्हानांसाठी लवकरच पुन्हा पहा!",
+          "clear_filters": "फिल्टर साफ करा"
+        },
+        "items": {
+          "water_usage_optimization": {
+            "title": "पाणी वापर अनुकूलन",
+            "description": "स्मार्ट सिंचन तंत्र वापरून पाणी वापर 20% ने कमी करा"
+          },
+          "organic_fertilizer_adoption": {
+            "title": "सेंद्रिय खतांचा अवलंब",
+            "description": "सेंद्रिय खतांकडे वळा आणि मातीच्या आरोग्यावर परिणाम नोंदवा"
+          },
+          "crop_rotation_planning": {
+            "title": "पीक पालट नियोजन",
+            "description": "चार हंगामांचा पीक पालट आराखडा तयार करून अमलात आणा"
+          },
+          "pest_management_survey": {
+            "title": "कीड व्यवस्थापन सर्वेक्षण",
+            "description": "तपशीलवार कीड निरीक्षण करा आणि साप्ताहिक अहवाल सादर करा"
+          },
+          "sustainable_harvesting": {
+            "title": "शाश्वत कापणी",
+            "description": "पर्यावरणपूरक कापणी पद्धती अमलात आणा आणि कार्यक्षमतेचे मोजमाप करा"
+          }
+        }
+      },
+  "predictions": {
+    "title": "पिकाचे अंदाज",
+    "description": "तुमच्या शेती निर्णयांसाठी AI-चालित अंतर्दृष्टी",
+    "yield_prediction": "उत्पादन अंदाज",
+    "weather_forecast": "हवामान अंदाज",
+    "disease_risk": "रोग जोखीम",
+    "pest_alert": "कीटक सतर्कता",
+    "soil_analysis": "माती विश्लेषण",
+    "irrigation_advice": "सिंचन सल्ला",
+    "fertilizer_recommendation": "खत शिफारस",
+    "planting_time": "लागवडीची वेळ",
+    "harvest_time": "कापणीची वेळ",
+    "confidence": "आत्मविश्वास",
+    "high": "उच्च",
+    "medium": "मध्यम",
+    "low": "कमी"
+  },
+  "leaderboard": {
+    "title": "लीडरबोर्ड",
+    "description": "इतर शेतकऱ्यांमध्ये तुम्ही कुठे रँक करता ते पहा",
+    "rank": "रँक",
+    "farmer": "शेतकरी",
+    "points": "गुण",
+    "village": "गाव",
+    "state": "राज्य",
+    "your_rank": "तुमची रँक",
+    "total_farmers": "एकूण शेतकरी"
+  },
+  "rewards": {
+    "title": "बक्षीस",
+    "description": "रोमांचक बक्षीसासाठी तुमचे गुण रिडीम करा",
+    "available_rewards": "उपलब्ध बक्षीस",
+    "my_rewards": "माझे बक्षीस",
+    "points_required": "आवश्यक गुण",
+    "redeem": "रिडीम करा",
+    "redeemed": "रिडीम केले",
+    "expires": "कालबाह्य",
+    "loading": "रिवॉर्ड लोड होत आहेत...",
+"header": {
+"back_to_dashboard": "डॅशबोर्ड",
+"title": "रिवॉर्ड स्टोअर",
+"subtitle": "तुमच्या गुणांच्या बदल्यात मौल्यवान कृषी साधने मिळवा",
+"points": "{{points}} गुण"
+},
+"stats": {
+"total_points": "एकूण गुण",
+"available": "उपलब्ध",
+"points_spent": "खर्च केलेले गुण",
+"items_redeemed": "रिडीम केलेल्या वस्तू"
+},
+"tabs": {
+"available": "उपलब्ध रिवॉर्ड",
+"history": "रिडेम्प्शन इतिहास"
+},
+"availability": {
+"available": "उपलब्ध",
+"limited": "मर्यादित स्टॉक",
+"out_of_stock": "स्टॉक संपला"
+},
+"status": {
+"processing": "प्रक्रिया सुरू",
+"shipped": "पाठवले",
+"delivered": "वितरित"
+},
+"card": {
+"delivery": "डिलिव्हरी:",
+"stock": "स्टॉक:",
+"stock_left": "{{count}} उरले",
+"limit": "मर्यादा:",
+"limit_per_farmer": "प्रति शेतकरी {{count}}",
+"points_label": "गुण"
+},
+"actions": {
+"redeem_now": "आत्ताच रिडीम करा",
+"insufficient_points": "गुण अपुरे आहेत"
+},
+"history": {
+"redeemed": "रिडीम तारीख:",
+"points_used": "वापरलेले गुण:",
+"tracking": "ट्रॅकिंग:"
+},
+"empty": {
+"title": "अजून रिडेम्प्शन नाही",
+"subtitle": "आपले शेती टूलकिट तयार करण्यासाठी रिवॉर्ड रिडीम करायला सुरूवात करा!",
+"browse": "उपलब्ध रिवॉर्ड पाहा"
+},
+"items": {
+"premium_seeds": {
+"name": "प्रीमियम बियाण्यांचा पॅक",
+"description": "गहू, भात आणि मका यांसाठी जास्त उत्पादन देणारी, दुष्काळ-प्रतिरोधक बियाणे"
+},
+"smart_irrigation": {
+"name": "स्मार्ट सिंचन किट",
+"description": "कार्यक्षम जल व्यवस्थापनासाठी IoT-सक्षम ड्रिप प्रणाली"
+},
+"organic_fertilizer": {
+"name": "सेंद्रिय खत बंडल",
+"description": "50 कि.ग्रॅ. प्रीमियम ऑर्गॅनिक कंपोस्ट आणि बायो-फर्टिलायझर मिक्स"
+},
+"farming_course": {
+"name": "प्रगत शेती अभ्यासक्रम",
+"description": "शाश्वत शेती पद्धतींवरील ऑनलाइन प्रमाणपत्र अभ्यासक्रम"
+},
+"soil_kit": {
+"name": "मृदा तपासणी किट",
+"description": "pH आणि पोषकतत्व तपासणीसह प्रोफेशनल मृदा विश्लेषण किट"
+},
+"equipment_voucher": {
+"name": "कृषी उपकरण व्हाऊचर",
+"description": "ट्रॅक्टर, हार्वेस्टर आणि उपकरणांसाठी ₹2000 व्हाऊचर"
+},
+"weather_station": {
+"name": "हवामान स्थानक",
+"description": "ॲप कनेक्टिव्हिटीसह पोर्टेबल हवामान मॉनिटरिंग स्टेशन"
+},
+"pest_handbook": {
+"name": "किड नियंत्रण हँडबुक",
+"description": "सेंद्रिय किड व्यवस्थापन तंत्रांवरील सविस्तर मार्गदर्शिका"
+}
+},
+"common": {
+"delivery_3_5": "3-5 दिवस",
+"delivery_5_7": "5-7 दिवस",
+"delivery_10_14": "10-14 दिवस",
+"delivery_14_21": "14-21 दिवस",
+"instant_access": "तात्काळ प्रवेश",
+"instant": "तात्काळ",
+"digital_download": "डिजिटल डाउनलोड"
+}
+  },
+  "badges": {
+    "title": "बॅज",
+    "description": "तुमच्या शेतीच्या यशस्वीतेसाठी बॅज मिळवा",
+    "earned": "मिळालेले बॅज",
+    "available": "उपलब्ध बॅज",
+    "earn_badge": "बॅज मिळवा",
+    "loading": "बॅज लोड होत आहेत...",
+"header": {
+"back_to_dashboard": "डॅशबोर्ड",
+"title": "सिद्धी बॅज",
+"subtitle": "आव्हाने पूर्ण करून बॅज मिळवा",
+"earned_count": "{{earned}}/{{total}} मिळाले"
+},
+"stats": {
+"total_badges": "एकूण बॅज",
+"earned": "मिळालेले",
+"points": "बॅज गुण",
+"completion": "पूर्णता"
+},
+"categories": {
+"all": "सर्व",
+"achiever": "सिद्धीकर्ता",
+"expert": "तज्ञ",
+"pioneer": "पथदर्शी",
+"helper": "मदतक",
+"learner": "शिकणारा"
+},
+"sections": {
+"earned": "मिळालेले बॅज",
+"in_progress": "प्रगतीत"
+},
+"rarity": {
+"common": "सामान्य",
+"rare": "दुर्मिळ",
+"epic": "एपिक",
+"legendary": "लेजेंडरी"
+},
+"points_short": "+{{points}} गुण",
+"earned_on": "{{date}} रोजी मिळाले",
+"progress": "प्रगती",
+"empty": {
+"title": "या श्रेणीत बॅज नाहीत",
+"subtitle": "इतर श्रेण्या पाहा!"
+},
+"items": {
+"first_quest": { "name": "पहिले क्वेस्ट", "description": "तुमचा पहिला शेती क्वेस्ट पूर्ण करा", "req": "1 क्वेस्ट पूर्ण करा" },
+"quest_master": { "name": "क्वेस्ट मास्टर", "description": "10 शेती क्वेस्ट पूर्ण करा", "req": "10 क्वेस्ट पूर्ण करा" },
+"water_wizard": { "name": "वॉटर विजार्ड", "description": "पाणी व्यवस्थापन तंत्रे आत्मसात करा", "req": "पाण्याशी संबंधित 5 क्वेस्ट पूर्ण करा" },
+"sustainability_champion": { "name": "सस्टेनेबिलिटी चॅम्पियन", "description": "उच्च स्थिरता गुण मिळवा", "req": "30 दिवस 80%+ स्थिरता राखा" },
+"innovation_pioneer": { "name": "इनोव्हेशन पायोनियर", "description": "नवीन वैशिष्ट्ये अगोदर वापरून पाहा", "req": "लाँच आठवड्यात 3 नवीन वैशिष्ट्ये वापरा" },
+"community_helper": { "name": "कम्युनिटी हेल्पर", "description": "इतर शेतकऱ्यांना मदत करा", "req": "10 वेळा ज्ञान शेअर करा" },
+"knowledge_seeker": { "name": "नॉलेज सीकर", "description": "सर्व लर्निंग मॉड्युल पूर्ण करा", "req": "8 लर्निंग मॉड्युल पूर्ण करा" },
+"streak_warrior": { "name": "स्ट्रिक वॉरियर", "description": "30 दिवसांची अॅक्टिव्हिटी स्ट्रिक ठेवा", "req": "सलग 30 दिवस लॉगिन करा" },
+"legendary_farmer": { "name": "लेजेंडरी फार्मर", "description": "शेती उत्कृष्टतेच्या शिखरावर पोहोचा", "req": "लेव्हल 10 आणि 5000 गुण मिळवा" }
+}
+  },
+  "profile": {
+    "title": "प्रोफाइल",
+    "personal_info": "वैयक्तिक माहिती",
+    "farming_info": "शेती माहिती",
+    "statistics": "आकडेवारी",
+    "edit_profile": "प्रोफाइल संपादित करा",
+    "change_password": "पासवर्ड बदला",
+    "account_settings": "खाते सेटिंग्ज",
+    "joined_date": "सामील झाले",
+    "total_points": "एकूण गुण",
+    "quests_completed": "पूर्ण क्वेस्ट",
+    "badges_earned": "मिळालेले बॅज",
+    "predictions_used": "वापरलेले अंदाज"
+  },
+  "weather": {
+    "temperature": "तापमान",
+    "humidity": "आर्द्रता",
+    "wind_speed": "वाऱ्याची गती",
+    "pressure": "दाब",
+    "uv_index": "UV निर्देशांक",
+    "visibility": "दृश्यता",
+    "sunrise": "सूर्योदय",
+    "sunset": "सूर्यास्त",
+    "conditions": {
+      "sunny": "सूर्यप्रकाश",
+      "partly_cloudy": "अंशतः ढगाळ",
+      "cloudy": "ढगाळ",
+      "rainy": "पाऊस",
+      "stormy": "वादळ",
+      "foggy": "धुके"
+    }
+  },
+  "crops": {
+    "rice": "तांदूळ",
+    "wheat": "गहू",
+    "maize": "मका",
+    "sugarcane": "ऊस",
+    "cotton": "कापूस",
+    "potato": "बटाटा",
+    "tomato": "टोमॅटो",
+    "onion": "कांदा",
+    "chili": "मिरची",
+    "brinjal": "वांगी",
+    "okra": "भेंडी",
+    "cabbage": "कोबी",
+    "cauliflower": "फुलकोबी",
+    "spinach": "पालक",
+    "coriander": "कोथिंबीर",
+    "mint": "पुदीना",
+    "basil": "तुळस",
+    "other": "इतर"
+  },
+  "states": {
+    "andhra_pradesh": "आंध्रप्रदेश",
+    "arunachal_pradesh": "अरुणाचल प्रदेश",
+    "assam": "आसाम",
+    "bihar": "बिहार",
+    "chhattisgarh": "छत्तीसगड",
+    "goa": "गोवा",
+    "gujarat": "गुजरात",
+    "haryana": "हरियाणा",
+    "himachal_pradesh": "हिमाचल प्रदेश",
+    "jharkhand": "झारखंड",
+    "karnataka": "कर्नाटक",
+    "kerala": "केरळ",
+    "madhya_pradesh": "मध्यप्रदेश",
+    "maharashtra": "महाराष्ट्र",
+    "manipur": "मणिपूर",
+    "meghalaya": "मेघालय",
+    "mizoram": "मिझोरम",
+    "nagaland": "नागालँड",
+    "odisha": "ओडिशा",
+    "punjab": "पंजाब",
+    "rajasthan": "राजस्थान",
+    "sikkim": "सिक्कीम",
+    "tamil_nadu": "तमिळनाडू",
+    "telangana": "तेलंगणा",
+    "tripura": "त्रिपुरा",
+    "uttar_pradesh": "उत्तरप्रदेश",
+    "uttarakhand": "उत्तराखंड",
+    "west_bengal": "पश्चिम बंगाल"
+  },
+  "languages": {
+    "english": "English",
+    "hindi": "हिन्दी",
+    "telugu": "తెలుగు",
+    "tamil": "தமிழ்",
+    "bengali": "বাংলা",
+    "gujarati": "ગુજરાતી",
+    "marathi": "मराठी",
+    "kannada": "ಕನ್ನಡ",
+    "malayalam": "മലയാളം",
+    "punjabi": "ਪੰਜਾਬੀ",
+    "odia": "ଓଡ଼ିଆ",
+    "assamese": "অসমীয়া"
+  },
+  "register": {
+      "hero": {
+        "alt": "सुंदर भारतीय शेत दृश्य",
+        "title": "खेतिबंधू मध्ये सामील व्हा",
+        "subtitle": "आपला डिजिटल शेती प्रवास सुरू करा",
+        "tagline": "भविष्यवाण्या मिळवा, आव्हाने पूर्ण करा आणि समुदायासोबत वाढवा"
+      },
+      "form": {
+        "title": "शेतकरी नोंदणी",
+        "description": "कृषी सहाय्यासाठी आपले खाते तयार करा"
+      },
+      "toast": {
+        "error_title": "नोंदणी अयशस्वी",
+        "success_title": "यशस्वी!",
+        "success_message": "खाते यशस्वीरित्या तयार झाले! खेतिबंधू मध्ये स्वागत आहे!",
+        "error_fallback": "नोंदणी अयशस्वी झाली"
+      },
+      "fields": {
+        "name": { "label": "पूर्ण नाव", "placeholder": "आपले पूर्ण नाव" },
+        "username": { "label": "वापरकर्ता नाव", "placeholder": "वापरकर्ता नाव निवडा" },
+        "email": { "label": "ईमेल पत्ता", "placeholder": "your.email@example.com" },
+        "password": { "label": "पासवर्ड", "placeholder": "मजबूत पासवर्ड तयार करा" },
+        "pm_kisan_id": { 
+          "label": "PM-किसान आयडी", 
+          "placeholder": "PMK1234567890",
+          "helper": "'PMK' ने सुरू होऊन 10+ अक्षरे असावीत"
+        },
+        "village": { "label": "गाव", "placeholder": "आपल्या गावाचे नाव" },
+        "crops": { 
+          "label": "लावलेली पिके", 
+          "placeholder": "भात, गहू, मका",
+          "helper": "स्वल्पविरामाने विभक्त करा"
+        },
+        "phone": { "label": "फोन नंबर", "placeholder": "+91 9876543210" }
+      },
+      "cta": {
+        "create_account": "खाते तयार करा",
+        "creating_account": "खाते तयार होत आहे..."
+      },
+      "have_account": "आधीच खाते आहे?",
+      "sign_in_here": "इथे साइन इन करा"
+    },
+    "login": {
+        "brand": "खेतिबंधू",
+        "hero": {
+          "alt": "सुंदर भारतीय शेत दृश्य",
+          "subtitle": "तुमचा डिजिटल शेती सहायक",
+          "tagline": "स्मार्ट कृषी उपायांनी शेतकऱ्यांना सक्षम बनवणे"
+        },
+        "form": {
+          "title": "शेतकरी लॉगिन",
+          "description": "तुमचा शेती डॅशबोर्ड वापरण्यासाठी साइन इन करा"
+        },
+        "fields": {
+          "username": { "label": "वापरकर्ता नाव", "placeholder": "तुमचे वापरकर्ता नाव प्रविष्ट करा" },
+          "password": { "label": "पासवर्ड", "placeholder": "तुमचा पासवर्ड प्रविष्ट करा" }
+        },
+        "cta": { "sign_in": "साइन इन", "signing_in": "साइन इन होत आहे..." },
+        "new_farmer": "नवीन शेतकरी?",
+        "create_account": "खाते तयार करा",
+        "toast": {
+          "error_title": "लॉगिन अयशस्वी",
+          "error_fallback": "लॉगिन अयशस्वी झाले"
+        }
+      },
+      "landing": {
+"brand": "खेतिबंधू",
+"nav": { "sign_in": "साइन इन", "get_started": "सुरू करा" },
+"hero": {
+"alt": "आधुनिक शेतीचे दृश्य",
+"tagline": "तुमचा डिजिटल शेती सहायक — AI-आधारित अंतर्दृष्टी, गेमिफाइड शिक्षण आणि समुदाय सहाय्य.",
+"cta_start": "तुमची यात्रा सुरू करा"
+},
+"features": {
+"title": "भारतीय कृषीमध्ये क्रांती",
+"subtitle": "खेतिबंधू पारंपरिक ज्ञान व आधुनिक तंत्रज्ञान यांचे मिश्रण करून चांगल्या पिकांसाठी कसे मदत करते ते जाणून घ्या.",
+"smart_quests": {
+"title": "स्मार्ट क्वेस्ट",
+"description": "शेती मिशन पूर्ण करा, गुण मिळवा आणि आपल्या पद्धती सुधारवा."
+},
+"ai_predictions": {
+"title": "AI अंदाज",
+"description": "मशीन लर्निंग व हवामान डेटावर आधारित अचूक उत्पादन अंदाज मिळवा."
+},
+"gamification": {
+"title": "गेमिफिकेशन",
+"description": "बॅज मिळवा, लीडरबोर्डवर चढा आणि उपलब्ध्यांसाठी बक्षिसे अनलॉक करा."
+},
+"community": {
+"title": "समुदाय",
+"description": "इतर शेतकऱ्यांशी जोडा आणि कृषी समुदायातून शिका."
+}
+},
+"benefits": {
+"title": "खेतिबंधू का निवडावे?",
+"subtitle": "हजारो भारतीय शेतकरी आमच्या अभिनव प्लॅटफॉर्मने आपली शेती बदलत आहेत.",
+"ai_yield": "AI अंतर्दृष्टींनी उत्पादन वाढवा",
+"sustainable_practices": "शाश्वत शेती पद्धती शिका",
+"community_connect": "शेती समुदायाशी जोडा",
+"earn_rewards": "चांगल्या पद्धतींसाठी बक्षिसे मिळवा",
+"weather_access": "हवामान अंदाज व सूचना",
+"track_progress": "आपली शेती प्रगती ट्रॅक करा"
+},
+"stats": {
+"active_farmers": "10,000+",
+"active_farmers_label": "सक्रिय शेतकरी",
+"yield_improvement": { "value": "85%", "label": "उत्पादन सुधारणा" },
+"user_satisfaction": { "value": "92%", "label": "वापरकर्ता समाधान" }
+},
+"cta": {
+"title": "आपली शेती बदलायला तयार?",
+"subtitle": "आजच खेतिबंधू मध्ये सामील व्हा आणि अधिक स्मार्ट, शाश्वत शेतीकडे प्रवास सुरू करा.",
+"create_free_account": "मोफत खाते तयार करा"
+},
+"footer": {
+"tagline": "भारतीय कृषीला बलकटी देणे",
+"copyright": "© {{year}} खेतिबंधू. शेतकऱ्यांसाठी, शेतकऱ्यांनी."
+}
+}
+    }
+
+

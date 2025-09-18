@@ -1,0 +1,625 @@
+{
+  "common": {
+    "loading": "ଲୋଡ୍ ହେଉଛି...",
+    "error": "ତ୍ରୁଟି",
+    "success": "ସଫଳତା",
+    "cancel": "ବାତିଲ୍ କରନ୍ତୁ",
+    "save": "ସେଭ୍ କରନ୍ତୁ",
+    "edit": "ସମ୍ପାଦନ କରନ୍ତୁ",
+    "delete": "ଡିଲିଟ୍ କରନ୍ତୁ",
+    "view": "ଦେଖନ୍ତୁ",
+    "back": "ପଛକୁ",
+    "next": "ପରବର୍ତ୍ତୀ",
+    "previous": "ପୂର୍ବବର୍ତ୍ତୀ",
+    "submit": "ଦାଖଲ୍ କରନ୍ତୁ",
+    "close": "ବନ୍ଦ କରନ୍ତୁ",
+    "yes": "ହଁ",
+    "no": "ନାହିଁ",
+    "ok": "ଠିକ୍ ଅଛି"
+  },
+  "navigation": {
+    "dashboard": "ଡ୍ୟାସବୋର୍ଡ",
+    "quests": "କ୍ୱେଷ୍ଟ",
+    "predictions": "ଭବିଷ୍ୟତବାଣୀ",
+    "leaderboard": "ଲିଡରବୋର୍ଡ",
+    "rewards": "ପୁରସ୍କାର",
+    "badges": "ବ୍ୟାଜ",
+    "profile": "ପ୍ରୋଫାଇଲ୍",
+    "login": "ଲଗଇନ୍",
+    "register": "ରେଜିଷ୍ଟର",
+    "logout": "ଲଗଆଉଟ୍"
+  },
+    "dashboard": {
+      "loading_dashboard": "ଡାସବୋର୍ଡ ଲୋଡ୍ ହେଉଛି...",
+      "stats": {
+        "total_points": "ମୋଟ ପଏଣ୍ଟ",
+        "keep_growing": "ବଢ଼ିବା ଜାରି ରଖନ୍ତୁ!",
+        "active_quests": "ସକ୍ରିୟ ଚ୍ୟାଲେଞ୍ଜ",
+        "available": "ଉପଲବ୍ଧ",
+        "leaderboard_rank": "ଲିଡର୍ବୋର୍ଡ ର୍ୟାଙ୍କ",
+        "farmers_count": "{{count}} ଚାଷୀଙ୍କ ମଧ୍ୟରେ",
+        "prediction_confidence": "ପୂର୍ବାନୁମାନ ବିଶ୍ୱାସ",
+        "latest_crop_prediction": "ସର୍ବଶେଷ ଫସଲ ପୂର୍ବାନୁମାନ"
+      },
+      "cards": {
+        "my_quests": "ମୋ ଚ୍ୟାଲେଞ୍ଜ",
+        "quests_description": "ଆପଣଙ୍କ କୃଷି ଚ୍ୟାଲେଞ୍ଜ ଏବଂ ସଫଳତାକୁ ଟ୍ରାକ କରନ୍ତୁ",
+        "active_quests": "ସକ୍ରିୟ ଚ୍ୟାଲେଞ୍ଜ",
+        "completed": "ସମ୍ପୂର୍ଣ୍ଣ",
+        "available": "ଉପଲବ୍ଧ",
+        "view_all": "ସବୁ ଦେଖନ୍ତୁ",
+        "crop_predictions": "ଫସଲ ପୂର୍ବାନୁମାନ",
+        "predictions_description": "AI-ଚାଳିତ ଉତ୍ପାଦନ ଏବଂ ସ୍ଥିରତା ଅନ୍ତର୍ଦୃଷ୍ଟି"
+      },
+      "predictions": {
+        "latest_prediction": "ସର୍ବଶେଷ ପୂର୍ବାନୁମାନ",
+        "latest_prediction_text": "+15% ଉତ୍ପାଦନ ବୃଦ୍ଧିର ଆଶା",
+        "confidence": "ବିଶ୍ୱାସ",
+        "view_detailed": "ବିସ୍ତୃତ ପୂର୍ବାନୁମାନ ଦେଖନ୍ତୁ"
+      },
+      "weather": {
+        "todays_weather": "ଆଜିର ପାଗ",
+        "location_conditions": "{{location}} ପାଗ ପରିସ୍ଥିତି",
+        "your_location": "ଆପଣଙ୍କ ସ୍ଥାନ",
+        "humidity": "ଆର୍ଦ୍ରତା",
+        "wind": "ପବନ",
+        "wind_light": "ହାଲକା",
+        "forecast_7_day": "7-ଦିନର ପୂର୍ବାନୁମାନ"
+      },
+      "quick_actions": {
+        "title": "ତୁରନ୍ତ କାର୍ଯ୍ୟ",
+        "start_new_quest": "ନୂତନ ଚ୍ୟାଲେଞ୍ଜ ଆରମ୍ଭ କରନ୍ତୁ",
+        "view_predictions": "ପୂର୍ବାନୁମାନ ଦେଖନ୍ତୁ",
+        "check_rewards": "ପୁରସ୍କାର ଯାଞ୍ଚ କରନ୍ତୁ",
+        "view_leaderboard": "ଲିଡର୍ବୋର୍ଡ ଦେଖନ୍ତୁ"
+      },
+      "activity": {
+        "recent_activity": "ସାମ୍ପ୍ରତିକ କାର୍ଯ୍ୟକଳାପ",
+        "description": "ଆପଣଙ୍କର ସର୍ବଶେଷ କୃଷି ସଫଳତା",
+        "quest_completed_water_management": "\"ଜଳ ପରିଚାଳନା ଅପ୍ଟିମାଇଜେସନ\" ସମ୍ପୂର୍ଣ୍ଣ କଲେ",
+        "prediction_received_rice": "ନୂତନ ଚାଉଳ ଉତ୍ପାଦନ ପୂର୍ବାନୁମାନ ଉପଲବ୍ଧ",
+        "badge_earned_efficiency": "\"ଦକ୍ଷତା ବିଶେଷଜ୍ଞ\" ବ୍ୟାଜ ଅର୍ଜନ କଲେ",
+        "time_hours_ago": "{{count}} ଘଣ୍ଟା ପୂର୍ବେ",
+        "time_days_ago": "{{count}} ଦିନ ପୂର୍ବେ"
+      }
+    },
+  "auth": {
+    "login": {
+      "title": "ପୁନର୍ବାର ସ୍ୱାଗତ",
+      "subtitle": "ଆପଣଙ୍କର KhetiBandhu ଆକାଉଣ୍ଟରେ ସାଇନ୍ ଇନ୍ କରନ୍ତୁ",
+      "email": "ଇମେଲ୍",
+      "password": "ପାସୱାର୍ଡ",
+      "remember_me": "ମୋତେ ମନେ ରଖନ୍ତୁ",
+      "forgot_password": "ପାସୱାର୍ଡ ଭୁଲିଗଲେ?",
+      "sign_in": "ସାଇନ୍ ଇନ୍",
+      "no_account": "ଆକାଉଣ୍ଟ୍ ନାହିଁ?",
+      "sign_up": "ସାଇନ୍ ଅପ୍ କରନ୍ତୁ"
+    },
+    "register": {
+      "title": "ଆକାଉଣ୍ଟ୍ ସୃଷ୍ଟି କରନ୍ତୁ",
+      "subtitle": "KhetiBandhuରେ ଯୋଗ ଦିଅନ୍ତୁ ଏବଂ ଆପଣଙ୍କର କୃଷି ଯାତ୍ରା ଆରମ୍ଭ କରନ୍ତୁ",
+      "full_name": "ପୂର୍ଣ୍ଣ ନାମ",
+      "email": "ଇମେଲ୍",
+      "password": "ପାସୱାର୍ଡ",
+      "confirm_password": "ପାସୱାର୍ଡ ନିଶ୍ଚିତ କରନ୍ତୁ",
+      "village": "ଗ୍ରାମ",
+      "state": "ରାଜ୍ୟ",
+      "crop_type": "ଫସଲର ପ୍ରକାର",
+      "create_account": "ଆକାଉଣ୍ଟ୍ ସୃଷ୍ଟି କରନ୍ତୁ",
+      "have_account": "ପୂର୍ବରୁ ଆକାଉଣ୍ଟ୍ ଅଛି?",
+      "sign_in": "ସାଇନ୍ ଇନ୍ କରନ୍ତୁ"
+    }
+  },
+  "quests": {
+    "title": "କ୍ୱେଷ୍ଟ",
+    "description": "ପଏଣ୍ଟ ଏବଂ ପୁରସ୍କାର ପାଇବା ପାଇଁ କୃଷି ମିଶନ୍ ସମ୍ପୂର୍ଣ୍ଣ କରନ୍ତୁ",
+    "active": "ସକ୍ରିୟ କ୍ୱେଷ୍ଟ",
+    "completed": "ସମ୍ପୂର୍ଣ୍ଣ କ୍ୱେଷ୍ଟ",
+    "available": "ଉପଲବ୍ଧ କ୍ୱେଷ୍ଟ",
+    "start_quest": "କ୍ୱେଷ୍ଟ ଆରମ୍ଭ କରନ୍ତୁ",
+    "complete_quest": "କ୍ୱେଷ୍ଟ ସମ୍ପୂର୍ଣ୍ଣ କରନ୍ତୁ",
+    "view_details": "ବିବରଣୀ ଦେଖନ୍ତୁ",
+    "points": "ପଏଣ୍ଟ",
+    "difficulty": "କଷ୍ଟ",
+    "easy": "ସହଜ",
+    "medium": "ମଧ୍ୟମ",
+    "hard": "କଷ୍ଟ",
+    "duration": "ଅବଧି",
+    "days": "ଦିନ",
+        "loading": "କୁଏଷ୍ଟ ଲୋଡ୍ ହେଉଛି...",
+        "header": {
+          "back_to_dashboard": "ଡାସବୋର୍ଡ",
+          "title": "କୃଷି ଚ୍ୟାଲେଞ୍ଜ",
+          "subtitle": "ଚ୍ୟାଲେଞ୍ଜ ପୂରଣ କରି ପୁରସ୍କାର ଅର୍ଜନ କରନ୍ତୁ",
+          "points": "{{points}} ପଏଣ୍ଟ"
+        },
+        "filters": {
+          "search_placeholder": "ଶିରୋନାମ କିମ୍ବା ଫସଲ ଦ୍ୱାରା କୁଏଷ୍ଟ ଖୋଜନ୍ତୁ...",
+          "filter_by_status": "ସ୍ଥିତି ଅନୁସାରେ ଫିଲ୍ଟର କରନ୍ତୁ",
+          "all_quests": "ସମସ୍ତ କୁଏଷ୍ଟ"
+        },
+        "status": {
+          "available": "ଉପଲବ୍ଧ",
+          "in_progress": "ଚାଲିଛି",
+          "completed": "ସମ୍ପୂର୍ଣ୍ଣ"
+        },
+        "card": {
+          "level": "ସ୍ତର {{level}}",
+          "duration_days": "{{days}} ଦିନ",
+          "reward_points": "{{points}} ପଏଣ୍ଟ",
+          "progress": "ପ୍ରଗତି",
+          "deadline": "ସମୟସୀମା: {{date}}"
+        },
+        "actions": {
+          "start_quest": "କୁଏଷ୍ଟ ଆରମ୍ଭ କରନ୍ତୁ",
+          "view_progress": "ପ୍ରଗତି ଦେଖନ୍ତୁ"
+        },
+        "empty": {
+          "title": "କ fଏଷ୍ଟ ମିଳିଲା ନାହିଁ",
+          "adjust_filters": "ଖୋଜ କିମ୍ବା ଫିଲ୍ଟର ବଦଳାଇ ଦେଖନ୍ତୁ",
+          "check_back": "ନୂତନ କୃଷି ଚ୍ୟାଲେଞ୍ଜ ପାଇଁ ଶୀଘ୍ର ଫେରି ଯାଞ୍ଚ କରନ୍ତୁ!",
+          "clear_filters": "ଫିଲ୍ଟର ସଫା କରନ୍ତୁ"
+        },
+        "items": {
+          "water_usage_optimization": {
+            "title": "ଜଳ ବ୍ୟବହାର ଅପ୍ଟିମାଇଜେସନ",
+            "description": "ସ୍ମାର୍ଟ ସିଚାଇ ପ୍ରଯୁକ୍ତି ଲାଗୁ କରି ଜଳ ଖର୍ଚ୍ଚ 20% କମାନ୍ତୁ"
+          },
+          "organic_fertilizer_adoption": {
+            "title": "ଜୈବିକ ସାର ଅପନାୟନ",
+            "description": "ଜୈବିକ ସାରକୁ ଅପନାଇ ମାଟିର ସ୍ବାସ୍ଥ୍ୟ ଉପରେ ପ୍ରଭାବ ରେକର୍ଡ କରନ୍ତୁ"
+          },
+          "crop_rotation_planning": {
+            "title": "ଫସଲ ପରିବର୍ତ୍ତନ ଯୋଜନା",
+            "description": "4-ଋତୁର ଫସଲ ପରିବର୍ତ୍ତନ ଯୋଜନା ତିଆରି କରି ଲାଗୁ କରନ୍ତୁ"
+          },
+          "pest_management_survey": {
+            "title": "କୀଟ ପରିଚାଳନା ସର୍ଭେ",
+            "description": "ବିସ୍ତୃତ କୀଟ ନିରୀକ୍ଷଣ କରି ସାପ୍ତାହିକ ରିପୋର୍ଟ ଦିଅନ୍ତୁ"
+          },
+          "sustainable_harvesting": {
+            "title": "ସୁସ୍ଥିର କଟାଇ",
+            "description": "ପରିବେଶ-ବନ୍ଧବ କଟାଇ ପ୍ରଣାଳୀ ଲାଗୁ କରି କାର୍ଯ୍ୟକ୍ଷମତା ମାପନ କରନ୍ତୁ"
+          }
+        }
+      },
+  "predictions": {
+    "title": "ଫସଲ ଭବିଷ୍ୟତବାଣୀ",
+    "description": "ଆପଣଙ୍କର କୃଷି ନିର୍ଣ୍ଣୟ ପାଇଁ AI-ଚାଳିତ ଅନ୍ତର୍ଦୃଷ୍ଟି",
+    "yield_prediction": "ଫଳନ ଭବିଷ୍ୟତବାଣୀ",
+    "weather_forecast": "ପାଣିପଗ ପୂର୍ବାନୁମାନ",
+    "disease_risk": "ରୋଗ ବିପଦ",
+    "pest_alert": "କୀଟ ସତର୍କତା",
+    "soil_analysis": "ମାଟି ବିଶ୍ଳେଷଣ",
+    "irrigation_advice": "ସେଚନ ପରାମର୍ଶ",
+    "fertilizer_recommendation": "ସାର ପରାମର୍ଶ",
+    "planting_time": "ବୁଣାଇ ସମୟ",
+    "harvest_time": "କଟାଇ ସମୟ",
+    "confidence": "ଆତ୍ମବିଶ୍ୱାସ",
+    "high": "ଉଚ୍ଚ",
+    "medium": "ମଧ୍ୟମ",
+    "low": "ନିମ୍ନ"
+  },
+  "leaderboard": {
+    "title": "ଲିଡରବୋର୍ଡ୍",
+    "description": "ଦେଖନ୍ତୁ ଆପଣ ଅନ୍ୟ କୃଷକମାନଙ୍କ ମଧ୍ୟରେ କେଉଁଠାରେ ର୍ୟାଙ୍କ କରୁଛନ୍ତି",
+    "rank": "ର୍ୟାଙ୍କ",
+    "farmer": "କୃଷକ",
+    "points": "ପଏଣ୍ଟ",
+    "village": "ଗ୍ରାମ",
+    "state": "ରାଜ୍ୟ",
+    "your_rank": "ଆପଣଙ୍କର ର୍ୟାଙ୍କ",
+    "total_farmers": "ମୋଟ କୃଷକ"
+  },
+  "rewards": {
+    "title": "ପୁରସ୍କାର",
+    "description": "ରୋମାଞ୍ଚକ ପୁରସ୍କାର ପାଇଁ ଆପଣଙ୍କର ପଏଣ୍ଟ ରିଡିମ୍ କରନ୍ତୁ",
+    "available_rewards": "ଉପଲବ୍ଧ ପୁରସ୍କାର",
+    "my_rewards": "ମୋର ପୁରସ୍କାର",
+    "points_required": "ଆବଶ୍ୟକ ପଏଣ୍ଟ",
+    "redeem": "ରିଡିମ୍ କରନ୍ତୁ",
+    "redeemed": "ରିଡିମ୍ ହୋଇଛି",
+    "expires": "ସମାପ୍ତି",
+    "loading": "ରିୱାର୍ଡ୍ ଲୋଡ୍ ହେଉଛି...",
+"header": {
+"back_to_dashboard": "ଡ୍ୟାଶବୋର୍ଡ",
+"title": "ରିୱାର୍ଡ୍ ସ୍ଟୋର",
+"subtitle": "ଆପଣଙ୍କ ପଏଣ୍ଟ୍ ବଦଳରେ ମୂଲ୍ୟବାନ କୃଷି ସମ୍ପଦ ପାଆନ୍ତୁ",
+"points": "{{points}} ପଏଣ୍ଟ"
+},
+"stats": {
+"total_points": "ମୋଟ ପଏଣ୍ଟ",
+"available": "ଉପଲବ୍ଧ",
+"points_spent": "ଖର୍ଚ୍ଚ ପଏଣ୍ଟ",
+"items_redeemed": "ରିଡିମ୍ ହୋଇଥିବା ବସ୍ତୁ"
+},
+"tabs": {
+"available": "ଉପଲବ୍ଧ ରିୱାର୍ଡ୍",
+"history": "ରିଡେମ୍ପସନ୍ ଇତିହାସ"
+},
+"availability": {
+"available": "ଉପଲବ୍ଧ",
+"limited": "ସୀମିତ ଷ୍ଟକ୍",
+"out_of_stock": "ଷ୍ଟକ୍ ଶୂନ୍ୟ"
+},
+"status": {
+"processing": "ପ୍ରସେସିଂ",
+"shipped": "ପଠାଯାଇଛି",
+"delivered": "ପହଞ୍ଚିଗଲା"
+},
+"card": {
+"delivery": "ଡିଲିଭରି:",
+"stock": "ଷ୍ଟକ୍:",
+"stock_left": "{{count}} ବାକୀ",
+"limit": "ସୀମା:",
+"limit_per_farmer": "ପ୍ରତି ଚାଷୀ {{count}}",
+"points_label": "ପଏଣ୍ଟ"
+},
+"actions": {
+"redeem_now": "ଏବେ ରିଡିମ୍ କରନ୍ତୁ",
+"insufficient_points": "ପଏଣ୍ଟ ପର୍ଯ୍ୟାପ୍ତ ନୁହେଁ"
+},
+"history": {
+"redeemed": "ରିଡିମ୍ ତାରିଖ:",
+"points_used": "ବ୍ୟବହୃତ ପଏଣ୍ଟ:",
+"tracking": "ଟ୍ରାକିଂ:"
+},
+"empty": {
+"title": "ଏପର୍ଯ୍ୟନ୍ତ କୌଣସି ରିଡେମ୍ପସନ୍ ନାହିଁ",
+"subtitle": "ଆପଣଙ୍କ କୃଷି ଟୁଲକିଟ୍ ଗଠନ ପାଇଁ ରିୱାର୍ଡ୍ ରିଡିମ୍ କରିବା ଆରମ୍ଭ କରନ୍ତୁ!",
+"browse": "ଉପଲବ୍ଧ ରିୱାର୍ଡ୍ ଦେଖନ୍ତୁ"
+},
+"items": {
+"premium_seeds": {
+"name": "ପ୍ରିମିୟମ୍ ବୀଜ ପ୍ୟାକ୍",
+"description": "ଗହମ, ଧାନ ଏବଂ ମକା ପାଇଁ ଉଚ୍ଚ-ଉତ୍ପାଦନ, ଖରା-ପ୍ରତିରୋଧୀ ବୀଜ"
+},
+"smart_irrigation": {
+"name": "ସ୍ମାର୍ଟ ସିଚାଇ କିଟ୍",
+"description": "କ୍ଷମତାଶୀଳ ଜଳ ପରିଚାଳନା ପାଇଁ IoT ସଚଳ ଡ୍ରିପ୍ ସିଷ୍ଟମ୍"
+},
+"organic_fertilizer": {
+"name": "ଜୈବିକ ସାର ବଣ୍ଡଲ୍",
+"description": "50କିଗ୍ରା ପ୍ରିମିୟମ୍ ଆର୍ଗାନିକ କମ୍ପୋଷ୍ଟ ଏବଂ ବାୟୋ-ଫର୍ଟିଲାଇଜର୍ ମିଶ୍ରଣ"
+},
+"farming_course": {
+"name": "ଅଡଭାନ୍ସ୍ ଫାର୍ମିଙ୍ଗ କୋର୍ସ",
+"description": "ସୁସ୍ଥିର କୃଷି ପ୍ରଯୋଗ ଉପରେ ଅନଲାଇନ୍ ସର୍ଟିଫିକେସନ୍ କୋର୍ସ"
+},
+"soil_kit": {
+"name": "ମାଟି ପରୀକ୍ଷଣ କିଟ୍",
+"description": "pH ଏବଂ ପୋଷକ ପରୀକ୍ଷା ସହ ପ୍ରୋଫେସନାଲ୍ ସଏଲ୍ ଆନାଲିସିସ୍ କିଟ୍"
+},
+"equipment_voucher": {
+"name": "କୃଷି ଉପକରଣ ଭାଉଚର୍",
+"description": "ଟ୍ରାକ୍ଟର, ହାରଭେଷ୍ଟର ଏବଂ ଉପକରଣ ପାଇଁ ₹2000 ଭାଉଚର୍"
+},
+"weather_station": {
+"name": "ଆବହାଅା ଷ୍ଟେସନ୍",
+"description": "ଆପ୍ କନେକ୍ଟିଭିଟି ସହ ପୋର୍ଟେବଲ୍ ଆବହାଅା ମନିଟରିଂ ଷ୍ଟେସନ୍"
+},
+"pest_handbook": {
+"name": "କୀଟ ନିୟନ୍ତ୍ରଣ ହ୍ୟାଣ୍ଡବୁକ୍",
+"description": "ଜୈବିକ କୀଟ ପରିଚାଳନା ପ୍ରଯୁକ୍ତି ବିଷୟରେ ସମ୍ପୂର୍ଣ୍ଣ ଗାଇଡ୍"
+}
+},
+"common": {
+"delivery_3_5": "3-5 ଦିନ",
+"delivery_5_7": "5-7 ଦିନ",
+"delivery_10_14": "10-14 ଦିନ",
+"delivery_14_21": "14-21 ଦିନ",
+"instant_access": "ତୁରନ୍ତ ଆକ୍ସେସ୍",
+"instant": "ତୁରନ୍ତ",
+"digital_download": "ଡିଜିଟାଲ୍ ଡାଉନଲୋଡ୍"
+}
+  },
+  "badges": {
+    "title": "ବ୍ୟାଜ",
+    "description": "ଆପଣଙ୍କର କୃଷି ସଫଳତା ପାଇଁ ବ୍ୟାଜ ପ୍ରାପ୍ତ କରନ୍ତୁ",
+    "earned": "ପ୍ରାପ୍ତ ବ୍ୟାଜ",
+    "available": "ଉପଲବ୍ଧ ବ୍ୟାଜ",
+    "earn_badge": "ବ୍ୟାଜ ପ୍ରାପ୍ତ କରନ୍ତୁ",
+    "loading": "ବ୍ୟାଜ୍ ଲୋଡ୍ ହେଉଛି...",
+"header": {
+"back_to_dashboard": "ଡ୍ୟାଶବୋର୍ଡ",
+"title": "ଉପଲବ୍ଧି ବ୍ୟାଜ୍",
+"subtitle": "ଚ୍ୟାଲେଞ୍ଜ ପୂରଣ କରି ବ୍ୟାଜ୍ ଅର୍ଜନ କରନ୍ତୁ",
+"earned_count": "{{earned}}/{{total}} ଅର୍ଜନ"
+},
+"stats": {
+"total_badges": "ମୋଟ ବ୍ୟାଜ୍",
+"earned": "ଅର୍ଜିତ",
+"points": "ବ୍ୟାଜ୍ ପଏଣ୍ଟ",
+"completion": "ସମ୍ପୂର୍ଣ୍ଣତା"
+},
+"categories": {
+"all": "ସମସ୍ତ",
+"achiever": "ଉପଲବ୍ଧିକାରୀ",
+"expert": "ପାରଦର୍ଶୀ",
+"pioneer": "ପ୍ରବର୍ତ୍ତକ",
+"helper": "ସହାୟକ",
+"learner": "ଶିକ୍ଷାର୍ଥୀ"
+},
+"sections": {
+"earned": "ଅର୍ଜିତ ବ୍ୟାଜ୍",
+"in_progress": "ଚାଲୁ ଅବସ୍ଥା"
+},
+"rarity": {
+"common": "ସାଧାରଣ",
+"rare": "ଦୁର୍ଲଭ",
+"epic": "ଏପିକ୍",
+"legendary": "ଲେଜେଣ୍ଡରି"
+},
+"points_short": "+{{points}} ପଏଣ୍ଟ",
+"earned_on": "{{date}} ରେ ଅର୍ଜନ",
+"progress": "ପ୍ରଗତି",
+"empty": {
+"title": "ଏହି ଶ୍ରେଣୀରେ କୌଣସି ବ୍ୟାଜ୍ ନାହିଁ",
+"subtitle": "ଅନ୍ୟ ଶ୍ରେଣୀ ଅନୁସନ୍ଧାନ କରନ୍ତୁ!"
+},
+"items": {
+"first_quest": {
+"name": "ପ୍ରଥମ କ୍ୱେଷ୍ଟ",
+"description": "ଆପଣଙ୍କ ପ୍ରଥମ କୃଷି କ୍ୱେଷ୍ଟ ପୂରଣ କରନ୍ତୁ",
+"req": "1ଟି କ୍ୱେଷ୍ଟ ପୂରଣ କରନ୍ତୁ"
+},
+"quest_master": {
+"name": "କ୍ୱେଷ୍ଟ ମାଷ୍ଟର",
+"description": "10ଟି କୃଷି କ୍ୱେଷ୍ଟ ପୂରଣ କରନ୍ତୁ",
+"req": "10ଟି କ୍ୱେଷ୍ଟ ପୂରଣ କରନ୍ତୁ"
+},
+"water_wizard": {
+"name": "ଜଳ ଯାଦୁକର",
+"description": "ଜଳ ପରିଚାଳନା ପ୍ରଣାଳୀରେ ପାରଦର୍ଶୀ ହନ୍ତୁ",
+"req": "ଜଳ ସମ୍ବନ୍ଧିତ 5ଟି କ୍ୱେଷ୍ଟ ପୂରଣ କରନ୍ତୁ"
+},
+"sustainability_champion": {
+"name": "ସସ୍ଥାୟୀତ୍ୱ ଚ୍ୟାମ୍ପିଅନ୍",
+"description": "ଉଚ୍ଚ ସସ୍ଥାୟୀତ୍ୱ ସ୍କୋର ଅର୍ଜନ କରନ୍ତୁ",
+"req": "30 ଦିନ ଧରି 80%+ ସସ୍ଥାୟୀତ୍ୱ ରଖନ୍ତୁ"
+},
+"innovation_pioneer": {
+"name": "ନବୀନତା ପ୍ରବର୍ତ୍ତକ",
+"description": "ନୂତନ ବିଶେଷତା ସର୍ବପ୍ରଥମେ ପରୀକ୍ଷାନ୍ତୁ",
+"req": "ଲଞ୍ଚ ସପ୍ତାହରେ 3ଟି ନୂତନ ବିଶେଷତା ପରୀକ୍ଷାନ୍ତୁ"
+},
+"community_helper": {
+"name": "ସମୁଦାୟ ସହାୟକ",
+"description": "ସହଯୋଗୀ ଚାଷୀମାନଙ୍କୁ ସହଯୋଗ କରନ୍ତୁ",
+"req": "10 ଥର ଜ୍ଞାନ ଅଦଳବଦଳ କରନ୍ତୁ"
+},
+"knowledge_seeker": {
+"name": "ଜ୍ଞାନ ଅନ୍ୱେଷୀ",
+"description": "ସମସ୍ତ ଶିକ୍ଷା ମଡ୍ୟୁଲ୍ ପୂରଣ କରନ୍ତୁ",
+"req": "8ଟି ଲର୍ଣିଂ ମଡ୍ୟୁଲ୍ ପୂରଣ କରନ୍ତୁ"
+},
+"streak_warrior": {
+"name": "ସ୍ଟ୍ରିକ୍ ୱାରିୟର୍",
+"description": "30 ଦିନର କାର୍ଯ୍ୟସଚଳତା ସ୍ଟ୍ରିକ୍ ରଖନ୍ତୁ",
+"req": "ଅବିରତ 30 ଦିନ ଲଗଇନ୍ କରନ୍ତୁ"
+},
+"legendary_farmer": {
+"name": "ଲେଜେଣ୍ଡରି ଚାଷୀ",
+"description": "କୃଷି ଶ୍ରେଷ୍ଠତାର ଶିଖରକୁ ପହଞ୍ଚନ୍ତୁ",
+"req": "ଲେଭେଲ୍ 10 ପହଞ୍ଚନ୍ତୁ ଏବଂ 5000 ପଏଣ୍ଟ ଅର୍ଜନ କରନ୍ତୁ"
+}
+}
+  },
+  "profile": {
+    "title": "ପ୍ରୋଫାଇଲ୍",
+    "personal_info": "ବ୍ୟକ୍ତିଗତ ସୂଚନା",
+    "farming_info": "କୃଷି ସୂଚନା",
+    "statistics": "ପରିସଂଖ୍ୟାନ",
+    "edit_profile": "ପ୍ରୋଫାଇଲ୍ ସମ୍ପାଦନ କରନ୍ତୁ",
+    "change_password": "ପାସୱାର୍ଡ ବଦଳାନ୍ତୁ",
+    "account_settings": "ଆକାଉଣ୍ଟ୍ ସେଟିଂ",
+    "joined_date": "ଯୋଗ ଦେଇଛନ୍ତି",
+    "total_points": "ମୋଟ ପଏଣ୍ଟ",
+    "quests_completed": "ସମ୍ପୂର୍ଣ୍ଣ କ୍ୱେଷ୍ଟ",
+    "badges_earned": "ପ୍ରାପ୍ତ ବ୍ୟାଜ",
+    "predictions_used": "ବ୍ୟବହୃତ ଭବିଷ୍ୟତବାଣୀ"
+  },
+  "weather": {
+    "temperature": "ତାପମାତ୍ରା",
+    "humidity": "ଆର୍ଦ୍ରତା",
+    "wind_speed": "ବାୟୁ ଗତି",
+    "pressure": "ଚାପ",
+    "uv_index": "UV ସୂଚକ",
+    "visibility": "ଦୃଶ୍ୟତା",
+    "sunrise": "ସୂର୍ଯ୍ୟୋଦୟ",
+    "sunset": "ସୂର୍ଯ୍ୟାସ୍ତ",
+    "conditions": {
+      "sunny": "ସୂର୍ଯ୍ୟକିରଣ",
+      "partly_cloudy": "ଆଂଶିକ ମେଘାଳ",
+      "cloudy": "ମେଘାଳ",
+      "rainy": "ବର୍ଷା",
+      "stormy": "ଝଡ଼",
+      "foggy": "କୁହୁଡ଼ି"
+    }
+  },
+  "crops": {
+    "rice": "ଚାଉଳ",
+    "wheat": "ଗହମ",
+    "maize": "ମକା",
+    "sugarcane": "ଆଖୁ",
+    "cotton": "କପଡ଼ା",
+    "potato": "ଆଳୁ",
+    "tomato": "ଟମାଟ",
+    "onion": "ପିଆଜ",
+    "chili": "ଲଙ୍କା",
+    "brinjal": "ବାଇଗଣ",
+    "okra": "ଭେଣ୍ଡି",
+    "cabbage": "ବନ୍ଧାକୋବି",
+    "cauliflower": "ଫୁଲକୋବି",
+    "spinach": "ପାଳଙ୍ଗ",
+    "coriander": "ଧନିଆ",
+    "mint": "ପୁଦିନା",
+    "basil": "ତୁଳସୀ",
+    "other": "ଅନ୍ୟ"
+  },
+  "states": {
+    "andhra_pradesh": "ଆନ୍ଧ୍ରପ୍ରଦେଶ",
+    "arunachal_pradesh": "ଅରୁଣାଚଳ ପ୍ରଦେଶ",
+    "assam": "ଆସାମ",
+    "bihar": "ବିହାର",
+    "chhattisgarh": "ଛତିଶଗଡ଼",
+    "goa": "ଗୋଆ",
+    "gujarat": "ଗୁଜରାଟ",
+    "haryana": "ହରିୟାଣା",
+    "himachal_pradesh": "ହିମାଚଳ ପ୍ରଦେଶ",
+    "jharkhand": "ଝାଡ଼ଖଣ୍ଡ",
+    "karnataka": "କର୍ଣ୍ଣାଟକ",
+    "kerala": "କେରଳ",
+    "madhya_pradesh": "ମଧ୍ୟପ୍ରଦେଶ",
+    "maharashtra": "ମହାରାଷ୍ଟ୍ର",
+    "manipur": "ମଣିପୁର",
+    "meghalaya": "ମେଘାଳୟ",
+    "mizoram": "ମିଜୋରାମ",
+    "nagaland": "ନାଗାଲାଣ୍ଡ",
+    "odisha": "ଓଡ଼ିଶା",
+    "punjab": "ପଞ୍ଜାବ",
+    "rajasthan": "ରାଜସ୍ଥାନ",
+    "sikkim": "ସିକ୍କିମ",
+    "tamil_nadu": "ତାମିଲନାଡୁ",
+    "telangana": "ତେଲେଙ୍ଗାନା",
+    "tripura": "ତ୍ରିପୁରା",
+    "uttar_pradesh": "ଉତ୍ତରପ୍ରଦେଶ",
+    "uttarakhand": "ଉତ୍ତରାଖଣ୍ଡ",
+    "west_bengal": "ପଶ୍ଚିମବଙ୍ଗ"
+  },
+  "languages": {
+    "english": "English",
+    "hindi": "हिन्दी",
+    "telugu": "తెలుగు",
+    "tamil": "தமிழ்",
+    "bengali": "বাংলা",
+    "gujarati": "ગુજરાતી",
+    "marathi": "मराठी",
+    "kannada": "ಕನ್ನಡ",
+    "malayalam": "മലയാളം",
+    "punjabi": "ਪੰਜਾਬੀ",
+    "odia": "ଓଡ଼ିଆ",
+    "assamese": "অসমীয়া"
+  },
+  "register": {
+      "hero": {
+        "alt": "ସୁନ୍ଦର ଭାରତୀୟ କୃଷି ଦୃଶ୍ୟ",
+        "title": "ଖେତିବନ୍ଧୁରେ ଯୋଗଦିଅନ୍ତୁ",
+        "subtitle": "ଆପଣଙ୍କ ଡିଜିଟାଲ କୃଷି ଯାତ୍ରା ଆରମ୍ଭ କରନ୍ତୁ",
+        "tagline": "ପୂର୍ବାନୁମାନ ପାଆନ୍ତୁ, ଚ୍ୟାଲେଞ୍ଜ ଶେଷ କରନ୍ତୁ, ସମୁଦାୟ ସହ ଏଗ୍ରାନ୍ତୁ"
+      },
+      "form": {
+        "title": "ଚାଷୀ ପଞ୍ଜିକରଣ",
+        "description": "କୃଷି ସହାୟତା ପାଇଁ ଆପଣଙ୍କ ଖାତା ସୃଷ୍ଟି କରନ୍ତୁ"
+      },
+      "toast": {
+        "error_title": "ପଞ୍ଜିକରଣ ବିଫଳ",
+        "success_title": "ସଫଳତା!",
+        "success_message": "ଖାତା ସଫଳତାର ସହ ସୃଷ୍ଟି ହେଲା! ଖେତିବନ୍ଧୁକୁ ସ୍ୱାଗତ!",
+        "error_fallback": "ପଞ୍ଜିକରଣ ବିଫଳ ହେଲା"
+      },
+      "fields": {
+        "name": { "label": "ପୂର୍ଣ୍ଣ ନାମ", "placeholder": "ଆପଣଙ୍କ ପୂର୍ଣ୍ଣ ନାମ" },
+        "username": { "label": "ଉପଯୋଗକର୍ତ୍ତା ନାମ", "placeholder": "ଉପଯୋଗକର୍ତ୍ତା ନାମ ଚୟନ କରନ୍ତୁ" },
+        "email": { "label": "ଇମେଲ୍ ଠିକଣା", "placeholder": "your.email@example.com" },
+        "password": { "label": "ପାସୱାର୍ଡ", "placeholder": "ଶକ୍ତିଶାଳୀ ପାସୱାର୍ଡ ସୃଷ୍ଟି କରନ୍ତୁ" },
+        "pm_kisan_id": { 
+          "label": "PM-କିଷାନ ID", 
+          "placeholder": "PMK1234567890",
+          "helper": "'PMK' ସହ ଆରମ୍ଭ ହେବା ଉଚିତ୍ ଏବଂ 10+ ଅକ୍ଷର ହେଉ"
+        },
+        "village": { "label": "ଗ୍ରାମ", "placeholder": "ଆପଣଙ୍କ ଗ୍ରାମର ନାମ" },
+        "crops": { 
+          "label": "ଚାଷ ହୋଇଥିବା ଫସଲ", 
+          "placeholder": "ଧାନ, ଗହମ, ମକା",
+          "helper": "କମା ଦ୍ୱାରା ପୃଥକ କରନ୍ତୁ"
+        },
+        "phone": { "label": "ଫୋନ୍ ନଂ", "placeholder": "+91 9876543210" }
+      },
+      "cta": {
+        "create_account": "ଖାତା ସୃଷ୍ଟି କରନ୍ତୁ",
+        "creating_account": "ଖାତା ସୃଷ୍ଟି ହେଉଛି..."
+      },
+      "have_account": "ପୂର୍ବରୁ ଖାତା ଅଛି?",
+      "sign_in_here": "ଏଠାରେ ସାଇନ୍ ଇନ୍ କରନ୍ତୁ"
+    },
+    "login": {
+        "brand": "ଖେତିବନ୍ଧୁ",
+        "hero": {
+          "alt": "ସୁନ୍ଦର ଭାରତୀୟ କୃଷି ଦୃଶ୍ୟ",
+          "subtitle": "ଆପଣଙ୍କ ଡିଜିଟାଲ କୃଷି ସହାୟକ",
+          "tagline": "ସ୍ମାର୍ଟ କୃଷି ସମାଧାନରେ ଚାଷୀମାନଙ୍କୁ ସକ୍ତିଶାଳୀ କରିବା"
+        },
+        "form": {
+          "title": "ଚାଷୀ ଲଗିନ୍",
+          "description": "ଆପଣଙ୍କ କୃଷି ଡ୍ୟାଶବୋର୍ଡ ଆସିବା ପାଇଁ ସାଇନ୍ ଇନ୍ କରନ୍ତୁ"
+        },
+        "fields": {
+          "username": { "label": "ଉପଯୋଗକର୍ତ୍ତା ନାମ", "placeholder": "ଆପଣଙ୍କ ଉପଯୋଗକର୍ତ୍ତା ନାମ ଦିଅନ୍ତୁ" },
+          "password": { "label": "ପାସୱାର୍ଡ", "placeholder": "ଆପଣଙ୍କ ପାସୱାର୍ଡ ଦିଅନ୍ତୁ" }
+        },
+        "cta": { "sign_in": "ସାଇନ୍ ଇନ୍", "signing_in": "ସାଇନ୍ ଇନ୍ ହେଉଛି..." },
+        "new_farmer": "ନୂତନ ଚାଷୀ?",
+        "create_account": "ଏକ ଖାତା ସୃଷ୍ଟି କରନ୍ତୁ",
+        "toast": {
+          "error_title": "ଲଗିନ୍ ବିଫଳ",
+          "error_fallback": "ଲଗିନ୍ ବିଫଳ ହେଲା"
+        }
+      },
+      "landing": {
+"brand": "ଖେତିବନ୍ଧୁ",
+"nav": { "sign_in": "ସାଇନ୍ ଇନ୍", "get_started": "ଆରମ୍ଭ କରନ୍ତୁ" },
+"hero": {
+"alt": "ଆଧୁନିକ କୃଷି ଦୃଶ୍ୟ",
+"tagline": "ଆପଣଙ୍କ ଡିଜିଟାଲ କୃଷି ସହାୟକ — AI ଆଧାରିତ ଜ୍ଞାନ, ଗେମିଫାଇଡ୍ ଶିକ୍ଷା ଏବଂ ସମୁଦାୟ ସହଯୋଗ।",
+"cta_start": "ଆପଣଙ୍କ ଯାତ୍ରା ଆରମ୍ଭ କରନ୍ତୁ"
+},
+"features": {
+"title": "ଭାରତୀୟ କୃଷିରେ ପରିବର୍ତ୍ତନ",
+"subtitle": "ପାରମ୍ପରିକ ଜ୍ଞାନକୁ ଆଧୁନିକ ପ୍ରଯୁକ୍ତି ସହ ଯୋଡି ଭଲ ଫସଲ ପାଇଁ ଖେତିବନ୍ଧୁ କିପରି ସହଯୋଗ କରେ ଜାଣନ୍ତୁ।",
+"smart_quests": {
+"title": "ସ୍ମାର୍ଟ କ୍ୱେଷ୍ଟ",
+"description": "କୃଷି ମିଶନ୍ ସମ୍ପୂର୍ଣ୍ଣ କରନ୍ତୁ, ପଏଣ୍ଟ ଅର୍ଜନ କରନ୍ତୁ ଏବଂ ପ୍ରକ୍ରିୟା ସୁଧାରନ୍ତୁ।"
+},
+"ai_predictions": {
+"title": "AI ପୂର୍ବାନୁମାନ",
+"description": "ମେସିନ୍ ଲର୍ଣିଂ ଏବଂ ଆବହାଅା ତଥ୍ୟରେ ଆଧାରିତ ନିଖୁତ ଫସଲ ଉତ୍ପାଦନ ପୂର୍ବାନୁମାନ ପାଆନ୍ତୁ।"
+},
+"gamification": {
+"title": "ଗେମିଫିକେଶନ୍",
+"description": "ବ୍ୟାଜ୍ ପାଆନ୍ତୁ, ଲିଡର୍ବୋର୍ଡରେ ଉପରେ ଯାଆନ୍ତୁ, ସାଧନା ପାଇଁ ପୁରସ୍କାର ଖୋଲନ୍ତୁ।"
+},
+"community": {
+"title": "ସମୁଦାୟ",
+"description": "ଅନ୍ୟ ଚାଷୀମାନଙ୍କ ସହ ଯୁକ୍ତ ହନ୍ତୁ ଏବଂ କୃଷି ସମୁଦାୟରୁ ଶିଖନ୍ତୁ।"
+}
+},
+"benefits": {
+"title": "କାହିଁକି ଖେତିବନ୍ଧୁ?",
+"subtitle": "ହଜାର ଭାରତୀୟ ଚାଷୀ ଆମ ନବୀନ ପ୍ଲାଟଫର୍ମ ସହିତ ତାଙ୍କ କୃଷି ପ୍ରକ୍ରିୟା ପରିବର୍ତ୍ତନ କରୁଛନ୍ତି।",
+"ai_yield": "AI ଜ୍ଞାନ ସହିତ ଉତ୍ପାଦନ ବଢ଼ାନ୍ତୁ",
+"sustainable_practices": "ସୁସ୍ଥିର କୃଷି ପ୍ରକ୍ରିୟା ଶିଖନ୍ତୁ",
+"community_connect": "କୃଷି ସମୁଦାୟ ସହ ଯୁକ୍ତ ହନ୍ତୁ",
+"earn_rewards": "ଭଲ ପ୍ରକ୍ରିୟା ପାଇଁ ପୁରସ୍କାର ପାଆନ୍ତୁ",
+"weather_access": "ଆବହାଅା ପୂର୍ବାନୁମାନ ଏବଂ ସତର୍କବାଣୀ",
+"track_progress": "ଆପଣଙ୍କ କୃଷି ପ୍ରଗତି ଟ୍ରାକ୍ କରନ୍ତୁ"
+},
+"stats": {
+"active_farmers": "10,000+",
+"active_farmers_label": "ସକ୍ରିୟ ଚାଷୀ",
+"yield_improvement": { "value": "85%", "label": "ଉତ୍ପାଦନ ସୁଧାର" },
+"user_satisfaction": { "value": "92%", "label": "ବ୍ୟବହାରକାରୀ ସନ୍ତୋଷ" }
+},
+"cta": {
+"title": "କୃଷି ପରିବର୍ତ୍ତନ ପାଇଁ ପ୍ରସ୍ତୁତ?",
+"subtitle": "ଆଜିଠୁ ଖେତିବନ୍ଧୁରେ ଯୋଗଦିଅନ୍ତୁ ଏବଂ ସ୍ମାର୍ଟ, ସୁସ୍ଥିର କୃଷି ଯାତ୍ରା ଆରମ୍ଭ କରନ୍ତୁ।",
+"create_free_account": "ମୁଫ୍ତ ଖାତା ସୃଷ୍ଟି କରନ୍ତୁ"
+},
+"footer": {
+"tagline": "ଭାରତୀୟ କୃଷିକୁ ସଶକ୍ତ କରୁଛୁ",
+"copyright": "© {{year}} ଖେତିବନ୍ଧୁ। ଚାଷୀଙ୍କ ପାଇଁ, ଚାଷୀଙ୍କ ଦ୍ୱାରା।"
+}
+}
+    }
+
+
