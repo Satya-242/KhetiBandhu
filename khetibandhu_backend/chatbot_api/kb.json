@@ -1,0 +1,350 @@
+[
+    {
+      "id": "irrigation_001",
+      "language": "en",
+      "title": "Irrigation Schedule - When to Water",
+      "content": "Water crops early morning (6-8 AM) or late evening (5-7 PM). Check soil moisture by inserting finger 2 inches deep. If dry, water immediately. For vegetables: every 2-3 days. For cereals: once weekly unless rainfall occurs.",
+      "category": "irrigation",
+      "keywords": ["irrigation schedule", "when to water", "watering time", "soil moisture check"]
+    },
+    {
+      "id": "irrigation_002",
+      "language": "hi",
+      "title": "सिंचाई का समय - कब पानी दें",
+      "content": "फसलों को सुबह 6-8 बजे या शाम 5-7 बजे पानी दें। मिट्टी में 2 इंच गहराई तक उंगली डालकर नमी जांचें। अगर सूखी है तो तुरंत पानी दें। सब्जियों के लिए: हर 2-3 दिन में। अनाज के लिए: सप्ताह में एक बार जब तक बारिश न हो।",
+      "category": "irrigation",
+      "keywords": ["सिंचाई का समय", "कब पानी दें", "पानी देने का समय", "मिट्टी की नमी"]
+    },
+    {
+      "id": "irrigation_003",
+      "language": "or",
+      "title": "ସିଚାଇ ସମୟ - କେବେ ପାଣି ଦେବେ",
+      "content": "ଫସଲକୁ ସକାଳ ୬-୮ ଟା କିମ୍ବା ସନ୍ଧ୍ୟା ୫-୭ ଟାରେ ପାଣି ଦିଅନ୍ତୁ। ମାଟିରେ ୨ ଇଞ୍ଚ ଗଭୀରତାରେ ଆଙ୍ଗୁଳି ପୁରାଇ ଆର୍ଦ୍ରତା ଯାଞ୍ଚ କରନ୍ତୁ। ଶୁଖିଲା ଲାଗିଲେ ତୁରନ୍ତ ପାଣି ଦିଅନ୍ତୁ।",
+      "category": "irrigation",
+      "keywords": ["ସିଚାଇ ସମୟ", "କେବେ ପାଣି", "ପାଣି ଦେବାର ସମୟ"]
+    },
+    {
+      "id": "irrigation_004",
+      "language": "en",
+      "title": "Skip Irrigation During Heavy Rain",
+      "content": "If rainfall forecast shows 10mm or more in 24 hours, skip irrigation completely. Wait 2-3 days after heavy rain before resuming normal watering. Over-watering causes root rot and fungal diseases. Check drainage in fields after rain.",
+      "category": "irrigation",
+      "keywords": ["skip irrigation", "heavy rain", "rainfall forecast", "over-watering", "drainage"]
+    },
+    {
+      "id": "irrigation_005",
+      "language": "hi",
+      "title": "भारी बारिश में सिंचाई बंद करें",
+      "content": "अगर मौसम विभाग 24 घंटे में 10mm या अधिक बारिश की भविष्यवाणी करता है तो सिंचाई पूरी तरह बंद कर दें। भारी बारिश के 2-3 दिन बाद सामान्य पानी देना शुरू करें। अधिक पानी से जड़ सड़न और फंगल रोग होते हैं।",
+      "category": "irrigation",
+      "keywords": ["भारी बारिश में सिंचाई", "बारिश की भविष्यवाणी", "सिंचाई बंद", "अधिक पानी के नुकसान"]
+    },
+    {
+      "id": "irrigation_006",
+      "language": "or",
+      "title": "ଅଧିକ ବର୍ଷାରେ ସିଚାଇ ବନ୍ଦ କରନ୍ତୁ",
+      "content": "ଯଦି ଆବହାବାନୀ ୨ୄ ଘଣ୍ଟାରେ ୧୦mm କିମ୍ବା ଅଧିକ ବର୍ଷା ଦେଖାଏ ତେବେ ସିଚାଇ ସମ୍ପୂର୍ଣ୍ଣ ବନ୍ଦ କରନ୍ତୁ। ଅଧିକ ବର୍ଷା ପରେ ୨-୩ ଦିନ ଅପେକ୍ଷା କରି ସାଧାରଣ ପାଣି ଦେବା ଆରମ୍ଭ କରନ୍ତୁ।",
+      "category": "irrigation",
+      "keywords": ["ଅଧିକ ବର୍ଷାରେ ସିଚାଇ", "ବର୍ଷା ପୂର୍ବାନୁମାନ", "ସିଚାଇ ବନ୍ଦ"]
+    },
+  
+    {
+      "id": "nitrogen_deficiency_001",
+      "language": "en",
+      "title": "Nitrogen Deficiency - Yellow Leaves Treatment",
+      "content": "Yellow leaves starting from bottom indicate nitrogen deficiency. Apply 2-3 handfuls of urea per square meter OR 5kg compost per plant. Symptoms: older leaves turn pale yellow, stunted growth. Apply nitrogen fertilizer immediately for quick results.",
+      "category": "fertilizer_deficiency",
+      "keywords": ["nitrogen deficiency", "yellow leaves treatment", "pale yellow leaves", "urea application", "stunted growth"]
+    },
+    {
+      "id": "nitrogen_deficiency_002",
+      "language": "hi",
+      "title": "नाइट्रोजन की कमी - पीली पत्तियों का इलाज",
+      "content": "नीचे से पीली होती पत्तियां नाइट्रोजन की कमी दर्शाती हैं। प्रति वर्ग मीटर 2-3 मुट्ठी यूरिया डालें या प्रति पौधे 5kg कंपोस्ट दें। लक्षण: पुरानी पत्तियां हल्की पीली, बौनी वृद्धि। तुरंत परिणाम के लिए नाइट्रोजन खाद दें।",
+      "category": "fertilizer_deficiency",
+      "keywords": ["नाइट्रोजन की कमी", "पीली पत्तियों का इलाज", "हल्की पीली पत्तियां", "यूरिया डालना", "बौनी वृद्धि"]
+    },
+    {
+      "id": "nitrogen_deficiency_003",
+      "language": "or",
+      "title": "ନାଇଟ୍ରୋଜେନ ଅଭାବ - ପୀତ ପତ୍ରର ଚିକିତ୍ସା",
+      "content": "ତଳୁ ପୀତ ହେଉଥିବା ପତ୍ର ନାଇଟ୍ରୋଜେନ ଅଭାବର ସୂଚନା। ପ୍ରତି ବର୍ଗ ମିଟରରେ ୨-୩ ମୁଠା ଇଉରିଆ କିମ୍ବା ପ୍ରତି ଗଛରେ ୫କିଗ୍ରା କମ୍ପୋଷ୍ଟ ଦିଅନ୍ତୁ। ଲକ୍ଷଣ: ପୁରୁଣା ପତ୍ର ହାଲକା ପୀତ, ବୌନା ବୃଦ୍ଧି।",
+      "category": "fertilizer_deficiency",
+      "keywords": ["ନାଇଟ୍ରୋଜେନ ଅଭାବ", "ପୀତ ପତ୍ର ଚିକିତ୍ସା", "ହାଲକା ପୀତ ପତ୍ର", "ଇଉରିଆ ପ୍ରୟୋଗ"]
+    },
+  
+    {
+      "id": "soil_improvement_001",
+      "language": "en",
+      "title": "Soil Health Improvement - Adding Organic Matter",
+      "content": "Improve soil fertility by adding 10-15 kg well-decomposed compost per square meter annually. Mix organic matter 6 inches deep into soil. Rotate crops yearly: legumes → cereals → vegetables. Add green manure crops like dhaincha during monsoon for natural nitrogen fixation.",
+      "category": "soil_health",
+      "keywords": ["soil health improvement", "adding organic matter", "soil fertility", "well-decomposed compost", "crop rotation", "green manure"]
+    },
+    {
+      "id": "soil_improvement_002",
+      "language": "hi",
+      "title": "मिट्टी की सेहत सुधार - जैविक पदार्थ मिलाना",
+      "content": "मिट्टी की उर्वरता बढ़ाने के लिए सालाना प्रति वर्ग मीटर 10-15 kg अच्छी तरह सड़ी खाद मिलाएं। जैविक पदार्थ को मिट्टी में 6 इंच गहराई तक मिलाएं। हर साल फसल चक्र बदलें: दलहन → अनाज → सब्जी। बरसात में ढैंचा जैसी हरी खाद की फसल उगाएं।",
+      "category": "soil_health",
+      "keywords": ["मिट्टी की सेहत सुधार", "जैविक पदार्थ मिलाना", "मिट्टी की उर्वरता", "सड़ी खाद", "फसल चक्र", "हरी खाद"]
+    },
+    {
+      "id": "soil_improvement_003",
+      "language": "or",
+      "title": "ମାଟି ସ୍ୱାସ୍ଥ୍ୟ ସୁଧାର - ଜୈବିକ ପଦାର୍ଥ ମିଶାଇବା",
+      "content": "ମାଟିର ଉର୍ବରତା ବଢ଼ାଇବା ପାଇଁ ବାର୍ଷିକ ପ୍ରତି ବର୍ଗ ମିଟରରେ ୧୦-୧୫ କିଗ୍ରା ଭଲ ଭାବେ ପଚିଥିବା କମ୍ପୋଷ୍ଟ ମିଶାନ୍ତୁ। ଜୈବିକ ପଦାର୍ଥକୁ ମାଟିରେ ୬ ଇଞ୍ଚ ଗଭୀରତାରେ ମିଶାନ୍ତୁ। ପ୍ରତିବର୍ଷ ଫସଲ ପରିବର୍ତ୍ତନ କରନ୍ତୁ।",
+      "category": "soil_health",
+      "keywords": ["ମାଟି ସ୍ୱାସ୍ଥ୍ୟ ସୁଧାର", "ଜୈବିକ ପଦାର୍ଥ ମିଶାଇବା", "ମାଟିର ଉର୍ବରତା", "କମ୍ପୋଷ୍ଟ"]
+    },
+  
+    {
+      "id": "aphid_control_001",
+      "language": "en",
+      "title": "Aphid Control - Small Green Insects",
+      "content": "For aphid infestation (tiny green/black insects clustered on leaves): Mix 10ml neem oil + 5ml liquid soap in 1 liter water. Spray early morning or evening on affected leaves. Repeat every 3 days until aphids disappear. Avoid chemical pesticides to protect beneficial insects.",
+      "category": "pest_aphid",
+      "keywords": ["aphid control", "small green insects", "tiny insects on leaves", "neem oil spray", "green insects clusters"]
+    },
+    {
+      "id": "aphid_control_002",
+      "language": "hi",
+      "title": "एफिड नियंत्रण - छोटे हरे कीड़े",
+      "content": "एफिड संक्रमण (पत्तियों पर छोटे हरे/काले कीड़े) के लिए: 1 लीटर पानी में 10ml नीम का तेल + 5ml तरल साबुन मिलाएं। सुबह या शाम प्रभावित पत्तियों पर छिड़काव करें। एफिड गायब होने तक हर 3 दिन में दोहराएं।",
+      "category": "pest_aphid",
+      "keywords": ["एफिड नियंत्रण", "छोटे हरे कीड़े", "पत्तियों पर छोटे कीड़े", "नीम तेल छिड़काव", "हरे कीड़ों के झुंड"]
+    },
+    {
+      "id": "aphid_control_003",
+      "language": "or",
+      "title": "ଆଫିଡ ନିୟନ୍ତ୍ରଣ - ଛୋଟ ସବୁଜ କୀଟ",
+      "content": "ଆଫିଡ ସଂକ୍ରମଣ (ପତ୍ରରେ ଛୋଟ ସବୁଜ/କଳା କୀଟ) ପାଇଁ: ୧ ଲିଟର ପାଣିରେ ୧୦ml ନିମ ତେଲ + ୫ml ତରଳ ସାବୁନ୍ ମିଶାନ୍ତୁ। ସକାଳ କିମ୍ବା ସନ୍ଧ୍ୟାରେ ପ୍ରଭାବିତ ପତ୍ରରେ ଛିଡ଼କାନ୍ତୁ। ଆଫିଡ ଅଦୃଶ୍ୟ ନହେବା ପର୍ଯ୍ୟନ୍ତ ପ୍ରତି ୩ ଦିନରେ ପୁନରାବୃତ୍ତି କରନ୍ତୁ।",
+      "category": "pest_aphid",
+      "keywords": ["ଆଫିଡ ନିୟନ୍ତ୍ରଣ", "ଛୋଟ ସବୁଜ କୀଟ", "ପତ୍ରରେ କୀଟ", "ନିମ ତେଲ ଛିଡ଼କା"]
+    },
+  
+    {
+      "id": "caterpillar_control_001",
+      "language": "en",
+      "title": "Caterpillar Control - Worms Eating Leaves",
+      "content": "For caterpillars eating leaves: Hand-pick large caterpillars in early morning. For severe infestation, spray Bacillus thuringiensis (Bt) solution: 2gm per liter water. Apply in evening when caterpillars are active. Install pheromone traps to catch adult moths before they lay eggs.",
+      "category": "pest_caterpillar",
+      "keywords": ["caterpillar control", "worms eating leaves", "leaf eating caterpillars", "hand-picking caterpillars", "Bacillus thuringiensis"]
+    },
+    {
+      "id": "caterpillar_control_002",
+      "language": "hi",
+      "title": "इल्ली नियंत्रण - पत्तियां खाने वाले कीड़े",
+      "content": "पत्तियां खाने वाली इल्लियों के लिए: सुबह बड़ी इल्लियों को हाथ से उठाकर हटाएं। गंभीर संक्रमण के लिए बैसिलस थुरिंजिएंसिस (Bt) का छिड़काव करें: 1 लीटर पानी में 2gm। शाम को छिड़काव करें जब इल्लियां सक्रिय हों। अंडे देने से पहले पतंगों को पकड़ने के लिए फेरोमोन ट्रैप लगाएं।",
+      "category": "pest_caterpillar",
+      "keywords": ["इल्ली नियंत्रण", "पत्तियां खाने वाले कीड़े", "पत्ती खाने वाली इल्ली", "हाथ से इल्ली हटाना", "बैसिलस थुरिंजिएंसिस"]
+    },
+    {
+      "id": "caterpillar_control_003",
+      "language": "or",
+      "title": "କ୍ୟାଟରପିଲାର ନିୟନ୍ତ୍ରଣ - ପତ୍ର ଖାଉଥିବା କୀଟ",
+      "content": "ପତ୍ର ଖାଉଥିବା କ୍ୟାଟରପିଲାର ପାଇଁ: ସକାଳେ ବଡ଼ କ୍ୟାଟରପିଲାରଗୁଡ଼ିକୁ ହାତରେ ଉଠାଇ ହଟାନ୍ତୁ। ଗମ୍ଭୀର ସଂକ୍ରମଣ ପାଇଁ ବାସିଲସ ଥୁରିଙ୍ଗିଏନସିସ (Bt) ଛିଡ଼କାନ୍ତୁ: ୧ ଲିଟର ପାଣିରେ ୨gm। ସନ୍ଧ୍ୟାରେ ଛିଡ଼କାନ୍ତୁ ଯେତେବେଳେ କ୍ୟାଟରପିଲାର ସକ୍ରିୟ ଥାଏ।",
+      "category": "pest_caterpillar",
+      "keywords": ["କ୍ୟାଟରପିଲାର ନିୟନ୍ତ୍ରଣ", "ପତ୍ର ଖାଉଥିବା କୀଟ", "ପତ୍ର ଖାଉଥିବା ଲାର୍ଭା", "ହାତରେ କୀଟ ହଟାଇବା"]
+    },
+  
+    {
+      "id": "weather_spray_001",
+      "language": "en",
+      "title": "Weather-Based Spraying - Avoid Rain",
+      "content": "Never spray pesticides or fertilizers if rain is predicted within 6 hours. Rain washes away treatments, wastes money, and can pollute water sources. Best spraying time: calm morning (7-9 AM) with no wind. Check weather forecast 24 hours before any spray application.",
+      "category": "weather_spraying",
+      "keywords": ["weather-based spraying", "avoid spraying before rain", "best spraying time", "rain prediction", "spray timing"]
+    },
+    {
+      "id": "weather_spray_002",
+      "language": "hi",
+      "title": "मौसम आधारित छिड़काव - बारिश से बचें",
+      "content": "अगर 6 घंटे के भीतर बारिश की भविष्यवाणी है तो कभी भी कीटनाशक या उर्वरक का छिड़काव न करें। बारिश उपचार को धो देती है, पैसे बर्बाद करती है। सबसे अच्छा छिड़काव समय: शांत सुबह (7-9 AM) बिना हवा के। किसी भी छिड़काव से 24 घंटे पहले मौसम पूर्वानुमान जांचें।",
+      "category": "weather_spraying",
+      "keywords": ["मौसम आधारित छिड़काव", "बारिश से पहले छिड़काव न करें", "सबसे अच्छा छिड़काव समय", "बारिश की भविष्यवाणी", "छिड़काव का समय"]
+    },
+    {
+      "id": "weather_spray_003",
+      "language": "or",
+      "title": "ଆବହବାନୀ ଆଧାରିତ ଛିଡ଼କା - ବର୍ଷାରୁ ଦୂରେ",
+      "content": "ଯଦି ୬ ଘଣ୍ଟା ମଧ୍ୟରେ ବର୍ଷାର ପୂର୍ବାନୁମାନ ଅଛି ତେବେ କୀଟନାଶକ କିମ୍ବା ସାର ଛିଡ଼କା କରନ୍ତୁ ନାହିଁ। ବର୍ଷା ଚିକିତ୍ସାକୁ ଧୋଇ ଦିଏ, ଟଙ୍କା ନଷ୍ଟ କରେ। ସର୍ବୋତ୍ତମ ଛିଡ଼କା ସମୟ: ଶାନ୍ତ ସକାଳ (୭-୯ AM) ପବନ ବିନା। ଯେକୌଣସି ଛିଡ଼କାର ୨ୄ ଘଣ୍ଟା ପୂର୍ବରୁ ଆବହବାନୀ ଯାଞ୍ଚ କରନ୍ତୁ।",
+      "category": "weather_spraying",
+      "keywords": ["ଆବହବାନୀ ଆଧାରିତ ଛିଡ଼କା", "ବର୍ଷା ପୂର୍ବରୁ ଛିଡ଼କା ନକରିବା", "ସର୍ବୋତ୍ତମ ଛିଡ଼କା ସମୟ", "ବର୍ଷା ପୂର୍ବାନୁମାନ"]
+    },
+  
+    {
+      "id": "phosphorus_deficiency_001",
+      "language": "en",
+      "title": "Phosphorus Deficiency - Purple/Dark Leaves",
+      "content": "Purple or dark reddish leaves indicate phosphorus deficiency, especially on leaf edges. Apply bone meal (100g per plant) or triple super phosphate (50g per square meter). Symptoms appear first on older leaves. Add wood ash for natural phosphorus boost. Ensure soil pH is 6.0-7.0 for better phosphorus uptake.",
+      "category": "fertilizer_deficiency",
+      "keywords": ["phosphorus deficiency", "purple leaves", "dark reddish leaves", "bone meal", "triple super phosphate", "wood ash"]
+    },
+    {
+      "id": "phosphorus_deficiency_002",
+      "language": "hi",
+      "title": "फास्फोरस की कमी - बैंगनी/गहरी पत्तियां",
+      "content": "बैंगनी या गहरी लाल पत्तियां फास्फोरस की कमी दर्शाती हैं, खासकर पत्तियों के किनारों पर। बोन मील (प्रति पौधे 100g) या ट्रिपल सुपर फास्फेट (प्रति वर्ग मीटर 50g) डालें। लक्षण पहले पुरानी पत्तियों पर दिखते हैं। प्राकृतिक फास्फोरस बढ़ाने के लिए राख डालें।",
+      "category": "fertilizer_deficiency",
+      "keywords": ["फास्फोरस की कमी", "बैंगनी पत्तियां", "गहरी लाल पत्तियां", "बोन मील", "ट्रिपल सुपर फास्फेट", "राख"]
+    },
+    {
+      "id": "phosphorus_deficiency_003",
+      "language": "or",
+      "title": "ଫସଫରସ ଅଭାବ - ବାଇଗଣି/ଗାଢ଼ ପତ୍ର",
+      "content": "ବାଇଗଣି କିମ୍ବା ଗାଢ଼ ଲାଲ ପତ୍ର ଫସଫରସ ଅଭାବର ସୂଚନା, ବିଶେଷକରି ପତ୍ର କିନାରାରେ। ବୋନ୍ ମିଲ୍ (ପ୍ରତି ଗଛରେ ୧୦୦g) କିମ୍ବା ଟ୍ରିପଲ୍ ସୁପର ଫସଫେଟ୍ (ପ୍ରତି ବର୍ଗ ମିଟରରେ ୫୦g) ଦିଅନ୍ତୁ। ଲକ୍ଷଣ ପ୍ରଥମେ ପୁରୁଣା ପତ୍ରରେ ଦେଖାଯାଏ।",
+      "category": "fertilizer_deficiency",
+      "keywords": ["ଫସଫରସ ଅଭାବ", "ବାଇଗଣି ପତ୍ର", "ଗାଢ଼ ଲାଲ ପତ୍ର", "ବୋନ୍ ମିଲ୍", "ଟ୍ରିପଲ୍ ସୁପର ଫସଫେଟ୍"]
+    },
+  
+    {
+      "id": "potassium_deficiency_001",
+      "language": "en",
+      "title": "Potassium Deficiency - Brown Leaf Edges",
+      "content": "Brown, burnt leaf edges with yellow halos indicate potassium deficiency. Apply muriate of potash (30g per square meter) or wood ash (200g per plant). Symptoms start on older leaves first. Banana peels composted in soil provide natural potassium. Water plants well after potassium application.",
+      "category": "fertilizer_deficiency",
+      "keywords": ["potassium deficiency", "brown leaf edges", "burnt leaf edges", "yellow halos", "muriate of potash", "wood ash", "banana peels"]
+    },
+    {
+      "id": "potassium_deficiency_002",
+      "language": "hi",
+      "title": "पोटैशियम की कमी - भूरे पत्ती किनारे",
+      "content": "पीले हेलो के साथ भूरे, जले हुए पत्ती किनारे पोटैशियम की कमी दर्शाते हैं। म्यूरिएट ऑफ पोटाश (प्रति वर्ग मीटर 30g) या राख (प्रति पौधे 200g) डालें। लक्षण पहले पुरानी पत्तियों पर दिखते हैं। मिट्टी में केले के छिलके कंपोस्ट करने से प्राकृतिक पोटैशियम मिलता है।",
+      "category": "fertilizer_deficiency",
+      "keywords": ["पोटैशियम की कमी", "भूरे पत्ती किनारे", "जले पत्ती किनारे", "पीले हेलो", "म्यूरिएट ऑफ पोटाश", "राख", "केले के छिलके"]
+    },
+    {
+      "id": "potassium_deficiency_003",
+      "language": "or",
+      "title": "ପୋଟାସିୟମ ଅଭାବ - ବାଦାମୀ ପତ୍ର କିନାରା",
+      "content": "ହଳଦିଆ ହାଲୋ ସହିତ ବାଦାମୀ, ଜଳିଥିବା ପତ୍ର କିନାରା ପୋଟାସିୟମ ଅଭାବର ସୂଚନା। ମ୍ୟୁରିଏଟ୍ ଅଫ୍ ପୋଟାଶ୍ (ପ୍ରତି ବର୍ଗ ମିଟରରେ ୩୦g) କିମ୍ବା କାଠ ପାଉଁଶ (ପ୍ରତି ଗଛରେ ୨୦ୠg) ଦିଅନ୍ତୁ। ଲକ୍ଷଣ ପ୍ରଥମେ ପୁରୁଣା ପତ୍ରରେ ଦେଖାଯାଏ।",
+      "category": "fertilizer_deficiency",
+      "keywords": ["ପୋଟାସିୟମ ଅଭାବ", "ବାଦାମୀ ପତ୍ର କିନାରା", "ଜଳିଥିବା ପତ୍ର", "ହଳଦିଆ ହାଲୋ", "ମ୍ୟୁରିଏଟ୍ ପୋଟାଶ୍", "କାଠ ପାଉଁଶ"]
+    },
+  
+    {
+      "id": "whitefly_control_001",
+      "language": "en",
+      "title": "Whitefly Control - Tiny White Flying Insects",
+      "content": "For whiteflies (tiny white insects that fly when leaves are disturbed): Spray 15ml neem oil + 10ml liquid soap in 1 liter water. Install yellow sticky traps near plants. Remove heavily infested lower leaves. Spray early morning when whiteflies are less active. Repeat treatment every 5 days.",
+      "category": "pest_whitefly",
+      "keywords": ["whitefly control", "tiny white flying insects", "white insects flying", "yellow sticky traps", "neem oil whitefly", "flying when disturbed"]
+    },
+    {
+      "id": "whitefly_control_002",
+      "language": "hi",
+      "title": "व्हाइटफ्लाई नियंत्रण - छोटे सफेद उड़ने वाले कीड़े",
+      "content": "व्हाइटफ्लाई (छोटे सफेद कीड़े जो पत्तियों को हिलाने पर उड़ते हैं) के लिए: 1 लीटर पानी में 15ml नीम का तेल + 10ml तरल साबुन का छिड़काव करें। पौधों के पास पीले चिपचिपे ट्रैप लगाएं। अधिक संक्रमित निचली पत्तियों को हटाएं। सुबह छिड़काव करें जब व्हाइटफ्लाई कम सक्रिय होती है।",
+      "category": "pest_whitefly",
+      "keywords": ["व्हाइटफ्लाई नियंत्रण", "छोटे सफेद उड़ने वाले कीड़े", "सफेद उड़ने वाले कीड़े", "पीले चिपचिपे ट्रैप", "नीम तेल व्हाइटफ्लाई", "हिलाने पर उड़ना"]
+    },
+    {
+      "id": "whitefly_control_003",
+      "language": "or",
+      "title": "ହ୍ୱାଇଟଫ୍ଲାଇ ନିୟନ୍ତ୍ରଣ - ଛୋଟ ଧଳା ଉଡ଼ନ୍ତା କୀଟ",
+      "content": "ହ୍ୱାଇଟଫ୍ଲାଇ (ଛୋଟ ଧଳା କୀଟ ଯାହା ପତ୍ର ହଲାଇଲେ ଉଡ଼େ) ପାଇଁ: ୁ ଲିଟର ପାଣିରେ ୧୫ml ନିମ ତେଲ + ୧୦ml ତରଳ ସାବୁନ୍ ଛିଡ଼କାନ୍ତୁ। ଗଛ ପାଖରେ ହଳଦିଆ ଚିପଚିପା ଜାଲ ଲଗାନ୍ତୁ। ଅଧିକ ସଂକ୍ରମିତ ତଳ ପତ୍ରଗୁଡ଼ିକ ହଟାନ୍ତୁ।",
+      "category": "pest_whitefly",
+      "keywords": ["ହ୍ୱାଇଟଫ୍ଲାଇ ନିୟନ୍ତ୍ରଣ", "ଛୋଟ ଧଳା ଉଡ଼ନ୍ତା କୀଟ", "ଧଳା ଉଡ଼ନ୍ତା କୀଟ", "ହଳଦିଆ ଚିପଚିପା ଜାଲ", "ନିମ ତେଲ ହ୍ୱାଇଟଫ୍ଲାଇ"]
+    },
+  
+    {
+      "id": "fungal_disease_001",
+      "language": "en",
+      "title": "Fungal Disease Prevention - Leaf Spots and Mold",
+      "content": "For leaf spots, powdery mildew, or mold on plants: Improve air circulation by proper plant spacing. Water at soil level, avoid wetting leaves. Spray copper fungicide (2gm per liter) in early morning. Remove infected plant parts immediately. Avoid overhead watering during humid weather.",
+      "category": "disease_fungal",
+      "keywords": ["fungal disease prevention", "leaf spots", "powdery mildew", "mold on plants", "air circulation", "copper fungicide", "infected plant parts"]
+    },
+    {
+      "id": "fungal_disease_002",
+      "language": "hi",
+      "title": "फंगल रोग रोकथाम - पत्ती धब्बे और फफूंद",
+      "content": "पत्ती के धब्बे, पाउडरी मिल्ड्यू या पौधों पर फफूंद के लिए: पौधों के बीच उचित दूरी रखकर हवा का संचार सुधारें। मिट्टी के स्तर पर पानी दें, पत्तियों को गीला न करें। सुबह कॉपर फंगीसाइड (प्रति लीटर 2gm) का छिड़काव करें। संक्रमित पौधों के हिस्सों को तुरंत हटाएं।",
+      "category": "disease_fungal",
+      "keywords": ["फंगल रोग रोकथाम", "पत्ती धब्बे", "पाउडरी मिल्ड्यू", "पौधों पर ففूंद", "हवा का संचार", "कॉपर फंगीसाइड", "संक्रमित पौधे के हिस्से"]
+    },
+    {
+      "id": "fungal_disease_003",
+      "language": "or",
+      "title": "ଫଙ୍ଗାଲ ରୋଗ ପ୍ରତିରୋଧ - ପତ୍ର ଦାଗ ଏବଂ ଛାଞ୍ଚ",
+      "content": "ପତ୍ର ଦାଗ, ପାଉଡରି ମିଲଡ୍ୟୁ କିମ୍ବା ଗଛରେ ଛାଞ୍ଚ ପାଇଁ: ଗଛ ମଧ୍ୟରେ ଉଚିତ ଦୂରତା ରଖି ବାୟୁ ସଞ୍ଚାଳନ ସୁଧାରନ୍ତୁ। ମାଟି ସ୍ତରରେ ପାଣି ଦିଅନ୍ତୁ, ପତ୍ରକୁ ଓଦା କରନ୍ତୁ ନାହିଁ। ସକାଳେ କପର ଫଙ୍ଗିସାଇଡ (ପ୍ରତି ଲିଟରରେ ୨gm) ଛିଡ଼କାନ୍ତୁ।",
+      "category": "disease_fungal",
+      "keywords": ["ଫଙ୍ଗାଲ ରୋଗ ପ୍ରତିରୋଧ", "ପତ୍ର ଦାଗ", "ପାଉଡରି ମିଲଡ୍ୟୁ", "ଗଛରେ ଛାଞ୍ଚ", "ବାୟୁ ସଞ୍ଚାଳନ", "କପର ଫଙ୍ଗିସାଇଡ"]
+    },
+  
+    {
+      "id": "drainage_improvement_001",
+      "language": "en",
+      "title": "Soil Drainage Improvement - Waterlogged Fields",
+      "content": "For waterlogged or poorly draining soil: Create raised beds 6 inches high. Add coarse sand and organic matter (1:1 ratio) to heavy clay soil. Dig drainage channels every 10 feet. Plant cover crops like dhaincha to improve soil structure. Avoid walking on wet soil to prevent compaction.",
+      "category": "soil_drainage",
+      "keywords": ["soil drainage improvement", "waterlogged fields", "poorly draining soil", "raised beds", "coarse sand", "drainage channels", "soil compaction"]
+    },
+    {
+      "id": "drainage_improvement_002",
+      "language": "hi",
+      "title": "मिट्टी जल निकासी सुधार - जलभराव वाले खेत",
+      "content": "जलभराव या खराब जल निकासी वाली मिट्टी के लिए: 6 इंच ऊंची उठी हुई क्यारियां बनाएं। भारी मिट्टी में मोटी रेत और जैविक पदार्थ (1:1 अनुपात) मिलाएं। हर 10 फीट पर जल निकासी चैनल खोदें। मिट्टी की संरचना सुधारने के लिए ढैंचा जैसी कवर क्रॉप लगाएं। संकुचन से बचने के लिए गीली मिट्टी पर न चलें।",
+      "category": "soil_drainage",
+      "keywords": ["मिट्टी जल निकासी सुधार", "जलभराव वाले खेत", "खराब जल निकासी वाली मिट्टी", "उठी हुई क्यारियां", "मोटी रेत", "जल निकासी चैनल", "मिट्टी संकुचन"]
+    },
+    {
+      "id": "drainage_improvement_003",
+      "language": "or",
+      "title": "ମାଟି ଜଳ ନିଷ୍କାସନ ସୁଧାର - ଜଳମଗ୍ନ କ୍ଷେତ",
+      "content": "ଜଳମଗ୍ନ କିମ୍ବା ଖରାପ ଜଳ ନିଷ୍କାସନ ବାଲା ମାଟି ପାଇଁ: ୬ ଇଞ୍ଚ ଉଚ୍ଚ ଉତ୍ଥିତ ଶଯ୍ୟା ତିଆରି କରନ୍ତୁ। ଭାରୀ ମାଟିରେ ମୋଟା ବାଲି ଏବଂ ଜୈବିକ ପଦାର୍ଥ (୧:୧ ଅନୁପାତ) ମିଶାନ୍ତୁ। ପ୍ରତି ୧୦ ଫୁଟରେ ଜଳ ନିଷ୍କାସନ ଚ୍ୟାନେଲ ଖୋଳନ୍ତୁ।",
+      "category": "soil_drainage",
+      "keywords": ["ମାଟି ଜଳ ନିଷ୍କାସନ ସୁଧାର", "ଜଳମଗ୍ନ କ୍ଷେତ", "ଖରାପ ଜଳ ନିଷ୍କାସନ", "ଉତ୍ଥିତ ଶଯ୍ୟା", "ମୋଟା ବାଲି", "ଜଳ ନିଷ୍କାସନ ଚ୍ୟାନେଲ"]
+    },
+  
+    {
+      "id": "seed_treatment_001",
+      "language": "en",
+      "title": "Seed Treatment Before Sowing - Disease Prevention",
+      "content": "Treat seeds before planting to prevent diseases: Soak seeds in warm water (40°C) for 30 minutes. Mix Trichoderma powder (5gm per kg seeds) before sowing. For fungal prevention, dip seeds in copper sulfate solution (2gm per liter) for 10 minutes. Dry treated seeds in shade before planting.",
+      "category": "seed_treatment",
+      "keywords": ["seed treatment before sowing", "disease prevention", "warm water seed treatment", "Trichoderma powder", "copper sulfate solution", "fungal prevention"]
+    },
+    {
+      "id": "seed_treatment_002",
+      "language": "hi",
+      "title": "बुवाई से पहले बीज उपचार - रोग रोकथाम",
+      "content": "रोगों से बचने के लिए रोपण से पहले बीज का उपचार करें: बीजों को गर्म पानी (40°C) में 30 मिनट भिगोएं। बुवाई से पहले ट्राइकोडर्मा पाउडर (प्रति किलो बीज 5gm) मिलाएं। फंगल रोकथाम के लिए बीजों को कॉपर सल्फेट घोल (प्रति लीटर 2gm) में 10 मिनट डुबोएं। उपचारित बीजों को छाया में सुखाकर लगाएं।",
+      "category": "seed_treatment",
+      "keywords": ["बुवाई से पहले बीज उपचार", "रोग रोकथाम", "गर्म पानी बीज उपचार", "ट्राइकोडर्मा पाउडर", "कॉपर सल्फेट घोल", "फंगल रोकथाम"]
+    },
+    {
+      "id": "seed_treatment_003",
+      "language": "or",
+      "title": "ବୁଆଣି ପୂର୍ବରୁ ବିହନ ଚିକିତ୍ସା - ରୋଗ ପ୍ରତିରୋଧ",
+      "content": "ରୋଗରୁ ବଞ୍ଚିବା ପାଇଁ ରୋପଣ ପୂର୍ବରୁ ବିହନର ଚିକିତ୍ସା କରନ୍ତୁ: ବିହନଗୁଡ଼ିକୁ ଗରମ ପାଣିରେ (ୄ0°C) ୩୦ ମିନିଟ ଭିଜାନ୍ତୁ। ବୁଆଣି ପୂର୍ବରୁ ଟ୍ରାଇକୋଡର୍ମା ପାଉଡର (ପ୍ରତି କିଗ୍ରା ବିହନରେ ୫gm) ମିଶାନ୍ତୁ। ଫଙ୍ଗାଲ ପ୍ରତିରୋଧ ପାଇଁ ବିହନଗୁଡ଼ିକୁ କପର ସଲଫେଟ ଦ୍ରବଣରେ (ପ୍ରତି ଲିଟରରେ ୨gm) ୧୦ ମିନିଟ ଡୁବାନ୍ତୁ।",
+      "category": "seed_treatment",
+      "keywords": ["ବୁଆଣି ପୂର୍ବରୁ ବିହନ ଚିକିତ୍ସା", "ରୋଗ ପ୍ରତିରୋଧ", "ଗରମ ପାଣି ବିହନ ଚିକିତ୍ସା", "ଟ୍ରାଇକୋଡର୍ମା ପାଉଡର", "କପର ସଲଫେଟ"]
+    },
+  
+    {
+      "id": "mulching_benefits_001",
+      "language": "en",
+      "title": "Mulching Benefits - Moisture Conservation",
+      "content": "Apply 3-4 inch thick mulch around plants using straw, dried leaves, or grass clippings. Mulching retains soil moisture, reduces weeds by 80%, maintains soil temperature, and prevents erosion. Keep mulch 2 inches away from plant stems to prevent pest hiding. Replace organic mulch every 3-4 months.",
+      "category": "soil_mulching",
+      "keywords": ["mulching benefits", "moisture conservation", "straw mulch", "dried leaves mulch", "grass clippings", "soil moisture retention", "weed reduction"]
+    },
+    {
+      "id": "mulching_benefits_002",
+      "language": "hi",
+      "title": "गीली घास के फायदे - नमी संरक्षण",
+      "content": "पौधों के चारों ओर पुआल, सूखी पत्तियों या घास की कटाई का उपयोग करके 3-4 इंच मोटी गीली घास डालें। गीली घास मिट्टी की नमी बनाए रखती है, 80% खरपतवार कम करती है, मिट्टी का तापमान बनाए रखती है और कटाव रोकती है। कीटों के छुपने से रोकने के लिए गीली घास को पौधों के तने से 2 इंच दूर रखें।",
+      "category": "soil_mulching",
+      "keywords": ["गीली घास के फायदे", "नमी संरक्षण", "पुआल गीली घास", "सूखी पत्तियों की गीली घास", "घास की कटाई", "मिट्टी नमी संरक्षण", "खरपतवार कमी"]
+    },
+    {
+      "id": "mulching_benefits_003",
+      "language": "or",
+      "title": "ମଲଚିଙ୍ଗ ଉପକାରିତା - ଆର୍ଦ୍ରତା ସଂରକ୍ଷଣ",
+      "content": "ଗଛ ଚାରିପଟେ ପାଳ, ଶୁଖିଲା ପତ୍ର କିମ୍ବା ଘାସ କାଟିବା ବ୍ୟବହାର କରି ୩-ୄ ଇଞ୍ଚ ମୋଟା ମଲଚ ଦିଅନ୍ତୁ। ମଲଚିଙ୍ଗ ମାଟି ଆର୍ଦ୍ରତା ବଜାୟ ରଖେ, ୮୦% ତୃଣ କମାଏ, ମାଟି ତାପମାତ୍ରା ବଜାୟ ରଖେ ଏବଂ କ୍ଷୟ ରୋକେ। କୀଟ ଲୁଚିବାକୁ ରୋକିବା ପାଇଁ ମଲଚକୁ ଗଛ ଡାଳରୁ ୨ ଇଞ୍ଚ ଦୂରରେ ରଖନ୍ତୁ।",
+      "category": "soil_mulching",
+      "keywords": ["ମଲଚିଙ୍ଗ ଉପକାରିତା", "ଆର୍ଦ୍ରତା ସଂରକ୍ଷଣ", "ପାଳ ମଲଚ", "ଶୁଖିଲା ପତ୍ର ମଲଚ", "ଘାସ କାଟିବା", "ମାଟି ଆର୍ଦ୍ରତା ସଂରକ୍ଷଣ"]
+    }
+  ]

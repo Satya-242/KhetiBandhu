@@ -11,6 +11,7 @@ interface Farmer {
   phone: string;
   total_points?: number;
   level?: number;
+  is_staff?: boolean;
 }
 
 interface AuthState {
@@ -79,6 +80,7 @@ export const AuthProvider: React.FC<{ children: ReactNode }> = ({ children }) =>
       phone: raw?.phone ?? raw?.phone_number ?? '',
       total_points: raw?.total_points,
       level: raw?.level,
+      is_staff: Boolean(raw?.is_staff),
     };
   };
 

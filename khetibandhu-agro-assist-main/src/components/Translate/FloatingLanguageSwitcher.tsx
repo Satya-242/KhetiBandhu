@@ -43,7 +43,7 @@ const FloatingLanguageSwitcher: React.FC<FloatingLanguageSwitcherProps> = ({
   };
 
   return (
-    <div className={cn("fixed bottom-6 right-6 z-50", className)}>
+    <div className={cn("fixed bottom-6 left-6 z-40", className)}>
       <DropdownMenu open={isOpen} onOpenChange={setIsOpen}>
         <DropdownMenuTrigger asChild>
           <Button

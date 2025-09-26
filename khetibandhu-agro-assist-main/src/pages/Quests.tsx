@@ -23,6 +23,7 @@ interface Quest {
     difficulty_level: number;
     target_crop: string;
     duration_days: number;
+      video_url?: string;
   };
   status: 'available' | 'in_progress' | 'completed';
   progress?: number;
@@ -34,96 +35,69 @@ const Quests: React.FC = () => {
   const { t } = useTranslation();
   const [quests, setQuests] = useState<Quest[]>([]);
   const [isLoading, setIsLoading] = useState(true);
+  const [isLoadingMore, setIsLoadingMore] = useState(false);
+  const [page, setPage] = useState(1);
+  const [pageSize] = useState(12);
+  const [hasMore, setHasMore] = useState(true);
+  const [error, setError] = useState<string | null>(null);
   const [filter, setFilter] = useState('all');
   const [searchTerm, setSearchTerm] = useState('');
   const navigate = useNavigate();
+  const API_BASE = (import.meta as any).env?.VITE_API_BASE || 'http://localhost:8000';
 
   if (!authLoading && !isAuthenticated) {
     return <Navigate to="/login" replace />;
   }
 
-  useEffect(() => {
-    const fetchQuests = async () => {
-      if (!user?.id) return;
+  const fetchQuests = async (nextPage: number, isLoadMore: boolean = false) => {
+    if (!user?.id) return;
+    const params = new URLSearchParams();
+    params.set('page', String(nextPage));
+    params.set('page_size', String(pageSize));
 
-      try {
-        // Mock data - replace with actual API call
-        const mockQuests: Quest[] = [
-          {
-            id: 1,
-            quest: {
-              title: t('quests.items.water_usage_optimization.title'),
-              description: t('quests.items.water_usage_optimization.description'),
-              reward_points: 150,
-              difficulty_level: 2,
-              target_crop: t('crops.rice'),
-              duration_days: 14
-            },
-            status: 'available'
-          },
-          {
-            id: 2,
-            quest: {
-              title: t('quests.items.organic_fertilizer_adoption.title'),
-              description: t('quests.items.organic_fertilizer_adoption.description'),
-              reward_points: 200,
-              difficulty_level: 3,
-              target_crop: t('crops.wheat'),
-              duration_days: 21
-            },
-            status: 'in_progress',
-            progress: 65,
-            deadline: '2024-10-15'
-          },
-          {
-            id: 3,
-            quest: {
-              title: t('quests.items.crop_rotation_planning.title'),
-              description: t('quests.items.crop_rotation_planning.description'),
-              reward_points: 300,
-              difficulty_level: 4,
-              target_crop: t('crops.mixed'),
-              duration_days: 30
-            },
-            status: 'available'
-          },
-          {
-            id: 4,
-            quest: {
-              title: t('quests.items.pest_management_survey.title'),
-              description: t('quests.items.pest_management_survey.description'),
-              reward_points: 100,
-              difficulty_level: 1,
-              target_crop: t('crops.cotton'),
-              duration_days: 7
-            },
-            status: 'completed'
-          },
-          {
-            id: 5,
-            quest: {
-              title: t('quests.items.sustainable_harvesting.title'),
-              description: t('quests.items.sustainable_harvesting.description'),
-              reward_points: 250,
-              difficulty_level: 3,
-              target_crop: t('crops.sugarcane'),
-              duration_days: 10
-            },
-            status: 'available'
-          }
-        ];
+    try {
+      if (isLoadMore) {
+        setIsLoadingMore(true);
+      } else {
+        setIsLoading(true);
+      }
+      setError(null);
 
-        setTimeout(() => {
-          setQuests(mockQuests);
-          setIsLoading(false);
-        }, 1000);
-      } catch (error) {
-        console.error('Failed to fetch quests:', error);
+      const res = await fetch(`${API_BASE}/api/quests/list/${user.id}/?${params.toString()}`);
+      const data = await res.json();
+      if (res.ok && data?.status === 'success' && Array.isArray(data.quests)) {
+        setQuests((prev: Quest[]) => {
+          const combined: Quest[] = isLoadMore ? [...prev, ...(data.quests as Quest[])] : (data.quests as Quest[]);
+          const map = new Map<number, Quest>(combined.map((q: Quest) => [q.id, q]));
+          const deduped: Quest[] = Array.from(map.values());
+          return deduped;
+        });
+        setHasMore(data.quests.length >= pageSize);
+        setPage(nextPage);
+      } else {
+        setError('Failed to fetch quests');
+        console.error('Failed to fetch quests:', data);
+        setHasMore(false);
+      }
+    } catch (e) {
+      setError('Failed to fetch quests');
+      console.error('Failed to fetch quests:', e);
+      setHasMore(false);
+    } finally {
+      if (isLoadMore) {
+        setIsLoadingMore(false);
+      } else {
         setIsLoading(false);
       }
-    };
+    }
+  };
 
-    fetchQuests();
+  useEffect(() => {
+    if (!user?.id) return;
+    // Reset to first page on mount or when user changes
+    setPage(1);
+    setHasMore(true);
+    fetchQuests(1, false);
   }, [user, t]);
 
   const filteredQuests = quests.filter(quest => {
@@ -134,12 +108,20 @@ const Quests: React.FC = () => {
   });
 
   const startQuest = async (questId: number) => {
-    // Mock API call
-    setQuests(prev => prev.map(quest => 
-      quest.id === questId 
-        ? { ...quest, status: 'in_progress' as const, progress: 0 }
-        : quest
-    ));
+    if (!user?.id) return;
+    try {
+      const res = await fetch(`${API_BASE}/api/quests/start/${user.id}/${questId}/`, {
+        method: 'POST'
+      });
+      const data = await res.json();
+      if (res.ok && data?.status === 'success') {
+        setQuests(prev => prev.map(q => q.id === questId ? { ...q, status: 'in_progress' as const, progress: 0 } : q));
+      } else {
+        console.error('Start quest failed', data);
+      }
+    } catch (e) {
+      console.error('Start quest error', e);
+    }
   };
 
   const getDifficultyStars = (level: number) => {
@@ -281,32 +263,12 @@ const Quests: React.FC = () => {
                     </div>
                   </div>
 
-                  {quest.status === 'in_progress' && quest.progress !== undefined && (
-                    <div className="space-y-1">
-                      <div className="flex justify-between text-sm">
-                        <span>{t('quests.card.progress')}</span>
-                        <span>{quest.progress}%</span>
-                      </div>
-                      <div className="w-full bg-muted rounded-full h-2">
-                        <div 
-                          className="bg-primary rounded-full h-2 transition-all duration-300"
-                          style={{ width: `${quest.progress}%` }}
-                        />
-                      </div>
-                      {quest.deadline && (
-                        <p className="text-xs text-muted-foreground">
-                          {t('quests.card.deadline', { date: new Date(quest.deadline).toLocaleDateString() })}
-                        </p>
-                      )}
-                    </div>
-                  )}
-
                   {quest.status === 'available' && (
                     <Button 
                       variant="agricultural" 
                       size="sm" 
                       className="w-full gap-2"
-                      onClick={() => startQuest(quest.id)}
+                      onClick={() => navigate(`/quests/${quest.id}`)}
                     >
                       <Play className="h-4 w-4" />
                       {t('quests.actions.start_quest')}
@@ -314,7 +276,7 @@ const Quests: React.FC = () => {
                   )}
 
                   {quest.status === 'in_progress' && (
-                    <Button variant="outline" size="sm" className="w-full gap-2">
+                    <Button variant="outline" size="sm" className="w-full gap-2" onClick={() => navigate(`/quests/${quest.id}`)}>
                       <TrendingUp className="h-4 w-4" />
                       {t('quests.actions.view_progress')}
                     </Button>
@@ -331,6 +293,20 @@ const Quests: React.FC = () => {
             </Card>
           ))}
         </div>
+
+        {/* Load More / Pagination */}
+        {hasMore && filteredQuests.length > 0 && (
+          <div className="flex justify-center">
+            <Button
+              variant="outline"
+              onClick={() => fetchQuests(page + 1, true)}
+              disabled={isLoadingMore}
+              className="min-w-[160px]"
+            >
+              {isLoadingMore ? t('quests.loading') : 'Load more'}
+            </Button>
+          </div>
+        )}
 
         {filteredQuests.length === 0 && (
           <div className="text-center py-12">

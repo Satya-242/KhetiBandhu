@@ -48,6 +48,28 @@ def login_farmer(request):
                     'token': token.key
                 })
             except Farmer.DoesNotExist:
+                # Allow admin/staff to login via same endpoint for in-app admin tools
+                if user.is_staff or user.is_superuser:
+                    token, created = Token.objects.get_or_create(user=user)
+                    admin_profile = {
+                        'id': user.id,
+                        'name': user.get_full_name() or user.username,
+                        'username': user.username,
+                        'email': user.email,
+                        'pm_kisan_id': '',
+                        'village': '',
+                        'crops': '',
+                        'phone': '',
+                        'total_points': 0,
+                        'level': None,
+                        'is_staff': True,
+                    }
+                    return Response({
+                        'status': 'success',
+                        'message': 'Admin login successful',
+                        'farmer': admin_profile,
+                        'token': token.key
+                    })
                 return Response({
                     'status': 'error',
                     'message': 'Farmer profile not found'
