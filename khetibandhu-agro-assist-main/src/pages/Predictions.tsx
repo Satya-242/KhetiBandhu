@@ -2,14 +2,13 @@ import React, { useState, useEffect } from 'react';
 import { Navigate, useNavigate } from 'react-router-dom';
 import { useAuth } from '@/context/AuthContext';
 import { Button } from '@/components/ui/button';
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { Progress } from '@/components/ui/progress';
 import LoadingSpinner from '@/components/LoadingSpinner';
 import { 
-  TrendingUp, TrendingDown, Leaf, Droplets, Thermometer, 
-  Wind, Sun, Cloud, ArrowLeft, RefreshCw, Calendar,
-  BarChart3, Target, Award, Info
+  TrendingUp, TrendingDown, Leaf, ArrowLeft, RefreshCw,
+  Calendar, BarChart3, Target, Info
 } from 'lucide-react';
 
 interface CropPrediction {
@@ -19,21 +18,6 @@ interface CropPrediction {
   sustainability_score: number;
   recommendations: string[];
   last_updated: string;
-}
-
-interface WeatherData {
-  temperature: number;
-  humidity: number;
-  rainfall: number;
-  wind_speed: number;
-  condition: string;
-  forecast: Array<{
-    date: string;
-    temp_max: number;
-    temp_min: number;
-    condition: string;
-    rain_chance: number;
-  }>;
 }
 
 interface PredictionSummary {
@@ -50,7 +34,6 @@ interface PredictionSummary {
 const Predictions: React.FC = () => {
   const { isAuthenticated, user, isLoading: authLoading } = useAuth();
   const [predictions, setPredictions] = useState<CropPrediction[]>([]);
-  const [weather, setWeather] = useState<WeatherData | null>(null);
   const [summary, setSummary] = useState<PredictionSummary | null>(null);
   const [isLoading, setIsLoading] = useState(true);
   const navigate = useNavigate();
@@ -116,23 +99,6 @@ const Predictions: React.FC = () => {
           }
         ];
 
-        const mockWeather: WeatherData = {
-          temperature: 28,
-          humidity: 65,
-          rainfall: 12,
-          wind_speed: 8,
-          condition: "Partly Cloudy",
-          forecast: [
-            { date: "2024-09-16", temp_max: 30, temp_min: 22, condition: "Sunny", rain_chance: 10 },
-            { date: "2024-09-17", temp_max: 28, temp_min: 20, condition: "Cloudy", rain_chance: 40 },
-            { date: "2024-09-18", temp_max: 26, temp_min: 19, condition: "Rainy", rain_chance: 80 },
-            { date: "2024-09-19", temp_max: 29, temp_min: 21, condition: "Partly Cloudy", rain_chance: 25 },
-            { date: "2024-09-20", temp_max: 31, temp_min: 23, condition: "Sunny", rain_chance: 5 },
-            { date: "2024-09-21", temp_max: 27, temp_min: 20, condition: "Cloudy", rain_chance: 35 },
-            { date: "2024-09-22", temp_max: 29, temp_min: 22, condition: "Sunny", rain_chance: 15 }
-          ]
-        };
-
         const mockSummary: PredictionSummary = {
           average_confidence: 80.75,
           total_predictions: 4,
@@ -146,7 +112,6 @@ const Predictions: React.FC = () => {
 
         setTimeout(() => {
           setPredictions(mockPredictions);
-          setWeather(mockWeather);
           setSummary(mockSummary);
           setIsLoading(false);
         }, 1000);
@@ -179,15 +144,6 @@ const Predictions: React.FC = () => {
     if (score >= 70) return { variant: 'secondary' as const, text: 'Good' };
     if (score >= 60) return { variant: 'outline' as const, text: 'Fair' };
     return { variant: 'destructive' as const, text: 'Poor' };
-  };
-
-  const getWeatherIcon = (condition: string) => {
-    switch (condition.toLowerCase()) {
-      case 'sunny': return Sun;
-      case 'cloudy': case 'partly cloudy': return Cloud;
-      case 'rainy': return Droplets;
-      default: return Cloud;
-    }
   };
 
   if (authLoading || isLoading) {
@@ -349,83 +305,6 @@ const Predictions: React.FC = () => {
                 </Card>
               );
             })}
-          </div>
-        </div>
-
-        {/* Weather Section */}
-        <div className="space-y-6">
-          <h2 className="text-xl font-bold font-heading">Weather Forecast</h2>
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
-            {/* Current Weather */}
-            <Card className="card-dashboard lg:col-span-1">
-              <CardHeader>
-                <CardTitle className="flex items-center gap-2">
-                  <Thermometer className="h-5 w-5 text-primary" />
-                  Current Weather
-                </CardTitle>
-                <CardDescription>{user?.village || 'Your Location'}</CardDescription>
-              </CardHeader>
-              <CardContent className="space-y-4">
-                <div className="text-center">
-                  <div className="flex items-center justify-center gap-2 mb-2">
-                    {weather && React.createElement(getWeatherIcon(weather.condition), { 
-                      className: "h-8 w-8 text-orange-500" 
-                    })}
-                    <span className="text-3xl font-bold">{weather?.temperature}°C</span>
-                  </div>
-                  <p className="text-sm text-muted-foreground">{weather?.condition}</p>
-                </div>
-                
-                <div className="grid grid-cols-2 gap-4 text-sm">
-                  <div className="flex items-center gap-2">
-                    <Droplets className="h-4 w-4 text-sky-500" />
-                    <span>Humidity: {weather?.humidity}%</span>
-                  </div>
-                  <div className="flex items-center gap-2">
-                    <Wind className="h-4 w-4 text-gray-500" />
-                    <span>Wind: {weather?.wind_speed} km/h</span>
-                  </div>
-                  <div className="flex items-center gap-2">
-                    <Droplets className="h-4 w-4 text-blue-500" />
-                    <span>Rainfall: {weather?.rainfall}mm</span>
-                  </div>
-                </div>
-              </CardContent>
-            </Card>
-
-            {/* 7-Day Forecast */}
-            <Card className="card-dashboard lg:col-span-2">
-              <CardHeader>
-                <CardTitle className="flex items-center gap-2">
-                  <Calendar className="h-5 w-5 text-primary" />
-                  7-Day Forecast
-                </CardTitle>
-              </CardHeader>
-              <CardContent>
-                <div className="space-y-3">
-                  {weather?.forecast.map((day, index) => {
-                    const WeatherIcon = getWeatherIcon(day.condition);
-                    return (
-                      <div key={day.date} className="flex items-center justify-between p-3 bg-muted/50 rounded-lg">
-                        <div className="flex items-center gap-3">
-                          <WeatherIcon className="h-5 w-5 text-primary" />
-                          <div>
-                            <p className="font-medium">
-                              {index === 0 ? 'Today' : new Date(day.date).toLocaleDateString('en', { weekday: 'short', month: 'short', day: 'numeric' })}
-                            </p>
-                            <p className="text-sm text-muted-foreground">{day.condition}</p>
-                          </div>
-                        </div>
-                        <div className="text-right">
-                          <p className="font-semibold">{day.temp_max}° / {day.temp_min}°</p>
-                          <p className="text-sm text-sky-600">{day.rain_chance}% rain</p>
-                        </div>
-                      </div>
-                    );
-                  })}
-                </div>
-              </CardContent>
-            </Card>
           </div>
         </div>
       </main>

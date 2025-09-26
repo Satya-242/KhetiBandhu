@@ -29,6 +29,13 @@ const AdminSubmissions: React.FC = () => {
   const [totalPages, setTotalPages] = useState(1);
   const pageSize = 12;
 
+  const toAbsoluteFileUrl = (filePath: string): string => {
+    if (!filePath) return '#';
+    if (/^https?:\/\//i.test(filePath)) return filePath;
+    const needsSlash = !filePath.startsWith('/');
+    return `${API_BASE}${needsSlash ? '/' : ''}${filePath}`;
+  };
+
   const load = async (p = 1) => {
     setIsLoading(true);
     const params = new URLSearchParams();
@@ -95,7 +102,7 @@ const AdminSubmissions: React.FC = () => {
               </CardHeader>
               <CardContent className="space-y-3">
                 <div className="text-sm text-muted-foreground">Submitted: {new Date(s.submitted_at).toLocaleString()}</div>
-                <a href={s.file} target="_blank" rel="noreferrer" className="text-primary underline text-sm">View file</a>
+                <a href={toAbsoluteFileUrl(s.file)} target="_blank" rel="noreferrer" className="text-primary underline text-sm">View file</a>
                 <div className="text-sm break-words">{s.notes}</div>
                 <div className="flex gap-2">
                   <Button size="sm" variant="default" onClick={() => review(s.id, 'approve')} disabled={s.status !== 'pending'}>

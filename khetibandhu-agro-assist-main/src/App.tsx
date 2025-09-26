@@ -12,6 +12,7 @@ import Register from "./pages/Register";
 import Dashboard from "./pages/Dashboard";
 import Profile from "./pages/Profile";
 import Predictions from "./pages/Predictions";
+import Forecast from "./pages/Forecast";
 import Quests from "./pages/Quests";
 import Badges from "./pages/Badges";
 import Leaderboard from "./pages/Leaderboard";
@@ -38,6 +39,7 @@ const App = () => (
               <Route path="/dashboard" element={<Dashboard />} />
               <Route path="/profile" element={<Profile />} />
               <Route path="/predictions" element={<Predictions />} />
+              <Route path="/forecast" element={<Forecast />} />
               <Route path="/quests" element={<Quests />} />
               <Route path="/quests/:id" element={<QuestDetails />} />
               <Route path="/badges" element={<Badges />} />

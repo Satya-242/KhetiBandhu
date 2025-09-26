@@ -279,7 +279,7 @@ const Dashboard: React.FC = () => {
                   <span>{t('dashboard.weather.wind')}: {t('dashboard.weather.wind_light')}</span>
                 </div>
               </div>
-              <Button variant="outline" size="sm" className="w-full">
+              <Button variant="outline" size="sm" className="w-full" onClick={() => navigate('/forecast')}>
                 {t('dashboard.weather.forecast_7_day')}
                 <ArrowRight className="h-4 w-4 ml-2" />
               </Button>
